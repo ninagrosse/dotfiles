@@ -1,3 +1,3 @@
 # Homebrew packages
 brew 'fastfetch'
-brew 'starhip'
+brew 'starship'
