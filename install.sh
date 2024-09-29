@@ -3,7 +3,6 @@
 
 # Create ssh ed25519 key pair if we don't have one; don't ask for a passphrase
 if ! test -f $HOME/.ssh/id_ed25519; then
-  echo "Generating ssh ed25519 key pair"
   ssh-keygen -t ed25519 -f $HOME/.ssh/id_ed25519 -N ''
   echo
 fi
