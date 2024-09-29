@@ -1,6 +1,20 @@
 # dotfiles
 My personal dotfiles (WORK IN PROGRESS!)
 
+## Installation
+Clone this repo to `$HOME/.dotfiles` and run the installer.
+```shell
+# via SSH
+git clone git@github.com:ninagrosse/dotfiles.git $HOME/.dotfiles
+
+# via HTTPS
+git clone https://github.com/ninagrosse/dotfiles.git $HOME/.dotfiles
+
+# switch directory and run the installer
+cd $HOME/.dotfiles
+./install.sh
+```
+
 ## Testing
 For testing the installer, there is a Dockerfile which is based on the latest Ubuntu. It... 
 
