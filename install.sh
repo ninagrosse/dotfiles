@@ -48,8 +48,10 @@ if test ! $(which brew); then
 fi
 
 # Install Homebrew packages (see Brewfile)
+echo "Installing Homebrew packages from Brewfile"
 brew tap homebrew/bundle
-brew bundle --file ./Brewfile
+brew bundle
+echo
 
 echo
 echo "DONE!"
