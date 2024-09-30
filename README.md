@@ -14,6 +14,7 @@ git clone https://github.com/ninagrosse/dotfiles.git $HOME/.dotfiles
 cd $HOME/.dotfiles
 ./install.sh
 ```
+The installer only works on Debian/Ubuntu or Mac!
 
 ## Testing
 For testing the installer, there is a Dockerfile which is based on the latest Ubuntu. It... 
