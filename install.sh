@@ -52,6 +52,11 @@ brew tap homebrew/bundle
 brew bundle
 echo
 
+# Link dotfiles
+echo "Linking .zshrc"
+mv $HOME/.zshrc $HOME/.zshrc.pre-dotfiles
+ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
+
 echo
 echo "DONE!"
 echo
