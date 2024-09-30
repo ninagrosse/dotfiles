@@ -12,19 +12,19 @@ echo
 OS=$(( lsb_release -ds || cat /etc/*release || uname -om ) 2>/dev/null | head -n1)
 case "$OS" in 
   *Debian*) 
-    echo "Running on Debian"
+    echo "Running on Debian ($OS)"
     DEB="y"
     ;;
   *buntu*) 
     DEB="y"
-    echo "Running on Ubuntu"
+    echo "Running on Ubuntu ($OS)"
     ;;
   *Darwin*)
     MAC="y"
-    echo "Running on Mac"
+    echo "Running on Mac ($OS)"
     ;;
   *)
-    echo "Unsupported OS. This installer only works on Debian/Ubuntu or Mac. Abort."
+    echo "Unsupported OS ($OS). This installer only works on Debian/Ubuntu or Mac. Abort."
     exit 1
 esac
 echo
