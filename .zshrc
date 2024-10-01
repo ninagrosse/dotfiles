@@ -121,5 +121,5 @@ for file in $HOME/.dotfiles/zsh/*.zsh; do
   source $file
 done
 
-# Init Starship prompt
-eval "$(starship init zsh)"
+# Init Starship prompt if it is installed
+[[ $(which starship) ]] && eval "$(starship init zsh)"
