@@ -1,0 +1,11 @@
+[user]
+	name = <NAME>
+	email = <EMAIL>
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[core]
+	pager = delta
+[delta]
+	line-numbers = true
