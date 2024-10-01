@@ -1,4 +1,4 @@
-FROM ubuntu:24.04
+FROM --platform=linux/amd64 ubuntu:24.04
 
 # Must have packages
 RUN apt-get update && apt-get upgrade -y && apt-get install -y vim nano curl git sudo
