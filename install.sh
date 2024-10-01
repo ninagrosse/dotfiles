@@ -23,10 +23,6 @@ case "$OS" in
     MAC="y"
     echo "Running on Mac ($OS)"
     ;;
-  *Raspbian*) 
-    DEB="y"
-    echo "Running on Raspbian ($OS)"
-    ;;
   *)
     echo "Unsupported OS ($OS). This installer only works on Debian/Ubuntu or Mac. Abort."
     exit 1
