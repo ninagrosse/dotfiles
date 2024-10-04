@@ -90,7 +90,8 @@ docker-compose
 rsync
 zsh-autosuggestions
 zsh-syntax-highlighting
-brew)
+brew
+systemadmin)
 
 source $ZSH/oh-my-zsh.sh
 
