@@ -1,20 +1,3 @@
-# Initialize Homebrew and its zsh-completions if it is installed.
-# This needs to be on top of .zshrc or at least before 'source $ZSH/oh-my-zsh.sh', 
-# so that some omz-aliases like 'duf' won't override brew packages.
-if [[ "$(uname)" = "Darwin" ]]; then # MacOS
-  if [[ -f /opt/homebrew/bin/brew ]]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-    export HOMEBREW_NO_ENV_HINTS=1
-  fi
-else # Linux
-  if [[ -f /home/linuxbrew/.linuxbrew/bin/brew ]]; then
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-    export HOMEBREW_NO_ENV_HINTS=1
-  fi
-fi
-
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
