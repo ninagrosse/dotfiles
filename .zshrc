@@ -97,7 +97,8 @@ rsync
 zsh-autosuggestions
 zsh-syntax-highlighting
 brew
-systemadmin)
+systemadmin
+direnv)
 
 source $ZSH/oh-my-zsh.sh
 
