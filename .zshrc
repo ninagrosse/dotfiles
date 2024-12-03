@@ -107,8 +107,8 @@ else
   export EDITOR='nano'
 fi
 
-# Load personal aliases, environment variables etc. from $HOME/.dotfiles/zsh
-for file in $HOME/.dotfiles/zsh/*.zsh; do
+# Load personal aliases, environment variables etc. from $HOME/.dotfiles/zsh/aliases
+for file in $HOME/.dotfiles/zsh/aliases/*.zsh; do
   source $file
 done
 
