@@ -1,6 +1,5 @@
 # Some additional aliases
 alias src='exec zsh' # reload zsh (e.g. after editing .zshrc)
-alias sysupdate='sudo apt update && sudo apt upgrade' # TODO, use ubuntu zsh plugin instead
 
 # replace cat with bat if installed
 if [ "$(command -v bat)" ]; then
