@@ -18,8 +18,8 @@ fi
 # Create .gitconfig which includes $HOME/.dotfiles/.gitconfig
 cat <<EOT >> $HOME/.gitconfig
 [user]
-	name = $name
-	email = $email
+  name = $name
+  email = $email
 [include]
   path = .dotfiles/.gitconfig
 EOT
