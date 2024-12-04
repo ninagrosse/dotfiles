@@ -108,4 +108,4 @@ for file in $HOME/.dotfiles/zsh/aliases/*.zsh; do
 done
 
 # Init Starship prompt if it is installed
-[[ $(which starship) ]] && eval "$(starship init zsh)"
+[[ $(command -v starship) ]] && eval "$(starship init zsh)"
