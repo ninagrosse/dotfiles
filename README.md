@@ -19,12 +19,10 @@ The installer only works on Debian/Ubuntu or Mac!
 ## Testing
 For testing the installer, there is a Dockerfile which is based on the latest Ubuntu. It... 
 
-* installs some essential tools (`vim nano curl git sudo`)
-* enables passwordless `sudo`
-* switches to the pre-installed default user `ubuntu`
-* copies all dotfiles to `/home/ubuntu/.dotfiles`
+* installs some essential tools (`vim nano curl git zsh brew tree`)
+* copies all dotfiles to `/home/ubuntu/.dotfiles` except the .gitignore'd ones
 
-Build the image with `docker build -t <some tag> -f testing/Dockerfile .`
+Build the image with `docker build -t <some tag> .`
 
 Launch a container with `docker container run -it --rm <some tag> bash`
 

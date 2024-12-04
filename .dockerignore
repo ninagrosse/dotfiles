@@ -1,0 +1,6 @@
+.git/
+zsh/aliases/*.zsh
+!zsh/aliases/aliases.zsh
+zsh/plugins/*.zsh
+!zsh/plugins/plugins.common.zsh
+Brewfile.lock.json
