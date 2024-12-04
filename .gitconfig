@@ -1,9 +1,9 @@
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [pull]
-	rebase = true
+  rebase = true
 [core]
-	pager = delta
-	autocrlf = input
+  pager = delta
+  autocrlf = input
 [delta]
-	line-numbers = true
+  line-numbers = true
