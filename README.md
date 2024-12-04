@@ -20,7 +20,7 @@ cd $HOME/.dotfiles
 Run `./setup_zsh.sh`
 
 ### Setup Homebrew
-Run `./setup_brew.sh`
+Run `./setup_brew.zsh`
 
 ## Testing
 To test the setup scripts, there is a [`Dockerfile`](Dockerfile) which is based on the latest Ubuntu. It installs some required tools (`vim nano curl git zsh brew tree build-essential`) and copies all dotfiles, except the .gitignore'd ones, to `/root/.dotfiles`.
