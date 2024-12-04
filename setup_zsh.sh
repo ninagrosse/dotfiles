@@ -29,6 +29,5 @@ echo "Symlinking $HOME/.zshrc to $HOME/.dotfiles/.zshrc"
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
 echo
-echo "DONE!"
-echo "Launch zsh with 'exec zsh'"
+echo "Done!"
 echo

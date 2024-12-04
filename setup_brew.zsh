@@ -17,6 +17,5 @@ direnv
 EOT
 
 echo
-echo "DONE!"
-echo "Please reload zsh with 'exec zsh'"
+echo "Done!"
 echo
