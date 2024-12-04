@@ -6,6 +6,7 @@ My personal dotfiles
 - Automatic zsh setup and config with [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) and various plugins. See [`setup_zsh.sh`](setup_zsh.sh) and the READMEs in [`zsh/aliases`](zsh/aliases/) and [`zsh/plugins`](zsh/plugins/).
 - Automatic setup and config for various [Homebrew](https://brew.sh/) packages. See [`Brewfile`](Brewfile) and [`setup_brew.zsh`](setup_brew.zsh).
 - Creation of a new .gitconfig in the user home which includes the settings from this repo's [`.gitconfig`](.gitconfig). See [`setup_gitconfig.sh`](setup_gitconfig.sh).
+- Backups of my [Solaar](https://github.com/pwr-Solaar/Solaar) configuration for MX Keys and MX Anywhere 3.
 
 ## Prerequisites
 To use the setup scripts, zsh and Homebrew need to be installed manually first. See their respective docs for instructions. After installing `setup_zsh.sh` should be run first, because `setup_brew.zsh` requires oh-my-zsh to be installed. If Homebrew isn't used or can't be installed, just skip its installation and setup.
