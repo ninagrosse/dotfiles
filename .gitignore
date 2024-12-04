@@ -1,4 +1,5 @@
 *.zsh
 !aliases.zsh
 !plugins.common.zsh
+!setup_brew.zsh
 Brewfile.lock.json
