@@ -48,27 +48,10 @@ cat $HOME/.dotfiles/zsh/plugins/plugins.*.zsh > $HOME/.dotfiles/zsh/plugins/plug
 # load plugins from creeated plugins.zsh
 plugins=("${(f)$(< $HOME/.dotfiles/zsh/plugins/plugins.zsh)}")
 
+# Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
-
-# Disable Homebrew hints, if it is installed
-[[ $(command -v brew) ]] && export HOMEBREW_NO_ENV_HINTS=1
-
-# Preferred editor for local and remote sessions
-# Use vscode when using it, otherwise use nano (I don't like vim)
-if [[ -n $TERM_PROGRAM ]]; then
-  if [[ $TERM_PROGRAM == 'vscode' ]]; then
-    export EDITOR='code --wait'
-  else
-    export EDITOR='nano'
-  fi
-else
-  export EDITOR='nano'
-fi
 
 # Load machine specific aliases, environment variables etc. from $HOME/.dotfiles/zsh/aliases
 for file in $HOME/.dotfiles/zsh/aliases/*.zsh; do
   source $file
 done
-
-# Init Starship prompt if it is installed
-[[ $(command -v starship) ]] && eval "$(starship init zsh)"
