@@ -50,8 +50,8 @@ plugins=("${(f)$(< $HOME/.dotfiles/zsh/plugins/plugins.zsh)}")
 
 source $ZSH/oh-my-zsh.sh
 
-# Disable Homebrew hints
-export HOMEBREW_NO_ENV_HINTS=1
+# Disable Homebrew hints, if it is installed
+[[ $(command -v brew) ]] && export HOMEBREW_NO_ENV_HINTS=1
 
 # Preferred editor for local and remote sessions
 # Use vscode when using it, otherwise use nano (I don't like vim)
