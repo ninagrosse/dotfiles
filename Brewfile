@@ -10,5 +10,6 @@ brew 'git-delta'
 brew 'httpie'
 brew 'starship'
 brew "tealdeer"
+brew "ugrep"
 brew 'wget'
 brew "zoxide"
