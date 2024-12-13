@@ -24,12 +24,12 @@ if [ "$(command -v bat)" ]; then
     alias cat='bat'
 fi
 
-# replace ls with eza if installed
+# eza plugin settings & source
+# This needs to be done here. Otherwise the common-aliases plugin would overwrite
+# some of the eza aliases
 if [ "$(command -v eza)" ]; then
-    alias ll='eza -lg --icons=auto --group-directories-first'
-    alias la='eza -lag --icons=auto --group-directories-first'
-    alias l='eza -lg'
-    alias l.='eza -d .*'
-    alias ls='eza'
-    alias l1='eza -1'
+  zstyle ':omz:plugins:eza' 'dirs-first' yes
+  zstyle ':omz:plugins:eza' 'icons' yes
+  source ${ZSH:-~/.oh-my-zsh}/plugins/eza/eza.plugin.zsh
+  alias l='eza -lg'
 fi
