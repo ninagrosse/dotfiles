@@ -11,7 +11,7 @@ brew bundle
 
 # Create $HOME/.dotfiles/zsh/plugins/plugins.brew.zsh to load brew specific omz-plugins
 # This should at least contain the brew plugin, so the brew shellenv gets loaded in subsequent .zshrc
-cat <<EOT >> $HOME/.dotfiles/zsh/plugins/plugins.brew.zsh
+cat <<EOT > $HOME/.dotfiles/zsh/plugins/plugins.brew.zsh
 brew
 direnv
 EOT
