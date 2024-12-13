@@ -10,3 +10,4 @@ brew 'httpie'
 brew 'starship'
 brew "tealdeer"
 brew 'wget'
+brew "zoxide"

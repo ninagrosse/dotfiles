@@ -14,6 +14,7 @@ brew bundle
 cat <<EOT > $HOME/.dotfiles/zsh/plugins/plugins.brew.zsh
 brew
 direnv
+zoxide
 EOT
 
 echo
