@@ -33,3 +33,8 @@ if [ "$(command -v eza)" ]; then
   source ${ZSH:-~/.oh-my-zsh}/plugins/eza/eza.plugin.zsh
   alias l='eza -lg'
 fi
+
+# Pipe output to fzf, e.g. 'alias F' to fzf through all aliases
+if [ "$(command -v fzf)" ]; then
+  alias -g F="| fzf"
+fi
