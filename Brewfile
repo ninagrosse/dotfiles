@@ -1,6 +1,5 @@
 # Homebrew packages
 brew 'bat'
-brew 'cheat'
 brew "direnv"
 brew 'dysk'
 brew 'eza'
@@ -9,4 +8,5 @@ brew 'fd'
 brew 'git-delta'
 brew 'httpie'
 brew 'starship'
+brew "tealdeer"
 brew 'wget'
