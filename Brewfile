@@ -1,4 +1,5 @@
 # Homebrew packages
+tap 'mike-engel/jwt-cli'
 brew 'bat'
 brew "direnv"
 brew 'dysk'
@@ -8,6 +9,7 @@ brew 'fd'
 brew 'fzf'
 brew 'git-delta'
 brew 'httpie'
+brew 'mike-engel/jwt-cli/jwt-cli'
 brew 'starship'
 brew "tealdeer"
 brew "ugrep"
