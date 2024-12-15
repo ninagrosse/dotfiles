@@ -31,7 +31,7 @@ if [ "$(command -v eza)" ]; then
   zstyle ':omz:plugins:eza' 'dirs-first' yes
   zstyle ':omz:plugins:eza' 'icons' yes
   source ${ZSH:-~/.oh-my-zsh}/plugins/eza/eza.plugin.zsh
-  alias l='eza -lg'
+  alias l='ll'
 fi
 
 # Pipe output to fzf, e.g. 'alias F' to fzf through all aliases
