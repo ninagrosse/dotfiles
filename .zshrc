@@ -57,6 +57,8 @@ if [[ $(command -v eza) ]]; then
   zstyle ':omz:plugins:eza' 'icons' yes
   source ${ZSH:-~/.oh-my-zsh}/plugins/eza/eza.plugin.zsh
   alias l='ll' # make alias l the same as ll (eza -gl)
+  alias lt='ls --tree' # tree alias (ls is already aliased to eza)
+  alias lat='ls -a --tree' # tree alias including hidden folder/files
 fi
 
 # Set fzf settings, if it is installed
