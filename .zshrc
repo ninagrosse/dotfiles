@@ -1,7 +1,7 @@
 # Setup $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# Path to Oh My Zsh installation.
+# Path to oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the oh-my-zsh theme to load
@@ -9,7 +9,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="bira"
 
-# Combine all plugins.*.zsh in files in $HOME/.dotfiles/zsh/plugins into plugins.zsh
+# Combine all plugins.*.zsh files in $HOME/.dotfiles/zsh/plugins into plugins.zsh
 cat $HOME/.dotfiles/zsh/plugins/plugins.*.zsh > $HOME/.dotfiles/zsh/plugins/plugins.zsh
 
 # Get the list of oh-my-zsh plugins, that should be loaded, from the created plugins.zsh

@@ -3,7 +3,7 @@ My personal dotfiles
 
 ## Content
 
-- Automatic zsh setup with [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) and various plugins. See [`setup_zsh.sh`](setup_zsh.sh) and the comments in [`.zshrc`](.zshrc) and [`zsh/plugins/README.md`](zsh/plugins/README.md).
+- Automatic zsh setup with [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) and various plugins. See [`setup_zsh.sh`](setup_zsh.sh) and the comments in [`.zshrc`](.zshrc) and [`zsh/plugins`](zsh/plugins).
 - Automatic setup and installation of various [Homebrew](https://brew.sh/) packages. See [`Brewfile`](Brewfile) and [`setup_brew.zsh`](setup_brew.zsh). Descriptions of the packages and alternative installation methods without Homebrew are provided in [`packages.md`](packages.md).
 - Creation of a new .gitconfig in the user home which includes the settings from this repo's [`.gitconfig`](.gitconfig). See [`setup_gitconfig.sh`](setup_gitconfig.sh).
 - Backups of my [Solaar](https://github.com/pwr-Solaar/Solaar) configuration for MX Keys and MX Anywhere 3.
