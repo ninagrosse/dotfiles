@@ -22,6 +22,11 @@ alias src='exec zsh' # reload zsh (e.g. after editing .zshrc)
 # replace cat with bat if installed
 if [ "$(command -v bat)" ]; then
     alias cat='bat'
+    # symlink $HOME/.dotfiles/.config/bat to $HOME/.config/bat (only once)
+    if [[ ! -L $HOME/.config/bat ]]; then
+      ln -s $HOME/.dotfiles/.config/bat $HOME/.config/bat
+      bat cache --build # rebuild cache so bat picks up Catppuccin theme
+    fi
 fi
 
 # eza plugin settings & source
