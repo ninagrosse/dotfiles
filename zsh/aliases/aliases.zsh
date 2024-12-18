@@ -53,3 +53,6 @@ if [ "$(command -v ug)" ]; then
     alias xzegrep='ug -zE'
     alias xzfgrep='ug -zF'
 fi
+
+# Replace cd with z (zoxide)
+[[ "$(command -v zoxide)" ]] && alias cd="z"
