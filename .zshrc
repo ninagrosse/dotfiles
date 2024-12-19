@@ -9,6 +9,15 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="bira"
 
+# Uncomment the following line if pasting URLs and other text is messed up.
+DISABLE_MAGIC_FUNCTIONS="true"
+
+# Ignore commands that start with spaces and duplicates.
+export HISTCONTROL=ignoreboth
+
+# Don't add certain commands to the history file.
+export HISTIGNORE="&:[bf]g:c:clear:history:exit:q:pwd:* --help"
+
 # Combine all plugins.*.zsh files in $HOME/.dotfiles/zsh/plugins into plugins.zsh
 cat $HOME/.dotfiles/zsh/plugins/plugins.*.zsh > $HOME/.dotfiles/zsh/plugins/plugins.zsh
 
