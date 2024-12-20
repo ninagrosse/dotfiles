@@ -13,6 +13,7 @@
 | httpie    | A better `curl` for using APIs        | [Website](https://httpie.io/docs/cli/installation) (package managers)                                                 |
 | lf        | Terminal File Manager                 | [GitHub](https://github.com/gokcehan/lf) (package managers)                                                           |
 | jwt-cli   | CLI Tool to decode/encode JWTs        | [GitHub](https://github.com/mike-engel/jwt-cli) (binary download)                                                     |
+| nnn       | Terminal File Manager                 | [GitHub](https://github.com/jarun/nnn) (package managers)                                                             |
 | starship  | Cross-Platform shell prompt           | [Website](https://starship.rs/guide/) (package managers or binary download)                                           |
 | tealdeer  | CLI Cheat Sheets (`tldr`)             | [Website](https://tealdeer-rs.github.io/tealdeer/installing.html) (package managers)                                  |
 | ugrep     | Alternative to `grep`                 | [Website](https://ugrep.com/) (package managers)                                                                      |
