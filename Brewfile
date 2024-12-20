@@ -10,6 +10,7 @@ brew 'fd'
 brew 'fzf'
 brew 'git-delta'
 brew 'httpie'
+brew 'lf'
 brew 'mike-engel/jwt-cli/jwt-cli'
 brew 'starship'
 brew "tealdeer"
