@@ -12,7 +12,6 @@ brew 'git-delta'
 brew 'httpie'
 brew 'lf'
 brew 'mike-engel/jwt-cli/jwt-cli'
-brew 'nnn'
 brew 'starship'
 brew "tealdeer"
 brew "ugrep"
