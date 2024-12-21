@@ -16,4 +16,5 @@ brew 'starship'
 brew "tealdeer"
 brew "ugrep"
 brew 'wget'
+brew "xxh"
 brew "zoxide"
