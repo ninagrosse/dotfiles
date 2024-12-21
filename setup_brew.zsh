@@ -18,6 +18,23 @@ fzf
 zoxide
 EOT
 
+# bat: Symlink $HOME/.dotfiles/.config/bat to $HOME/.config/bat (only once)
+if [[ $(command -v bat) ]]; then
+  if [[ ! -L $HOME/.config/bat ]]; then
+    mkdir -p $HOME/.config
+    ln -s $HOME/.dotfiles/.config/bat $HOME/.config/bat
+    bat cache --build # rebuild cache so bat picks up Catppuccin Mocha theme
+  fi
+fi
+
+# xxh: Symlink $HOME/.dotfiles/.config/xxh to $HOME/.config/xxh (only once)
+if [[ $(command -v xxh) ]]; then
+  if [[ ! -L $HOME/.config/xxh ]]; then
+    mkdir -p $HOME/.config
+    ln -s $HOME/.dotfiles/.config/xxh $HOME/.config/xxh
+  fi
+fi
+
 echo
 echo "Done!"
 echo
