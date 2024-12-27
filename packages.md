@@ -11,9 +11,10 @@
 | fzf       | A command-line fuzzy finder           | [GitHub](https://github.com/junegunn/fzf?tab=readme-ov-file#installation) (package managers)                          |
 | git-delta | Diff-Tool for Git                     | [Website](https://dandavison.github.io/delta/installation.html) (package managers or deb download)                    |
 | httpie    | A better `curl` for using APIs        | [Website](https://httpie.io/docs/cli/installation) (package managers)                                                 |
-| lf        | Terminal File Manager                 | [GitHub](https://github.com/gokcehan/lf) (package managers)                                                           |
 | jwt-cli   | CLI Tool to decode/encode JWTs        | [GitHub](https://github.com/mike-engel/jwt-cli) (binary download)                                                     |
-| ripgrep   | Alternative to `grep`                 | [Website](https://github.com/BurntSushi/ripgrep) (package managers)                                                   |
+| lf        | Terminal File Manager                 | [GitHub](https://github.com/gokcehan/lf) (package managers or binary download)                                        |
+| neovim    | neovim                                | [GitHub](https://github.com/neovim/neovim) (package managers or binary download)                                      |
+| ripgrep   | Alternative to `grep`                 | [GitHub](https://github.com/BurntSushi/ripgrep) (package managers or binary download)                                |
 | starship  | Cross-Platform shell prompt           | [Website](https://starship.rs/guide/) (package managers or binary download)                                           |
 | tealdeer  | CLI Cheat Sheets (`tldr`)             | [Website](https://tealdeer-rs.github.io/tealdeer/installing.html) (package managers)                                  |
 | ugrep     | Alternative to `grep`                 | [Website](https://ugrep.com/) (package managers)                                                                      |
