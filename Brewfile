@@ -10,6 +10,7 @@ brew 'fd'
 brew 'fzf'
 brew 'git-delta'
 brew 'httpie'
+brew 'jq'
 brew 'lf'
 brew 'mike-engel/jwt-cli/jwt-cli'
 brew 'neovim'
@@ -19,4 +20,5 @@ brew "tealdeer"
 brew "ugrep"
 brew 'wget'
 brew "xxh"
+brew 'yazi'
 brew "zoxide"

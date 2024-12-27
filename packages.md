@@ -14,10 +14,11 @@
 | jwt-cli   | CLI Tool to decode/encode JWTs        | [GitHub](https://github.com/mike-engel/jwt-cli) (binary download)                                                     |
 | lf        | Terminal File Manager                 | [GitHub](https://github.com/gokcehan/lf) (package managers or binary download)                                        |
 | neovim    | neovim                                | [GitHub](https://github.com/neovim/neovim) (package managers or binary download)                                      |
-| ripgrep   | Alternative to `grep`                 | [GitHub](https://github.com/BurntSushi/ripgrep) (package managers or binary download)                                |
+| ripgrep   | Alternative to `grep`                 | [GitHub](https://github.com/BurntSushi/ripgrep) (package managers or binary download)                                 |
 | starship  | Cross-Platform shell prompt           | [Website](https://starship.rs/guide/) (package managers or binary download)                                           |
 | tealdeer  | CLI Cheat Sheets (`tldr`)             | [Website](https://tealdeer-rs.github.io/tealdeer/installing.html) (package managers)                                  |
 | ugrep     | Alternative to `grep`                 | [Website](https://ugrep.com/) (package managers)                                                                      |
 | wget      | Plain old `wget`                      | Only for MacOS. On Linux `wget` is usually already installed.                                                         |
 | xxh       | Portable shell environments via ssh   | [GitHub](https://github.com/xxh/xxh) (binary download)                                                                |
+| yazi      | Terminal File Manager                 | [GitHub](https://github.com/sxyazi/yazi) (package managers or binary download)                                        |
 | zoxide    | A smart `cd`                          | [GitHub](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation) (package managers or binary download) |

@@ -35,6 +35,14 @@ if [[ $(command -v xxh) ]]; then
   fi
 fi
 
+# yazi: Symlink $HOME/.dotfiles/.config/yazi to $HOME/.config/yazi (only once)
+if [[ $(command -v yazi) ]]; then
+  if [[ ! -L $HOME/.config/yazi ]]; then
+    mkdir -p $HOME/.config
+    ln -s $HOME/.dotfiles/.config/yazi $HOME/.config/yazi
+  fi
+fi
+
 echo
 echo "Done!"
 echo
