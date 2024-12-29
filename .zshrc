@@ -16,7 +16,7 @@ DISABLE_MAGIC_FUNCTIONS="true"
 export HISTCONTROL=ignoreboth
 
 # Don't add certain commands to the history file.
-export HISTIGNORE="&:[bf]g:c:clear:history:exit:q:pwd:* --help"
+export HISTIGNORE="&:[bf]g:c:clear:clr:history:exit:q:pwd:* --help"
 
 # Combine all plugins.*.zsh files in $HOME/.dotfiles/zsh/plugins into plugins.zsh
 cat $HOME/.dotfiles/zsh/plugins/plugins.*.zsh > $HOME/.dotfiles/zsh/plugins/plugins.zsh
