@@ -15,6 +15,8 @@ cat <<EOT > $HOME/.dotfiles/zsh/plugins/plugins.brew.zsh
 brew
 direnv
 fzf
+tmux
+tmux-cssh
 zoxide
 EOT
 
@@ -27,12 +29,21 @@ if [[ $(command -v bat) ]]; then
   fi
 fi
 
-# tmux: Symlink $HOME/.dotfiles/.config/tmux to $HOME/.config/tmux and install tpm (only once)
+# tmux setup (only once)
+# - Symlink $HOME/.dotfiles/.config/tmux to $HOME/.config/tmux 
+# - Install tpm
+# - Download tmux-cssh
 if [[ $(command -v tmux) ]]; then
   if [[ ! -L $HOME/.config/tmux ]]; then
     mkdir -p $HOME/.config
     ln -s $HOME/.dotfiles/.config/tmux $HOME/.config/tmux
-    [[ ! -d $HOME/.tmux/plugins/tpm ]] && git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+  fi
+  if [[ ! -d $HOME/.tmux/plugins/tpm ]]; then
+    git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+  fi
+  if [[ ! -f $HOME/.local/bin/tmux-cssh ]]; then
+    mkdir -p $HOME/.local/bin
+    wget -O $HOME/.local/bin/tmux-cssh https://github.com/zinic/tmux-cssh/raw/refs/heads/master/tmux-cssh
   fi
 fi
 
