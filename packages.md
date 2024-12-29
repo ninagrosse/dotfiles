@@ -17,6 +17,7 @@
 | ripgrep   | Alternative to `grep`                 | [GitHub](https://github.com/BurntSushi/ripgrep) (package managers or binary download)                                 |
 | starship  | Cross-Platform shell prompt           | [Website](https://starship.rs/guide/) (package managers or binary download)                                           |
 | tealdeer  | CLI Cheat Sheets (`tldr`)             | [Website](https://tealdeer-rs.github.io/tealdeer/installing.html) (package managers)                                  |
+| tmux      | Terminal Multiplexer                  | [GitHub](https://github.com/tmux/tmux/wiki/Installing) (package managers)                                             |
 | ugrep     | Alternative to `grep`                 | [Website](https://ugrep.com/) (package managers)                                                                      |
 | wget      | Plain old `wget`                      | Only for MacOS. On Linux `wget` is usually already installed.                                                         |
 | xxh       | Portable shell environments via ssh   | [GitHub](https://github.com/xxh/xxh) (binary download)                                                                |

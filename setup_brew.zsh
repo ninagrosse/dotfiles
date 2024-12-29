@@ -27,6 +27,15 @@ if [[ $(command -v bat) ]]; then
   fi
 fi
 
+# tmux: Symlink $HOME/.dotfiles/.config/tmux to $HOME/.config/tmux and install tpm (only once)
+if [[ $(command -v tmux) ]]; then
+  if [[ ! -L $HOME/.config/tmux ]]; then
+    mkdir -p $HOME/.config
+    ln -s $HOME/.dotfiles/.config/tmux $HOME/.config/tmux
+    [[ ! -d $HOME/.tmux/plugins/tpm ]] && git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+  fi
+fi
+
 # xxh: Symlink $HOME/.dotfiles/.config/xxh to $HOME/.config/xxh (only once)
 if [[ $(command -v xxh) ]]; then
   if [[ ! -L $HOME/.config/xxh ]]; then
