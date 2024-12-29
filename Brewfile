@@ -2,6 +2,7 @@
 # See packages.md for descriptions and alternative installation methods
 tap 'mike-engel/jwt-cli'
 brew 'bat'
+brew 'btop'
 brew "direnv"
 brew 'dysk'
 brew 'eza'

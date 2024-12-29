@@ -3,6 +3,7 @@
 | Name      | Description                           | Alternative Installation Methods                                                                                      |
 | --------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | bat       | Alternative to `cat`                  | [GitHub](https://github.com/sharkdp/bat?tab=readme-ov-file#installation) (package managers)                           |
+| btop      | Resource Monitor                      | [GitHub](https://github.com/aristocratos/btop) (package managers or binary download       )                           |
 | direnv    | Dynamic loading of `.envrc` or `.env` | [Website](https://direnv.net/docs/installation.html) (package managers)                                               |
 | dysk      | Filesystem / Disk Usage utility       | [Download binary](https://dystroy.org/dysk/install/) to `~/.local/bin`. Linux only. `brew install duf` on MacOS.      |
 | eza       | Alternative to `ls`                   | [GitHub](https://github.com/eza-community/eza/blob/main/INSTALL.md) (package managers)                                |
