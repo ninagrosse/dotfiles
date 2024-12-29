@@ -63,6 +63,14 @@ if [[ $(command -v yazi) ]]; then
   fi
 fi
 
+# zellij: Symlink $HOME/.dotfiles/.config/zellij to $HOME/.config/zellij (only once)
+if [[ $(command -v zellij) ]]; then
+  if [[ ! -L $HOME/.config/zellij ]]; then
+    mkdir -p $HOME/.config
+    ln -s $HOME/.dotfiles/.config/zellij $HOME/.config/zellij
+  fi
+fi
+
 echo
 echo "Done!"
 echo

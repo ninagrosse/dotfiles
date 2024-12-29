@@ -22,4 +22,5 @@
 | wget      | Plain old `wget`                      | Only for MacOS. On Linux `wget` is usually already installed.                                                         |
 | xxh       | Portable shell environments via ssh   | [GitHub](https://github.com/xxh/xxh) (binary download)                                                                |
 | yazi      | Terminal File Manager                 | [GitHub](https://github.com/sxyazi/yazi) (package managers or binary download)                                        |
+| zellij    | Terminal Multiplexer                  | [GitHub](https://github.com/zellij-org/zellij) (package managers or binary download)                                  |
 | zoxide    | A smart `cd`                          | [GitHub](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation) (package managers or binary download) |

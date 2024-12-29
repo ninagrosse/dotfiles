@@ -22,4 +22,5 @@ brew "ugrep"
 brew 'wget'
 brew "xxh"
 brew 'yazi'
+brew "zellij"
 brew "zoxide"
