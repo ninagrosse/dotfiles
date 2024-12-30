@@ -44,6 +44,7 @@ if [[ $(command -v tmux) ]]; then
   if [[ ! -f $HOME/.local/bin/tmux-cssh ]]; then
     mkdir -p $HOME/.local/bin
     wget -O $HOME/.local/bin/tmux-cssh https://github.com/zinic/tmux-cssh/raw/refs/heads/master/tmux-cssh
+    chmod +x $HOME/.local/bin/tmux-cssh
   fi
 fi
 
