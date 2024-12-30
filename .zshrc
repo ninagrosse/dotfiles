@@ -27,16 +27,16 @@ plugins=("${(f)$(< $HOME/.dotfiles/zsh/plugins/plugins.zsh)}")
 # Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-# Set preferred editor for local and remote sessions
-# Use vscode when using it, otherwise use nano
+# Set preferred editor
+# Use vscode when inside vscode terminal, otherwise use nvim
 if [[ -n $TERM_PROGRAM ]]; then
   if [[ $TERM_PROGRAM == 'vscode' ]]; then
     export EDITOR='code --wait'
   else
-    export EDITOR='nano'
+    export EDITOR='nvim'
   fi
 else
-  export EDITOR='nano'
+  export EDITOR='nvim'
 fi
 
 # Alias to reload zsh (e.g. after editing .zshrc or editing plugins)
