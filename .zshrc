@@ -125,3 +125,42 @@ fi
 
 # Load machine specific aliases, environment variables etc. from $HOME/.zshrc.local.zsh, if the file exists
 [[ -f $HOME/.zshrc.local.zsh ]] && source $HOME/.zshrc.local.zsh
+
+# Zellij settings
+if [[ $(command -v zellij) ]]; then
+  # If no session is running, create a new one
+  # If only one session is running, attach to it
+  # If two or more sessions are running, select one with fzf
+  function za() {
+    local ZJ_SESSIONS=$(zellij list-sessions -n -s)
+    local NO_SESSIONS=$(echo "${ZJ_SESSIONS}" | wc -l)
+    if [ "${NO_SESSIONS}" -ge 2 ]; then
+      zellij attach "$(echo "${ZJ_SESSIONS}" | fzf)"
+    else
+      zellij attach -c
+    fi
+  }
+
+  # More Zellij aliases
+  alias zl='zellij list-sessions'
+  alias zd='zellij delete-session'
+  alias zda='zellij delete-all-sessions'
+  alias zk='zellij kill-session'
+  alias zka='zellij kill-all-sessions'
+  alias zn='zellij' # creates a new session regardless of existing ones
+
+  # Autostart Zellij on shell creation
+  # This needs to be at the very end
+  export ZELLIJ_AUTO_ATTACH="true"
+  if [[ -z "$ZELLIJ" ]]; then
+    if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+        za
+    else
+        zellij
+    fi
+
+    if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+        exit
+    fi
+  fi
+fi
