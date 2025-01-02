@@ -151,6 +151,7 @@ if [[ $(command -v zellij) ]]; then
   alias zk='zellij kill-session'
   alias zka='zellij kill-all-sessions'
   alias zj='zellij' # creates a new session regardless of existing ones
+  alias zla='zellij --layout'
 
   # Autostart Zellij on shell creation
   # This needs to be at the very end
