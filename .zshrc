@@ -145,7 +145,7 @@ if [[ $(command -v zellij) ]]; then
   }
 
   # More Zellij aliases
-  alias zl='zellij list-sessions'
+  alias zls='zellij list-sessions'
   alias zd='zellij delete-session'
   alias zda='zellij delete-all-sessions'
   alias zk='zellij kill-session'
