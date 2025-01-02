@@ -131,16 +131,19 @@ fi
 
 # Zellij settings
 if [[ $(command -v zellij) ]]; then
-  # If no session is running, create a new one
-  # If only one session is running, attach to it
-  # If two or more sessions are running, select one with fzf
+  # Function to either attach/resurrect a session or create a new one, if none exists
+  # No session: create new session
+  # One session (alive or exited): attach / resurrect session
+  # Two or more sessions (alive or exited): select session with fzf
   function za() {
     local ZJ_SESSIONS=$(zellij list-sessions -n -s)
-    local NO_SESSIONS=$(echo "${ZJ_SESSIONS}" | wc -l)
-    if [ "${NO_SESSIONS}" -ge 2 ]; then
+    local NO_SESSIONS=$(echo "${ZJ_SESSIONS}" | wc -w)
+    if [ "${NO_SESSIONS}" -eq 1 ]; then
+      zellij attach "$ZJ_SESSIONS"
+    elif [ "${NO_SESSIONS}" -ge 2 ]; then
       zellij attach "$(echo "${ZJ_SESSIONS}" | fzf)"
     else
-      zellij attach -c
+      zellij
     fi
   }
 
