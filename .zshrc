@@ -29,12 +29,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Set preferred editor
 # Use vscode when inside vscode terminal, otherwise use nvim
-if [[ -n $TERM_PROGRAM ]]; then
-  if [[ $TERM_PROGRAM == 'vscode' ]]; then
-    export EDITOR='code --wait'
-  else
-    export EDITOR='nvim'
-  fi
+if [[ $TERM_PROGRAM == 'vscode' ]]; then
+  export EDITOR='code --wait'
 else
   export EDITOR='nvim'
 fi
