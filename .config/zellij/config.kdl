@@ -3,10 +3,6 @@ keybinds clear-defaults=true {
         bind "Ctrl f" { SwitchToMode "normal"; }
     }
     pane {
-        bind "left" { MoveFocus "left"; }
-        bind "down" { MoveFocus "down"; }
-        bind "up" { MoveFocus "up"; }
-        bind "right" { MoveFocus "right"; }
         bind "c" { SwitchToMode "renamepane"; PaneNameInput 0; }
         bind "d" { NewPane "down"; SwitchToMode "locked"; }
         bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "locked"; }
@@ -24,10 +20,6 @@ keybinds clear-defaults=true {
         bind "tab" { SwitchFocus; }
     }
     tab {
-        bind "left" { GoToPreviousTab; }
-        bind "down" { GoToNextTab; }
-        bind "up" { GoToPreviousTab; }
-        bind "right" { GoToNextTab; }
         bind "1" { GoToTab 1; SwitchToMode "locked"; }
         bind "2" { GoToTab 2; SwitchToMode "locked"; }
         bind "3" { GoToTab 3; SwitchToMode "locked"; }
@@ -52,10 +44,6 @@ keybinds clear-defaults=true {
         bind "tab" { ToggleTab; }
     }
     resize {
-        bind "left" { Resize "Increase left"; }
-        bind "down" { Resize "Increase down"; }
-        bind "up" { Resize "Increase up"; }
-        bind "right" { Resize "Increase right"; }
         bind "+" { Resize "Increase"; }
         bind "-" { Resize "Decrease"; }
         bind "=" { Resize "Increase"; }
@@ -70,10 +58,6 @@ keybinds clear-defaults=true {
         bind "r" { SwitchToMode "normal"; }
     }
     move {
-        bind "left" { MovePane "left"; }
-        bind "down" { MovePane "down"; }
-        bind "up" { MovePane "up"; }
-        bind "right" { MovePane "right"; }
         bind "h" { MovePane "left"; }
         bind "j" { MovePane "down"; }
         bind "k" { MovePane "up"; }
@@ -129,23 +113,15 @@ keybinds clear-defaults=true {
         }
     }
     shared_among "normal" "locked" {
-        bind "Ctrl left" { MoveFocusOrTab "left"; }
-        bind "Ctrl down" { MoveFocus "down"; }
-        bind "Ctrl up" { MoveFocus "up"; }
-        bind "Ctrl right" { MoveFocusOrTab "right"; }
         bind "Ctrl +" { Resize "Increase"; }
         bind "Ctrl -" { Resize "Decrease"; }
         bind "Ctrl =" { Resize "Increase"; }
         bind "Ctrl i" { PreviousSwapLayout; }
         bind "Ctrl o" { NextSwapLayout; }
-        // bind "Ctrl f" { ToggleFloatingPanes; }
         bind "Ctrl h" { MoveFocusOrTab "left"; }
-        // bind "Ctrl i" { MoveTab "left"; }
         bind "Ctrl j" { MoveFocus "down"; }
         bind "Ctrl k" { MoveFocus "up"; }
         bind "Ctrl l" { MoveFocusOrTab "right"; }
-        // bind "Ctrl n" { NewPane; }
-        // bind "Ctrl o" { MoveTab "right"; }
     }
     shared_except "locked" "renametab" "renamepane" {
         bind "Ctrl f" { SwitchToMode "locked"; }
