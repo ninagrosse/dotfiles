@@ -7,6 +7,7 @@ My personal dotfiles
 - Automatic setup and installation of various [Homebrew](https://brew.sh/) packages. See [`Brewfile`](Brewfile) and [`setup_brew.zsh`](setup_brew.zsh). Descriptions of the packages and alternative installation methods without Homebrew are provided in [`packages.md`](packages.md).
 - Creation of a new .gitconfig in the user home which includes the settings from this repo's [`.gitconfig`](.gitconfig). See [`setup_gitconfig.sh`](setup_gitconfig.sh).
 - Backups of my [Solaar](https://github.com/pwr-Solaar/Solaar) configuration for MX Keys and MX Anywhere 3.
+- Some generic `.bash_aliases` for when using bash. Install with `wget -O $HOME/.bash_aliases https://github.com/ninagrosse/dotfiles/raw/refs/heads/main/.bash_aliases`
 
 ## Prerequisites
 To use the setup scripts, zsh and Homebrew need to be installed manually first. See their respective docs for instructions. After installing, `setup_zsh.sh` should be run first, because `setup_brew.zsh` requires oh-my-zsh to be installed. If Homebrew isn't used or can't be installed, just skip its installation and setup.
