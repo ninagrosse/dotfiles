@@ -116,6 +116,9 @@ if [[ $(command -v yazi) ]]; then
   }
 fi
 
+# lazydocker alias
+alias lzd='lazydocker'
+
 # Function for lazygit to start it with just 'lg' and cd into the repo, if switched within lazygit
 function lg() {
   export LAZYGIT_NEW_DIR_FILE=~/.lazygit/newdir

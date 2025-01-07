@@ -1,6 +1,7 @@
 # Homebrew packages
 # See packages.md for descriptions and alternative installation methods
 tap 'mike-engel/jwt-cli'
+tap 'jesseduffield/lazydocker'
 tap 'jesseduffield/lazygit'
 brew 'bat'
 brew 'btop'
@@ -13,6 +14,7 @@ brew 'fzf'
 brew 'git-delta'
 brew 'httpie'
 brew 'jq'
+brew 'jesseduffield/lazydocker/lazydocker'
 brew 'jesseduffield/lazygit/lazygit'
 brew 'mike-engel/jwt-cli/jwt-cli'
 brew 'neovim'

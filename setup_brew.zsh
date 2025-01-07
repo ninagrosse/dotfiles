@@ -29,6 +29,14 @@ if [[ $(command -v bat) ]]; then
   fi
 fi
 
+# lazydocker: Symlink $HOME/.dotfiles/.config/lazydocker to $HOME/.config/lazydocker (only once)
+if [[ $(command -v lazydocker) ]]; then
+  if [[ ! -L $HOME/.config/lazydocker ]]; then
+    mkdir -p $HOME/.config
+    ln -s $HOME/.dotfiles/.config/lazydocker $HOME/.config/lazydocker
+  fi
+fi
+
 # lazygit: Symlink $HOME/.dotfiles/.config/lazygit to $HOME/.config/lazygit (only once)
 if [[ $(command -v lazygit) ]]; then
   if [[ ! -L $HOME/.config/lazygit ]]; then
