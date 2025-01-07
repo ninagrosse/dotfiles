@@ -85,8 +85,17 @@ image_alloc      = 536870912  # 512MB
 image_bound      = [ 0, 0 ]
 suppress_preload = false
 
-[plugin]
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*"
+run = "git"
 
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*/"
+run = "git"
+
+[plugin]
 fetchers = [
 	# Mimetype
 	{ id = "mime", name = "*", run = "mime", if = "!mime", prio = "high" },
