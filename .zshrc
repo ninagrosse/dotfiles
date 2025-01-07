@@ -119,15 +119,8 @@ fi
 # lazydocker alias
 alias lzd='lazydocker'
 
-# Function for lazygit to start it with just 'lg' and cd into the repo, if switched within lazygit
-function lg() {
-  export LAZYGIT_NEW_DIR_FILE=~/.lazygit/newdir
-  lazygit "$@"
-  if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
-    cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
-    rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
-  fi
-}
+# lazigit alias
+alias lg='lazygit'
 
 # Replace cd with z (zoxide), if it is installed
 [[ $(command -v zoxide) ]] && alias cd="z"
