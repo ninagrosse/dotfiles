@@ -29,6 +29,14 @@ if [[ $(command -v bat) ]]; then
   fi
 fi
 
+# lazygit: Symlink $HOME/.dotfiles/.config/lazygit to $HOME/.config/lazygit (only once)
+if [[ $(command -v lazygit) ]]; then
+  if [[ ! -L $HOME/.config/lazygit ]]; then
+    mkdir -p $HOME/.config
+    ln -s $HOME/.dotfiles/.config/lazygit $HOME/.config/lazygit
+  fi
+fi
+
 # tmux setup (only once)
 # - Symlink $HOME/.dotfiles/.config/tmux to $HOME/.config/tmux 
 # - Install tpm
