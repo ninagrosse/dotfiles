@@ -3,3 +3,4 @@
 !plugins.common.zsh
 !setup_brew.zsh
 Brewfile.lock.json
+.config/lazygit/state.yml
