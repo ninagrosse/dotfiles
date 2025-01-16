@@ -9,7 +9,7 @@ My personal dotfiles
 - Creation of a new .gitconfig in the user home which includes the settings from this repo's [`.gitconfig`](.gitconfig). See [`setup_gitconfig.sh`](setup_gitconfig.sh).
 - Backups of my [Solaar](https://github.com/pwr-Solaar/Solaar) configuration for MX Keys and MX Anywhere 3.
 - Some generic `.bash_aliases` for when using bash. Install with `wget -O $HOME/.bash_aliases https://github.com/ninagrosse/dotfiles/raw/refs/heads/main/.bash_aliases`
-- Simple `.vimrc` for when using vim. Symlink with `ln -s $HOME/.dotfiles/.vimrc $HOME/.vimrc`
+- Simple `.vimrc` for when using vim. Symlink with `ln -s $HOME/.dotfiles/.vimrc $HOME/.vimrc` or download with `wget -O $HOME/.vimrc https://github.com/ninagrosse/dotfiles/raw/refs/heads/main/.vimrc`
 
 ## Prerequisites
 
