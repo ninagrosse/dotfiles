@@ -1,7 +1,7 @@
 FROM --platform=linux/amd64 ubuntu:24.04
 
 # Must have packages
-RUN apt-get update && apt-get upgrade -y && apt-get install -y vim nano curl git zsh tree build-essential
+RUN apt-get update && apt-get upgrade -y && apt-get install -y vim nano curl git zsh tree build-essential stow
 RUN NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Copy .dotfiles to image

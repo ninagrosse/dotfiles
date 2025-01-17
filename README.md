@@ -44,7 +44,7 @@ exec zsh
 
 ## Testing
 
-To test the setup scripts, there is a [`Dockerfile`](Dockerfile) which is based on the latest Ubuntu. It installs some required tools (`vim nano curl git zsh brew tree build-essential`) and copies all dotfiles, except the .gitignore'd ones, to `/root/.dotfiles`.
+To test the setup scripts, there is a [`Dockerfile`](Dockerfile) which is based on the latest Ubuntu. It installs some required tools (`vim nano curl git zsh brew tree build-essential stow`) and copies all dotfiles, except the .gitignore'd ones, to `/root/.dotfiles`.
 
 Build the image with `docker build -t <some tag> .`
 
