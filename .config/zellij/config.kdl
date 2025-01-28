@@ -18,6 +18,8 @@ keybinds clear-defaults=true {
         bind "x" { CloseFocus; SwitchToMode "locked"; }
         bind "z" { TogglePaneFrames; SwitchToMode "locked"; }
         bind "tab" { SwitchFocus; }
+        bind "i" { PreviousSwapLayout; }
+        bind "o" { NextSwapLayout; }
     }
     tab {
         bind "1" { GoToTab 1; SwitchToMode "locked"; }
@@ -116,8 +118,6 @@ keybinds clear-defaults=true {
         bind "Ctrl +" { Resize "Increase"; }
         bind "Ctrl -" { Resize "Decrease"; }
         bind "Ctrl =" { Resize "Increase"; }
-        bind "Ctrl i" { PreviousSwapLayout; }
-        bind "Ctrl o" { NextSwapLayout; }
         bind "Ctrl h" {
             MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.2.1/vim-zellij-navigator.wasm" {
                 name "move_focus_or_tab";
