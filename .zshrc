@@ -128,6 +128,9 @@ alias lg='lazygit'
 # Initialize atuin
 eval "$(atuin init zsh)"
 
+# Controls Zellij autostart. Overwrite in .zshrc.local.zsh to disable.
+export ZELLIJ_AUTO_START="true"
+
 # Load machine specific aliases, environment variables etc. from $HOME/.zshrc.local.zsh, if the file exists
 [[ -f $HOME/.zshrc.local.zsh ]] && source $HOME/.zshrc.local.zsh
 
@@ -158,18 +161,9 @@ if [[ $(command -v zellij) ]]; then
   alias zj='zellij' # creates a new session regardless of existing ones
   alias zla='zellij --layout'
 
-  # Autostart Zellij on shell creation
-  # This needs to be at the very end
-  export ZELLIJ_AUTO_ATTACH="true"
-  if [[ -z "$ZELLIJ" ]]; then
-    if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-        za
-    else
-        zellij
-    fi
-
-    if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
-        exit
-    fi
+  # Autostart Zellij on shell creation, if it's not already running.
+  # This needs to be at the very end of .zshrc
+  if [[ -z "$ZELLIJ" && "$ZELLIJ_AUTO_START" == "true" ]]; then
+    za
   fi
 fi
