@@ -2,6 +2,7 @@
 
 | Name      | Description                           | Alternative Installation Methods                                                                                      |
 | --------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| atuin     | Shell history tool                  | [GitHub](https://github.com/atuinsh/atuin) (package managers)                           |
 | bat       | Alternative to `cat`                  | [GitHub](https://github.com/sharkdp/bat?tab=readme-ov-file#installation) (package managers)                           |
 | btop      | Resource Monitor                      | [GitHub](https://github.com/aristocratos/btop) (package managers or binary download       )                           |
 | direnv    | Dynamic loading of `.envrc` or `.env` | [Website](https://direnv.net/docs/installation.html) (package managers)                                               |

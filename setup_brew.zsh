@@ -2,7 +2,7 @@
 
 echo "Setting up and installing brew packages"
 
-# Source omz brew plugin, so brew shellenv is initialized for the first time and 
+# Source omz brew plugin, so brew shellenv is initialized for the first time and
 # we can use 'brew bundle' to install packages
 source ${ZSH:-~/.oh-my-zsh}/plugins/brew/brew.plugin.zsh
 
@@ -11,7 +11,7 @@ brew bundle
 
 # Create $HOME/.dotfiles/zsh/plugins/plugins.brew.zsh to load brew specific omz-plugins
 # This should at least contain the brew plugin, so the brew shellenv gets loaded in subsequent .zshrc
-cat <<EOT > $HOME/.dotfiles/zsh/plugins/plugins.brew.zsh
+cat <<EOT >$HOME/.dotfiles/zsh/plugins/plugins.brew.zsh
 brew
 direnv
 fzf
@@ -19,6 +19,14 @@ tmux
 tmux-cssh
 zoxide
 EOT
+
+# atuin: Symlink $HOME/.dotfiles/.config/atuin to $HOME/.config/atuin (only once)
+if [[ $(command -v atuin) ]]; then
+  if [[ ! -L $HOME/.config/atuin ]]; then
+    mkdir -p $HOME/.config
+    ln -sf $HOME/.dotfiles/.config/atuin $HOME/.config/atuin
+  fi
+fi
 
 # bat: Symlink $HOME/.dotfiles/.config/bat to $HOME/.config/bat (only once)
 if [[ $(command -v bat) ]]; then
@@ -46,7 +54,7 @@ if [[ $(command -v lazygit) ]]; then
 fi
 
 # tmux setup (only once)
-# - Symlink $HOME/.dotfiles/.config/tmux to $HOME/.config/tmux 
+# - Symlink $HOME/.dotfiles/.config/tmux to $HOME/.config/tmux
 # - Install tpm
 # - Download tmux-cssh
 if [[ $(command -v tmux) ]]; then

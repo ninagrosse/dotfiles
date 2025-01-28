@@ -3,6 +3,7 @@
 tap 'mike-engel/jwt-cli'
 tap 'jesseduffield/lazydocker'
 tap 'jesseduffield/lazygit'
+brew 'atuin'
 brew 'bat'
 brew 'btop'
 brew "direnv"
