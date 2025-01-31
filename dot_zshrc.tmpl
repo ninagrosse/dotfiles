@@ -46,8 +46,8 @@ plugins=(
   zoxide
 )
 
-{{- if eq .osid "darwin" -}}
-# Mac specific plugins
+# OS specific plugins
+{{- if eq .osid "darwin" }}
 plugins+=(
   brew
   docker
@@ -55,16 +55,14 @@ plugins+=(
 )
 # Disable Homebrew hints
 export HOMEBREW_NO_ENV_HINTS=1
-{{- else if eq .osid "linux-ubuntu" "linux-debian" -}}
-# Ubuntu/Debian specific plugins
-# (use ubuntu plugin on both because the aliases for apt are better)
+{{ else if eq .osid "linux-ubuntu" "linux-debian" }}
 plugins+=(
   ubuntu
 )
-{{- end -}}
+{{- end }}
 
 # Host specific plugins
-{{- if eq .chezmoi.hostname "nina-desktop" "RTY-6495672069" "docker" -}}
+{{- if eq .chezmoi.hostname "nina-desktop" "RTY-6495672069" "docker" }}
 plugins+=(
   brew
   docker
@@ -72,7 +70,7 @@ plugins+=(
 )
 # Disable Homebrew hints
 export HOMEBREW_NO_ENV_HINTS=1
-{{- end -}}
+{{- end }}
 
 # Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -193,11 +191,10 @@ function za() {
 # Controls Zellij autostart. Set to "false" in host specifc settings to disable.
 export ZELLIJ_AUTO_START="true"
 
-{{- if eq .chezmoi.hostname "RTY-6495672069" -}}
 ############################################################################
 ### Host specific settings, variables, aliases, ...
 ############################################################################
-
+{{- if eq .chezmoi.hostname "RTY-6495672069" }}
 alias winhome="cd /mnt/c/Users/GROS145"
 
 # lazydocker alias
@@ -217,7 +214,7 @@ export M2_HOME=/home/linuxbrew/.linuxbrew/Cellar/maven/3.9.9
 export M2=$M2_HOME/bin
 export MAVEN_OPTS='-Xms256m -Xmx512m'
 export PATH=$M2:$PATH
-{{- end -}}
+{{- end }}
 
 ############################################################################
 ### Autostart Zellij on shell creation, if it's not already running.
