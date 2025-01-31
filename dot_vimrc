@@ -25,6 +25,7 @@ set softtabstop=0
 " set nocompatible
 syntax on
 filetype on
+set modeline
 
 set ruler
 set rulerformat=%=%h%m%r%w\ %(%c%V%),%l/%L\ %P
