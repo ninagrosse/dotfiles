@@ -55,7 +55,7 @@ plugins+=(
 )
 # Disable Homebrew hints
 export HOMEBREW_NO_ENV_HINTS=1
-{{- else if eq .osid "linux-ubuntu" "linux-debian"-}}
+{{- else if eq .osid "linux-ubuntu" "linux-debian" -}}
 # Ubuntu/Debian specific plugins
 # (use ubuntu plugin on both because the aliases for apt are better)
 plugins+=(
@@ -64,7 +64,7 @@ plugins+=(
 {{- end -}}
 
 # Host specific plugins
-{{- if eq .chezmoi.hostname "nina-desktop" "RTY-6495672069" "docker" }}
+{{- if eq .chezmoi.hostname "nina-desktop" "RTY-6495672069" "docker" -}}
 plugins+=(
   brew
   docker
