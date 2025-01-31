@@ -1,0 +1,12 @@
+[user]
+  name = {{ .gituser | quote }}
+  email = {{ .gitemail | quote }}
+[init]
+  defaultBranch = main
+[pull]
+  rebase = true
+[core]
+  pager = delta
+  autocrlf = input
+[delta]
+  line-numbers = true
