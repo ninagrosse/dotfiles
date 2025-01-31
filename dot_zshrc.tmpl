@@ -9,7 +9,7 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the oh-my-zsh theme to load
-# The theme only loads while starship prompt is not installed and activated 
+# The theme only loads while starship prompt is not installed and activated
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="bira"
 
@@ -46,31 +46,36 @@ plugins=(
   zoxide
 )
 
-{{- if eq .osid "darwin" }}
+{{- if eq .osid "darwin" -}}
 # Mac specific plugins
 plugins+=(
   brew
   docker
   docker-compose
 )
-
 # Disable Homebrew hints
 export HOMEBREW_NO_ENV_HINTS=1
-{{- end }}
+{{- else if eq .osid "linux-ubuntu" "linux-debian"-}}
+# Ubuntu/Debian specific plugins
+# (use ubuntu plugin on both because the aliases for apt are better)
+plugins+=(
+  ubuntu
+)
+{{- end -}}
 
-{{- if eq .chezmoi.hostname "nina-desktop" "RTY-6495672069" }}
 # Host specific plugins
+{{- if eq .chezmoi.hostname "nina-desktop" "RTY-6495672069" "docker" }}
 plugins+=(
   brew
   docker
   docker-compose
-  ubuntu
 )
-{{- end }}
+# Disable Homebrew hints
+export HOMEBREW_NO_ENV_HINTS=1
+{{- end -}}
 
 # Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
-
 
 ############################################################################
 ### Aliases
@@ -86,8 +91,8 @@ alias zshrc='chezmoi edit ${ZDOTDIR:-$HOME}/.zshrc'
 alias cat='bat'
 
 # More eza aliases
-alias l='ll' # make alias l the same as ll (eza -gl)
-alias lt='ls --tree' # tree alias (ls is already aliased to eza)
+alias l='ll'             # make alias l the same as ll (eza -gl)
+alias lt='ls --tree'     # tree alias (ls is already aliased to eza)
 alias lat='ls -a --tree' # tree alias including hidden folder/files
 
 # Pipe output to fzf with 'command F' instead of 'command | fzf'
@@ -100,9 +105,6 @@ alias fgrep='ug -F'
 alias xzgrep='ug -z'
 alias xzegrep='ug -zE'
 alias xzfgrep='ug -zF'
-
-# lazydocker alias
-alias lzd='lazydocker'
 
 # lazigit alias
 alias lg='lazygit'
@@ -118,7 +120,6 @@ alias zk='zellij kill-session'
 alias zka='zellij kill-all-sessions'
 alias zj='zellij' # creates a new session regardless of existing ones
 alias zla='zellij --layout'
-
 
 ############################################################################
 ### Tools initializations & settings
@@ -158,8 +159,8 @@ _fzf_comprun() {
   local command=$1
   shift
   case "$command" in
-    cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
-    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
+  cd) fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+  *) fzf --preview "$show_file_or_dir_preview" "$@" ;;
   esac
 }
 
@@ -192,13 +193,15 @@ function za() {
 # Controls Zellij autostart. Set to "false" in host specifc settings to disable.
 export ZELLIJ_AUTO_START="true"
 
-
+{{- if eq .chezmoi.hostname "RTY-6495672069" -}}
 ############################################################################
 ### Host specific settings, variables, aliases, ...
 ############################################################################
 
-{{- if eq .chezmoi.hostname "RTY-6495672069" }}
 alias winhome="cd /mnt/c/Users/GROS145"
+
+# lazydocker alias
+alias lzd='lazydocker'
 
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
@@ -214,8 +217,7 @@ export M2_HOME=/home/linuxbrew/.linuxbrew/Cellar/maven/3.9.9
 export M2=$M2_HOME/bin
 export MAVEN_OPTS='-Xms256m -Xmx512m'
 export PATH=$M2:$PATH
-{{- end }}
-
+{{- end -}}
 
 ############################################################################
 ### Autostart Zellij on shell creation, if it's not already running.
@@ -225,3 +227,5 @@ export PATH=$M2:$PATH
 if [[ -z "$ZELLIJ" && "$ZELLIJ_AUTO_START" == "true" ]]; then
   za
 fi
+
+# vim:filetype=zsh
