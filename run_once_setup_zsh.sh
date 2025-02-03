@@ -3,7 +3,7 @@
 # Check if oh-my-zsh is installed, if not install it
 if [[ ! -d $HOME/.oh-my-zsh ]]; then
   echo "Installing oh-my-zsh"
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
   if [ $? -gt 0 ]; then
     echo "Error installing oh-my-zsh. Abort."
     exit 1
