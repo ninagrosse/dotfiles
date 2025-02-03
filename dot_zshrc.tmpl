@@ -57,6 +57,7 @@ plugins+=(
 export HOMEBREW_NO_ENV_HINTS=1
 {{ else if eq .osid "linux-ubuntu" "linux-debian" }}
 plugins+=(
+  brew
   ubuntu
 )
 {{- end }}
@@ -64,7 +65,6 @@ plugins+=(
 # Host specific plugins
 {{- if eq .chezmoi.hostname "nina-desktop" "RTY-6495672069" "docker" }}
 plugins+=(
-  brew
   docker
   docker-compose
 )
