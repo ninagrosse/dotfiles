@@ -12,7 +12,7 @@ My personal dotfiles, managed with [chezmoi](https://github.com/twpayne/chezmoi)
 One-line Installation
 
 ```shell
-sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply ninagrosse --branch chezmoi --ssh
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply ninagrosse --ssh
 ```
 
 This installs `chezmoi`, clones the repo and applies everything. For cloning with https instead, omit `--ssh`.
