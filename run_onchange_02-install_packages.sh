@@ -36,3 +36,9 @@ brew 'yazi'
 brew "zellij"
 brew "zoxide"
 EOF
+
+# Build bat cache so it can pick up Catppuccin theme
+bat cache --build
+
+# Run 'ya pack' to install yazi plugins and theme
+ya pack -i
