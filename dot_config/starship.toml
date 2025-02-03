@@ -1,0 +1,10 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# [username]
+# show_always = true
+#
+# [hostname]
+# ssh_only = false
+
+# [os]
+# disabled = false
