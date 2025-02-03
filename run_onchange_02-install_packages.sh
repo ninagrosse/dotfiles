@@ -28,7 +28,6 @@ brew 'neovim'
 brew 'ripgrep'
 brew 'starship'
 brew "tealdeer"
-brew "tmux"
 brew "ugrep"
 brew 'wget'
 brew "xxh"
