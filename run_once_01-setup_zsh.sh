@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Check for zsh
+if [[ ! $(command -v zsh) ]]; then
+  echo "zsh is not installed. Please install it first and then run 'chezmoi apply' again."
+fi
+
 # Check if oh-my-zsh is installed, if not install it
 if [[ ! -d $HOME/.oh-my-zsh ]]; then
   echo "Installing oh-my-zsh"
