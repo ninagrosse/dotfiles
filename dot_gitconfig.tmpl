@@ -1,3 +1,6 @@
+[user]
+  name = {{ .gituser | quote }}
+  email = {{ .gitemail | quote }}
 [init]
   defaultBranch = main
 [pull]
@@ -7,3 +10,5 @@
   autocrlf = input
 [delta]
   line-numbers = true
+
+# vim:filetype=gitconfig

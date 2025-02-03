@@ -38,3 +38,5 @@ hosts:
 #    +hh: /tmp/.xxh       # use special xxh home directory (++host-xxh-home)
 #    +if:                 # force reinstall xxh every connect (++install-force)
 #    +hhr:                # remove host xxh home after disconnect (++host-xxh-home-remove)
+#
+# vim:filetype=yaml
