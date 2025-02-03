@@ -188,13 +188,16 @@ function za() {
   fi
 }
 
-# Controls Zellij autostart. Set to "false" in host specifc settings to disable.
-export ZELLIJ_AUTO_START="true"
+# Controls Zellij autostart. Set to "true" in host specifc settings to enable.
+export ZELLIJ_AUTO_START="false"
 
 ############################################################################
 ### Host specific settings, variables, aliases, ...
 ############################################################################
 {{- if eq .chezmoi.hostname "RTY-6495672069" }}
+# autostart zellij
+export ZELLIJ_AUTO_START="true"
+
 alias winhome="cd /mnt/c/Users/GROS145"
 
 # lazydocker alias
