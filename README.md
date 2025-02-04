@@ -15,6 +15,14 @@ One-line Installation
 sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply ninagrosse --ssh
 ```
 
-This installs `chezmoi`, clones the repo and applies everything. For cloning with https instead, omit `--ssh`.
+This installs `chezmoi`, clones the repo and applies everything. Follow the on-screen prompts to setup git email and username. For cloning with https instead, omit `--ssh`.
 
-Follow the on-screen prompts to setup git email and username. Afterwards, all packages in [`run_onchange_02-install_packages.sh`](run_onchange_02-install_packages.sh) will be installed.
+## Scripts description
+
+#### [`run_once_01-setup_zsh.sh`](run_once_01-setup_zsh.sh)
+
+Installs `oh-my-zsh`, `zsh-autosuggestions` and `zsh-syntax-highlighting`, if they are not already installed.
+
+#### [`run_onchange_02-install_packages.sh`](run_onchange_02-install_packages.sh)
+
+Installs various CLI tools and apps with Homebrew and performs necessary setups if needed.
