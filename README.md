@@ -23,6 +23,6 @@ This installs `chezmoi`, clones the repo and applies everything. Follow the on-s
 
 Installs `oh-my-zsh`, `zsh-autosuggestions` and `zsh-syntax-highlighting`, if they are not already installed.
 
-#### [`run_onchange_02-install_packages.sh`](run_onchange_02-install_packages.sh)
+#### [`run_onchange_02-install_packages.sh.tmpl`](run_onchange_02-install_packages.sh.tmpl)
 
 Installs various CLI tools and apps with Homebrew and performs necessary setups if needed.

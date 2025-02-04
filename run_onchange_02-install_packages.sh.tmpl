@@ -39,5 +39,9 @@ EOF
 # Build bat cache so it can pick up Catppuccin theme
 bat cache --build
 
-# Run 'ya pack' to install yazi plugins and theme
+# Run 'ya pack' to install yazi plugins and themes
+# Include hash of yazis package.toml, so the script gets executed when package.toml changes
+# {{ include "dot_config/yazi/package.toml" | sha256sum }}
 ya pack -i
+
+# vim:filetype=zsh
