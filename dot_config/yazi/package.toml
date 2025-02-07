@@ -1,5 +1,8 @@
 [plugin]
-deps = [{ use = "yazi-rs/plugins:git", rev = "02d18be" }, { use = "yazi-rs/plugins:jump-to-char", rev = "02d18be" }, { use = "Rolv-Apneseth/starship", rev = "af8bf6f" }]
+deps = [
+  { use = "yazi-rs/plugins:git", rev = "02d18be" },
+  { use = "yazi-rs/plugins:jump-to-char", rev = "02d18be" },
+]
 
 [flavor]
 deps = [{ use = "yazi-rs/flavors:catppuccin-mocha", rev = "fd85060" }]
