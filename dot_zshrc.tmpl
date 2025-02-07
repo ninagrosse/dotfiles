@@ -34,6 +34,8 @@ plugins+=(
   docker
   docker-compose
 )
+# lazydocker alias
+alias lzd='lazydocker'
 # Disable Homebrew hints
 export HOMEBREW_NO_ENV_HINTS=1
 {{ else if eq .osid "linux-ubuntu" "linux-debian" }}
@@ -51,6 +53,8 @@ plugins+=(
   docker
   docker-compose
 )
+# lazydocker alias
+alias lzd='lazydocker'
 {{- end }}
 
 # General plugins that should be loaded on every host
@@ -199,9 +203,6 @@ export ZELLIJ_AUTO_START="true"
 
 alias winhome="cd /mnt/c/Users/GROS145"
 
-# lazydocker alias
-alias lzd='lazydocker'
-
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
@@ -239,9 +240,6 @@ fi
 
 # Init cargo / rust
 source $HOME/.cargo/env
-
-# lazydocker alias
-alias lzd='lazydocker'
 
 # Launch Neovim with the old kickstart config
 alias nk='NVIM_APPNAME=nvim-kickstart nvim'
