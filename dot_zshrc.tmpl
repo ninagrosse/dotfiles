@@ -245,6 +245,12 @@ source $HOME/.cargo/env
 alias nk='NVIM_APPNAME=nvim-kickstart nvim'
 {{- end }}
 
+{{- if eq .chezmoi.hostname "docker" }}
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+{{- end }}
+
 ############################################################################
 ### Autostart Zellij on shell creation, if it's not already running.
 ### This needs to be at the very end of .zshrc
