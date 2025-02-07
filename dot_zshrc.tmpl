@@ -218,6 +218,35 @@ export MAVEN_OPTS='-Xms256m -Xmx512m'
 export PATH=$M2:$PATH
 {{- end }}
 
+{{- if eq .chezmoi.hostname "nina-desktop" }}
+# autostart zellij
+export ZELLIJ_AUTO_START="true"
+
+# Add nodebrew to PATH
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# Init ssh-agent so vscode can forward the keys to a dev container
+if [ -z "$SSH_AUTH_SOCK" ]; then
+  # Check for a currently running instance of the agent
+  RUNNING_AGENT="$(ps -ax | grep 'ssh-agent -s' | grep -v grep | wc -l | tr -d '[:space:]')"
+  if [ "$RUNNING_AGENT" = "0" ]; then
+    # Launch a new instance of the agent
+    ssh-agent -s &>$HOME/.ssh/ssh-agent
+  fi
+  eval $(cat $HOME/.ssh/ssh-agent) >/dev/null
+  ssh-add $HOME/.ssh/id_ed25519 2>/dev/null
+fi
+
+# Init cargo / rust
+source $HOME/.cargo/env
+
+# lazydocker alias
+alias lzd='lazydocker'
+
+# Launch Neovim with the old kickstart config
+alias nk='NVIM_APPNAME=nvim-kickstart nvim'
+{{- end }}
+
 ############################################################################
 ### Autostart Zellij on shell creation, if it's not already running.
 ### This needs to be at the very end of .zshrc
