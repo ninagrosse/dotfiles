@@ -203,19 +203,6 @@ export ZELLIJ_AUTO_START="false"
 export ZELLIJ_AUTO_START="true"
 {{- end }}
 
-{{- if eq .chezmoi.hostname "RTY-6495672069" }}
-alias winhome="cd /mnt/c/Users/GROS145"
-alias nk='NVIM_APPNAME=nvim-kickstart nvim'
-# Set JAVA_HOME, so java 17 is used and not java 23 installed through homebrew
-export JAVA_HOME=/usr/lib/jvm/temurin-17-jdk-amd64
-export PATH=$JAVA_HOME:$PATH
-# maven config
-export M2_HOME=/home/linuxbrew/.linuxbrew/Cellar/maven/3.9.9
-export M2=$M2_HOME/bin
-export MAVEN_OPTS='-Xms256m -Xmx512m'
-export PATH=$M2:$PATH
-{{- end }}
-
 {{- if eq .chezmoi.hostname "nina-desktop" }}
 # Init ssh-agent so vscode can forward the keys to a dev container
 if [ -z "$SSH_AUTH_SOCK" ]; then
@@ -245,6 +232,19 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 # To use gnu-tar from homebrew as tar
 export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
+{{- end }}
+
+{{- if eq .chezmoi.hostname "RTY-6495672069" }}
+alias winhome="cd /mnt/c/Users/GROS145"
+alias nk='NVIM_APPNAME=nvim-kickstart nvim'
+# Set JAVA_HOME, so java 17 is used and not java 23 installed through homebrew
+export JAVA_HOME=/usr/lib/jvm/temurin-17-jdk-amd64
+export PATH=$JAVA_HOME:$PATH
+# maven config
+export M2_HOME=/home/linuxbrew/.linuxbrew/Cellar/maven/3.9.9
+export M2=$M2_HOME/bin
+export MAVEN_OPTS='-Xms256m -Xmx512m'
+export PATH=$M2:$PATH
 {{- end }}
 
 ############################################################################
