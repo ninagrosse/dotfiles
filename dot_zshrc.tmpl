@@ -66,6 +66,7 @@ plugins+=(
   fzf
   git
   history
+  nvm
   rsync
   ssh
   systemadmin
@@ -203,9 +204,6 @@ export ZELLIJ_AUTO_START="true"
 
 alias winhome="cd /mnt/c/Users/GROS145"
 
-# nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
 alias nk='NVIM_APPNAME=nvim-kickstart nvim'
 
 # Set JAVA_HOME, so java 17 is used and not java 23 installed through homebrew
@@ -240,13 +238,6 @@ source $HOME/.cargo/env
 
 # Launch Neovim with the old kickstart config
 alias nk='NVIM_APPNAME=nvim-kickstart nvim'
-{{- end }}
-
-{{- if eq .chezmoi.hostname "nina-desktop" "docker" }}
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 {{- end }}
 
 ############################################################################
