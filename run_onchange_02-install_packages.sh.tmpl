@@ -44,4 +44,7 @@ bat cache --build
 # {{ include "dot_config/yazi/package.toml" | sha256sum }}
 ya pack -i
 
+# Install/update nvm
+PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash'
+
 # vim:filetype=zsh
