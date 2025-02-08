@@ -240,6 +240,22 @@ source $HOME/.cargo/env
 alias nk='NVIM_APPNAME=nvim-kickstart nvim'
 {{- end }}
 
+{{- if eq .chezmoi.hostname "MacBook-Air-von-Nina" }}
+# iTerm2
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# bun
+[ -s "/Users/ninagrosse/.bun/_bun" ] && source "/Users/ninagrosse/.bun/_bun"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# So lazygit can pickup the config
+export XDG_CONFIG_HOME="$HOME/.config"
+
+# To use gnu-tar from homebrew as tar
+export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
+{{- end }}
+
 ############################################################################
 ### Autostart Zellij on shell creation, if it's not already running.
 ### This needs to be at the very end of .zshrc
