@@ -17,6 +17,14 @@ capslock.ahk
 {{ end }}
 
 {{ if eq .osid "windows" }}
+.config/atuin
+.config/btop
+.config/lazydocker
+.config/solaar
+.config/tealdeer
+.config/xxh
+.config/zellij
+.zshrc
 *.sh
 {{ end }}
 
@@ -27,6 +35,7 @@ OneDrive - Bertelsmann SE & Co. KGaA/Dokumente/WindowsPowerShell/Microsoft.Power
 {{ if ne .chezmoi.hostname "nina-desktop" }}
 02-install_winget_packages.ps1
 OneDrive/Dokumente/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
+OneDrive/
 .config/komorebi/applications.json
 .config/komorebi/komorebi.json
 .config/whkdrc
@@ -36,4 +45,5 @@ OneDrive/Dokumente/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
 
 {{ if ne .chezmoi.hostname "nina-ally" }}
 Dokumente/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
+Documents/
 {{ end }}
