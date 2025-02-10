@@ -2,3 +2,38 @@ README.md
 LICENSE
 .gitignore
 Dockerfile
+
+{{ if ne .osid "windows" }}
+.config/komorebi
+.config/yasb
+.config/whkdrc
+AppData/
+Documents/
+OneDrive/
+OneDrive*/
+.wslconfig
+*.ps1
+capslock.ahk
+{{ end }}
+
+{{ if eq .osid "windows" }}
+*.sh
+{{ end }}
+
+{{ if ne .chezmoi.hostname "RTY-6495672069" }}
+OneDrive - Bertelsmann SE & Co. KGaA/Dokumente/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
+{{ end }}
+
+{{ if ne .chezmoi.hostname "nina-desktop" }}
+02-install_winget_packages.ps1
+OneDrive/Dokumente/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
+.config/komorebi/applications.json
+.config/komorebi/komorebi.json
+.config/whkdrc
+.config/yasb/config.yaml
+.config/yasb/styles.css
+{{ end }}
+
+{{ if ne .chezmoi.hostname "nina-ally" }}
+Dokumente/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
+{{ end }}

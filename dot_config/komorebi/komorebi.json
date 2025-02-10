@@ -1,0 +1,128 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.30/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.json",
+  "window_hiding_behaviour": "Cloak",
+  "cross_monitor_move_behaviour": "Insert",
+  "default_workspace_padding": 3,
+  "default_container_padding": 3,
+  "border": true,
+  "border_width": 3,
+  "border_offset": -1,
+  "mouse_follows_focus": false,
+  "theme": {
+    "palette": "Base16",
+    "name": "Ashes",
+    "unfocused_border": "Base03",
+    "bar_accent": "Base0D"
+  },
+  "stackbar": {
+    "height": 40,
+    "mode": "OnStack",
+    "tabs": {
+      "width": 300
+    }
+  },
+  "display_index_preferences": {
+    "0": "IVM6644-7&9bf0708&0&UID512",
+    "1": "AOC2590-7&9bf0708&0&UID516"
+  },
+  "monitors":  [
+    {
+      "window_based_work_area_offset_limit": 1,
+      "window_based_work_area_offset": {
+        "left": 300,
+        "top": 30,
+        "right": 600,
+        "bottom": 60
+      },
+      "workspaces": [
+        {
+          "name": "I",
+          "layout": "BSP"
+        },
+        {
+          "name": "II",
+          "layout": "BSP"
+        },
+        {
+          "name": "III",
+          "layout": "BSP"
+        },
+        {
+          "name": "IV",
+          "layout": "BSP"
+        },
+        {
+          "name": "V",
+          "layout": "BSP"
+        },
+        {
+          "name": "VI",
+          "layout": "BSP"
+        },
+        {
+          "name": "Floaters"
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
+          "name": "I",
+          "layout": "BSP"
+        },
+        {
+          "name": "II",
+          "layout": "BSP"
+        },
+        {
+          "name": "III",
+          "layout": "BSP"
+        },
+        {
+          "name": "IV",
+          "layout": "BSP"
+        },
+        {
+          "name": "V",
+          "layout": "BSP"
+        },
+        {
+          "name": "VI",
+          "layout": "BSP"
+        },
+        {
+          "name": "Floaters"
+        }
+      ]
+    }
+  ],
+  "floating_applications": [
+    {
+      "kind": "Title",
+      "id": "Nachricht",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Title",
+      "id": "Termin",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Title",
+      "id": "Besprechung",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Exe",
+      "id": "7zFM.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "Enpass.exe",
+      "matching_strategy": "Equals"
+    }
+  ],
+  "ignore_rules": []
+}

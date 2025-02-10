@@ -3,7 +3,9 @@
 {{-   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id -}}
 {{- end -}}
 
-{{ $gitemail := promptString "git email" -}}
+{{ $gitemail_before := promptString "git email (before @, e.g. firstname.lastname)" -}}
+{{ $gitemail_after := promptString "git email (after @, e.g. company.com)" -}}
+{{ $gitemail := (printf "%s%s%s" $gitemail_before "@" $gitemail_after) -}}
 {{ $gituser := promptString "git username" -}}
 
 [data]
