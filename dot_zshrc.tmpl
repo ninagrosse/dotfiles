@@ -217,8 +217,6 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
 fi
 # Init cargo / rust
 source $HOME/.cargo/env
-# Launch Neovim with the old kickstart config
-alias nk='NVIM_APPNAME=nvim-kickstart nvim'
 {{- end }}
 
 {{- if eq .chezmoi.hostname "MacBook-Air-von-Nina" }}
@@ -236,7 +234,6 @@ export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
 
 {{- if eq .chezmoi.hostname "RTY-6495672069" }}
 alias winhome="cd /mnt/c/Users/GROS145"
-alias nk='NVIM_APPNAME=nvim-kickstart nvim'
 # Set JAVA_HOME, so java 17 is used and not java 23 installed through homebrew
 export JAVA_HOME=/usr/lib/jvm/temurin-17-jdk-amd64
 export PATH=$JAVA_HOME:$PATH
