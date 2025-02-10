@@ -29,7 +29,7 @@ capslock.ahk
 {{ end }}
 
 {{ if ne .chezmoi.hostname "RTY-6495672069" }}
-OneDrive - Bertelsmann SE & Co. KGaA/Dokumente/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
+OneDrive - Bertelsmann SE & Co. KGaA*
 {{ end }}
 
 {{ if ne .chezmoi.hostname "nina-desktop" }}
