@@ -2,6 +2,7 @@ README.md
 LICENSE
 .gitignore
 Dockerfile
+ubuntu-debian-installer.sh
 
 {{ if ne .osid "windows" }}
 .config/komorebi
