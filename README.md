@@ -8,8 +8,8 @@ My personal dotfiles, managed with [chezmoi](https://github.com/twpayne/chezmoi)
 
 * zsh
 * Package manager
-  * MacOS / Debian/Ubuntu[^1]: [Homebrew](https://brew.sh/)
   * Arch: `pacman` and [`paru`](https://github.com/Morganamilo/paru)
+  * MacOS and other Linuxes: [Homebrew](https://brew.sh/) [^1]
 * [Jetbrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads) (for the terminal emulator)
 
 ### Installation
@@ -30,7 +30,8 @@ Installs `oh-my-zsh`, `zsh-autosuggestions` and `zsh-syntax-highlighting`, if th
 
 #### [`run_onchange_02-install_packages.sh`](run_onchange_02-install_packages.sh.tmpl)
 
-Installs various CLI tools and apps with Homebrew and performs necessary setups if needed.
+Installs various CLI tools and apps with the appropriate package manager and performs necessary setups if needed.
+Homebrew installs packages from `Brewfile` while Arch uses `packages-arch.sh`.
 
 ## 📖 Windows instructions
 
@@ -87,4 +88,4 @@ Installs various desktop applications with winget.
 * [Wezterm config](https://github.com/ninagrosse/wezterm-config)
 * [CLI tools plugin for xxh](https://github.com/ninagrosse/xxh-plugin-prerun-cli-tools)
 
-[^1]: Debian/Ubuntu has `apt` for package management, but half of the packages aren't available in apt-repositories. Using Homebrew on Debian/Ubuntu is just more hassle-free.
+[^1]: Other Linuxes have their own tools for package management, but for the distros I use besides Arch (Debian, Ubuntu, Fedora), a lot of the packages aren't available in their repositories. Using Homebrew on non-Arch systems is just more hassle-free.
