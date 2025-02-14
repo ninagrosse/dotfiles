@@ -14,7 +14,7 @@ brew bundle --no-lock --file="$HOME"/.local/share/chezmoi/Brewfile
 # {{ include "packages-arch.sh" | sha256sum }}
 
 # Install Arch packages from packages-arch.sh
-sudo bash "$HOME"/.local/share/chezmoi/packages-arch.sh
+bash "$HOME"/.local/share/chezmoi/packages-arch.sh
 
 {{- end }}
 
