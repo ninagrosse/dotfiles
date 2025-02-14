@@ -6,7 +6,10 @@
 # Source oh-my-zsh brew plugin, so brew shellenv is initialized and
 # we can use 'brew bundle' to install packages
 source ${ZSH:-~/.oh-my-zsh}/plugins/brew/brew.plugin.zsh
-
+if [[ ! $(command -v brew) ]]; then
+  echo "brew is not installed. Please install it first and then run 'chezmoi apply' again."
+  exit 1
+fi
 # Install packages from Brewfile
 brew bundle --no-lock --file="$HOME"/.local/share/chezmoi/Brewfile
 
@@ -14,6 +17,10 @@ brew bundle --no-lock --file="$HOME"/.local/share/chezmoi/Brewfile
 # {{ include "packages-arch.sh" | sha256sum }}
 
 # Install Arch packages from packages-arch.sh
+if [[ ! $(command -v paru) ]]; then
+  echo "paru is not installed. Please install it first and then run 'chezmoi apply' again."
+  exit 1
+fi
 bash "$HOME"/.local/share/chezmoi/packages-arch.sh
 
 {{- end }}
