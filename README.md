@@ -7,8 +7,10 @@ My personal dotfiles, managed with [chezmoi](https://github.com/twpayne/chezmoi)
 ### Requirements
 
 * zsh
-* [Homebrew](https://brew.sh/)
-* [Jetbrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
+* Package manager
+  * MacOS / Debian/Ubuntu[^1]: [Homebrew](https://brew.sh/)
+  * Arch: `pacman` and [`paru`](https://github.com/Morganamilo/paru)
+* [Jetbrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads) (for the terminal emulator)
 
 ### Installation
 
@@ -37,7 +39,7 @@ Installs various CLI tools and apps with Homebrew and performs necessary setups 
 * [Scoop](https://scoop.sh/)
 * winget
 * [Git for Windows](https://git-scm.com/downloads/win) (can install with `winget install --id Git.Git -e --source winget`)
-* [Jetbrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads)
+* [Jetbrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads) (for the terminal emulator and yasb)
 
 ### Installation
 
@@ -84,3 +86,5 @@ Installs various desktop applications with winget.
 * [Neovim config](https://github.com/ninagrosse/lazyvim-config)
 * [Wezterm config](https://github.com/ninagrosse/wezterm-config)
 * [CLI tools plugin for xxh](https://github.com/ninagrosse/xxh-plugin-prerun-cli-tools)
+
+[^1]: Debian/Ubuntu has `apt` for package management, but half of the packages aren't available in apt-repositories. Using Homebrew on Debian/Ubuntu is just more hassle-free.

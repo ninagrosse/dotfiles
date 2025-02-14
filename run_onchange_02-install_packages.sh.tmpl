@@ -1,40 +1,22 @@
 #!/usr/bin/env zsh
 
-# Source oh-my-zsh brew plugin, so brew shellenv is initialized for the first time and
+{{- if eq .osid "darwin" "linux-ubuntu" "linux-debian" }}
+# {{ include "Brewfile" | sha256sum }}
+
+# Source oh-my-zsh brew plugin, so brew shellenv is initialized and
 # we can use 'brew bundle' to install packages
 source ${ZSH:-~/.oh-my-zsh}/plugins/brew/brew.plugin.zsh
 
-# Install packages with inline 'brew bundle'
-brew bundle --no-lock --file=/dev/stdin <<EOF
-tap 'mike-engel/jwt-cli'
-tap 'jesseduffield/lazydocker'
-tap 'jesseduffield/lazygit'
-brew 'atuin'
-brew 'bat'
-brew 'btop'
-brew "direnv"
-brew 'dysk'
-brew 'eza'
-brew 'fastfetch'
-brew 'fd'
-brew 'fzf'
-brew 'git-delta'
-brew 'httpie'
-brew 'jq'
-brew 'jesseduffield/lazydocker/lazydocker'
-brew 'jesseduffield/lazygit/lazygit'
-brew 'mike-engel/jwt-cli/jwt-cli'
-brew 'neovim'
-brew 'ripgrep'
-brew 'starship'
-brew "tealdeer"
-brew "ugrep"
-brew 'wget'
-brew "xxh"
-brew 'yazi'
-brew "zellij"
-brew "zoxide"
-EOF
+# Install packages from Brewfile
+brew bundle --no-lock --file="$HOME"/.local/share/chezmoi/Brewfile
+
+{{ else if eq .osid "linux-arch" }}
+# {{ include "packages-arch.sh" | sha256sum }}
+
+# Install Arch packages from packages-arch.sh
+sudo bash "$HOME"/.local/share/chezmoi/packages-arch.sh
+
+{{- end }}
 
 # Build bat cache so it can pick up Catppuccin theme
 bat cache --build

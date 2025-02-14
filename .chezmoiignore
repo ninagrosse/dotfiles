@@ -2,6 +2,8 @@ README.md
 LICENSE
 .gitignore
 Dockerfile
+Brewfile
+packages-arch.sh
 
 {{ if ne .osid "windows" }}
 .config/komorebi
