@@ -22,7 +22,7 @@ set smartindent
 set smarttab
 set softtabstop=0
 
-" set nocompatible
+set nocompatible
 syntax on
 filetype on
 set modeline
