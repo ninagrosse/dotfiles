@@ -241,6 +241,20 @@ export MAVEN_OPTS='-Xms256m -Xmx512m'
 export PATH=$M2:$PATH
 {{- end }}
 
+{{- if eq .chezmoi.hostname "soniq-pi4" }}
+# load bash autocompletion for pihole
+autoload bashcompinit
+bashcompinit
+source /etc/bash_completion.d/pihole
+
+# vpn logs
+alias vpnl='tail -f /var/log/openvpn.log'
+alias vpns='cat /var/log/openvpn-status.log'
+
+# Catppuccin colors for fzf don't work here, so unset them
+unset FZF_DEFAULT_OPTS
+{{- end }}
+
 ############################################################################
 ### Autostart Zellij on shell creation, if it's not already running.
 ### This needs to be at the very end of .zshrc
