@@ -21,6 +21,7 @@ capslock.ahk
 {{ if eq .osid "windows" }}
 .config/atuin
 .config/btop
+.config/httpie
 .config/lazydocker
 .config/solaar
 .config/tealdeer
