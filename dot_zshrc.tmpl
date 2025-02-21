@@ -234,9 +234,6 @@ export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
 
 {{- if eq .chezmoi.hostname "RTY-6495672069" }}
 alias winhome="cd /mnt/c/Users/GROS145"
-# Set JAVA_HOME, so java 17 is used and not java 23 installed through homebrew
-export JAVA_HOME=/usr/lib/jvm/temurin-17-jdk-amd64
-export PATH=$JAVA_HOME:$PATH
 # maven config
 export M2_HOME=/home/linuxbrew/.linuxbrew/Cellar/maven/3.9.9
 export M2=$M2_HOME/bin
