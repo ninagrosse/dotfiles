@@ -16,6 +16,8 @@ packages=(
   lazygit
   jwt-cli
   neovim
+  python
+  python-pipx
   ripgrep
   starship
   tealdeer
@@ -37,3 +39,7 @@ paru_pkgs=(
 for PKG in "${paru_pkgs[@]}"; do
   paru -S "$PKG" --noconfirm --needed
 done
+
+# install xxh via pipx
+pipx ensurepath
+pipx install xxh-xxh
