@@ -1,0 +1,3 @@
+[submodule "dot_config/minimal-nvim"]
+	path = dot_config/minimal-nvim
+	url = https://github.com/ninagrosse/minimal-nvim.git

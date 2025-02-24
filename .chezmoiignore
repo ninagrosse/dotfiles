@@ -23,6 +23,7 @@ capslock.ahk
 .config/btop
 .config/httpie
 .config/lazydocker
+.config/minimal-nvim
 .config/solaar
 .config/tealdeer
 .config/xxh
