@@ -28,9 +28,11 @@ bash "$HOME"/.local/share/chezmoi/packages-arch.sh
 # Build bat cache so it can pick up Catppuccin theme
 bat cache --build
 
-# Run 'ya pack' to install yazi plugins and themes
+# Run 'ya pack' to (re)install yazi plugins and themes
 # Include hash of yazis package.toml, so the script gets executed when package.toml changes
 # {{ include "dot_config/yazi/package.toml" | sha256sum }}
+rm -rf "$HOME"/.config/yazi/flavors
+rm -rf "$HOME"/.config/yazi/plugins
 ya pack -i
 
 # Install/update nvm
