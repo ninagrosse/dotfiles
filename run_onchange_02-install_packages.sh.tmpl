@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-{{- if eq .osid "darwin" "linux-ubuntu" "linux-debian" }}
+{{- if eq .osid "darwin" "linux-ubuntu" "linux-debian" "linux-aurora" }}
 # {{ include "Brewfile" | sha256sum }}
 
 # Source oh-my-zsh brew plugin, so brew shellenv is initialized and
