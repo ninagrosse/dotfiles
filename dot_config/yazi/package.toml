@@ -1,14 +1,14 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "02d18be"
-hash = "4d6a07559118975e2dee983d27474d70"
+rev = "5186af7"
+hash = "771f18427fb75fb19990ce602bb322f4"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:jump-to-char"
-rev = "02d18be"
-hash = "72c66a0b3d60f8377eb9db5e1d8b60b2"
+rev = "5186af7"
+hash = "af11685de39c366ec1137fcbccacdbff"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "fd85060"
-hash = "c40e434318a8ceffd01842f8dfb2390e"
+rev = "c023460"
+hash = "2ac87e1b3a61f5887472899e86535d29"
