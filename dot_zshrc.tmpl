@@ -45,6 +45,10 @@ plugins+=(
 )
 # Disable Homebrew hints
 export HOMEBREW_NO_ENV_HINTS=1
+{{ else if eq .osid "linux-arch" }}
+plugins+=(
+  archlinux
+)
 {{- end }}
 
 # Host specific plugins
