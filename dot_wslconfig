@@ -2,13 +2,13 @@
 # Settings apply across all Linux distros running on WSL 2
 #----------------------------------------------------------
 [wsl2]
-memory=4GB 							# Limits VM memory to use no more than 4 GB
-processors=2 						# Sets the VM to use two virtual processors
-swap=8GB 							# Sets amount of swap storage space to 8GB, default is 25% of available
+memory=8GB 							# Limits VM memory to use no more than 4 GB
+processors=4 						# Sets the VM to use two virtual processors
+swap=16GB 							# Sets amount of swap storage space to 8GB, default is 25% of available
 swapfile=C:\\temp\\wsl-swap.vhdx 	# Sets swapfile path location
 localhostforwarding=true 			# Turn on default connection to bind WSL 2 localhost to Windows localhos
 # vmIdleTimeout=-1 					# Never timeout a running wsl instance
-# guiApplications=false 				# Disable GUI Support to reduce memory usage
+guiApplications=true 				# Disable GUI Support to reduce memory usage
 
 #----------------------------------------------------------
 # Enable experimental features
