@@ -5,7 +5,8 @@ brew "atuin"
 brew "bat"
 brew "btop"
 brew "direnv"
-brew "dysk"
+brew "duf" if OS.mac?
+brew "dysk" if OS.linux?
 brew "eza"
 brew "fastfetch"
 brew "fd"
