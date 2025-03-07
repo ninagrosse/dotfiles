@@ -11,7 +11,7 @@ if [[ ! $(command -v brew) ]]; then
   exit 1
 fi
 # Install packages from Brewfile
-brew bundle --no-lock --file="$HOME"/.local/share/chezmoi/Brewfile
+brew bundle --file="$HOME"/.local/share/chezmoi/Brewfile
 
 {{ else if eq .osid "linux-arch" }}
 # {{ include "packages-arch.sh" | sha256sum }}
