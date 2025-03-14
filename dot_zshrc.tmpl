@@ -27,25 +27,20 @@ zstyle ':omz:plugins:eza' 'dirs-first' yes
 zstyle ':omz:plugins:eza' 'icons' yes
 
 # OS specific plugins
-{{- if eq .osid "darwin" }}
-# brew needs to be loaded first. Otherwise the brew-installed packages aren't available on the PATH.
+{{- if eq .osid "darwin" "linux-ubuntu" "linux-debian" "linux-aurora" }}
+# Ensure brew is loaded first on Mac, Ubuntu, Debian and Fedora (Universal Blue distros).
+# Otherwise the brew-installed packages aren't available on the PATH.
 plugins+=(
   brew
-  docker
-  docker-compose
 )
-# lazydocker alias
-alias lzd='lazydocker'
 # Disable Homebrew hints
 export HOMEBREW_NO_ENV_HINTS=1
-{{ else if eq .osid "linux-ubuntu" "linux-debian" }}
-# brew needs to be loaded first. Otherwise the brew-installed packages aren't available on the PATH.
+{{- end }}
+
+{{ if eq .osid "linux-ubuntu" "linux-debian" }}
 plugins+=(
-  brew
   ubuntu
 )
-# Disable Homebrew hints
-export HOMEBREW_NO_ENV_HINTS=1
 {{ else if eq .osid "linux-arch" }}
 plugins+=(
   archlinux
@@ -53,7 +48,7 @@ plugins+=(
 {{- end }}
 
 # Host specific plugins
-{{- if eq .chezmoi.hostname "nina-desktop" "RTY-6495672069" "docker" }}
+{{- if eq .chezmoi.hostname "nina-desktop" "RTY-6495672069" "docker" "MacBook-Air-von-Nina" "aurora" }}
 plugins+=(
   docker
   docker-compose
