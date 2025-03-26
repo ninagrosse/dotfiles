@@ -32,6 +32,10 @@ capslock.ahk
 *.sh
 {{ end }}
 
+{{ if ne .osid "linux-cachyos" }}
+.config/paru
+{{ end }}
+
 {{ if ne .chezmoi.hostname "RTY-6495672069" }}
 OneDrive - Bertelsmann SE & Co. KGaA*
 {{ end }}
