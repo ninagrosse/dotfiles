@@ -13,7 +13,7 @@ fi
 # Install packages from Brewfile
 brew bundle --file="$HOME"/.local/share/chezmoi/Brewfile
 
-{{ else if eq .osid "linux-arch" }}
+{{ else if eq .osid "linux-arch" "linux-cachyos" }}
 # {{ include "packages-arch.sh" | sha256sum }}
 
 # Install Arch packages from packages-arch.sh
