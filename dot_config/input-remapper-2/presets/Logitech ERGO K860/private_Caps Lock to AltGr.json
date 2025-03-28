@@ -1,0 +1,31 @@
+[
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 58,
+                "origin_hash": "84ec8d5fafb24a9600c56994c37ae309"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "ISO_Level3_Shift",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 42,
+                "origin_hash": "84ec8d5fafb24a9600c56994c37ae309"
+            },
+            {
+                "type": 1,
+                "code": 58,
+                "origin_hash": "84ec8d5fafb24a9600c56994c37ae309"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "Caps_Lock",
+        "mapping_type": "key_macro"
+    }
+]
