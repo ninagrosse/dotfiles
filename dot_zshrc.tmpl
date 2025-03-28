@@ -204,8 +204,10 @@ export ZELLIJ_AUTO_START="false"
 ### Host specific settings, variables, aliases, ...
 ############################################################################
 {{- if eq .chezmoi.hostname "nina-desktop" "MacBook-Air-von-Nina" "RTY-6495672069" "aurora" "cachy-mini" }}
-# autostart zellij
-export ZELLIJ_AUTO_START="true"
+# autostart zellij, but only, if not in vscode terminal
+if [[ $TERM_PROGRAM != 'vscode' ]]; then
+  export ZELLIJ_AUTO_START="true"
+fi
 {{- end }}
 
 {{- if eq .chezmoi.hostname "nina-desktop" }}
