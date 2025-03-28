@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.30/schema.json",
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.35/schema.json",
   "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.json",
   "window_hiding_behaviour": "Cloak",
   "cross_monitor_move_behaviour": "Insert",
@@ -23,10 +23,10 @@
     }
   },
   "display_index_preferences": {
-    "0": "IVM6644-7&9bf0708&0&UID512",
+    "0": "IVM6644-7&9bf0708&0&UID256",
     "1": "AOC2590-7&9bf0708&0&UID516"
   },
-  "monitors":  [
+  "monitors": [
     {
       "window_based_work_area_offset_limit": 1,
       "window_based_work_area_offset": {
