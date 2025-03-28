@@ -27,7 +27,7 @@ zstyle ':omz:plugins:eza' 'dirs-first' yes
 zstyle ':omz:plugins:eza' 'icons' yes
 
 # OS specific plugins
-{{- if eq .osid "darwin" "linux-ubuntu" "linux-debian" "linux-aurora" }}
+{{- if eq .osid "darwin" "linux-ubuntu" "linux-debian" }}
 # Ensure brew is loaded first on Mac, Ubuntu, Debian and Fedora (Universal Blue distros).
 # Otherwise the brew-installed packages aren't available on the PATH.
 plugins+=(
@@ -48,7 +48,7 @@ plugins+=(
 {{- end }}
 
 # Host specific plugins
-{{- if eq .chezmoi.hostname "nina-desktop" "RTY-6495672069" "docker" "MacBook-Air-von-Nina" "aurora" "cachy-mini" }}
+{{- if eq .chezmoi.hostname "nina-desktop" "RTY-6495672069" "docker" "MacBook-Air-von-Nina" "cachy-mini" }}
 plugins+=(
   docker
   docker-compose
@@ -203,7 +203,7 @@ export ZELLIJ_AUTO_START="false"
 ############################################################################
 ### Host specific settings, variables, aliases, ...
 ############################################################################
-{{- if eq .chezmoi.hostname "nina-desktop" "MacBook-Air-von-Nina" "RTY-6495672069" "aurora" "cachy-mini" }}
+{{- if eq .chezmoi.hostname "nina-desktop" "MacBook-Air-von-Nina" "RTY-6495672069" "cachy-mini" }}
 # autostart zellij, but only, if not in vscode terminal
 if [[ $TERM_PROGRAM != 'vscode' ]]; then
   export ZELLIJ_AUTO_START="true"
