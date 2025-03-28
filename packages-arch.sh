@@ -16,6 +16,7 @@ packages=(
   lazygit
   jwt-cli
   neovim
+  perl-image-exiftool
   python
   python-pipx
   ripgrep

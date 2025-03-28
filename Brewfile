@@ -7,6 +7,7 @@ brew "btop"
 brew "direnv"
 brew "duf" if OS.mac?
 brew "dysk" if OS.linux?
+brew "exiftool"
 brew "eza"
 brew "fastfetch"
 brew "fd"

@@ -10,6 +10,7 @@ $packages = @(
   "curlie",
   "delta",
   "duf",
+  "exiftool",
   "eza",
   "fastfetch",
   "fd",
