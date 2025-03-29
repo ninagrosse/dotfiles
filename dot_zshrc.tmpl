@@ -131,9 +131,6 @@ alias mn='NVIM_APPNAME=minimal-nvim nvim'
 # Get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 
-# Recent installed packages
-alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
-
 ############################################################################
 ### Tools initializations & settings
 ############################################################################
@@ -266,6 +263,11 @@ alias vpns='cat /var/log/openvpn-status.log'
 
 # Catppuccin colors for fzf don't work here, so unset them
 unset FZF_DEFAULT_OPTS
+{{- end }}
+
+{{- if eq .osid "linux-arch" "linux-cachyos" }}
+# Recent installed packages
+alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 {{- end }}
 
 ############################################################################
