@@ -128,6 +128,12 @@ alias zla='zellij --layout'
 # Alias to load Neovim with the minimal config included in the dotfiles
 alias mn='NVIM_APPNAME=minimal-nvim nvim'
 
+# Get the error messages from journalctl
+alias jctl="journalctl -p 3 -xb"
+
+# Recent installed packages
+alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+
 ############################################################################
 ### Tools initializations & settings
 ############################################################################
