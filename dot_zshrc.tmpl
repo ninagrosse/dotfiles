@@ -182,6 +182,7 @@ function y() {
     builtin cd -- "$cwd"
   fi
   rm -f -- "$tmp"
+  echo -e -n "\x1b[0 q" # reset cursor to terminal emulator default
 }
 
 # Zellij function to either attach/resurrect a session or create a new one, if none exists
