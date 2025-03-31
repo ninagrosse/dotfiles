@@ -134,6 +134,11 @@ key = "Key0"
 mods = "Control"
 action = "ResetFontSize"
 
+[[keyboard.bindings]]
+key = "N"
+mods = "Control|Shift"
+action = "CreateNewWindow"
+
 [general]
 live_config_reload = true
 working_directory = "None"
@@ -141,11 +146,18 @@ import = ["catppuccin-mocha.toml"]
 
 {{- if eq .osid "windows" }}
 # Windows specific settings
-[general]
-working_directory = "~"
-
-[Terminal]
+[terminal]
 shell = { program = "wsl", args = ["--cd", "~"] }
+
+[[keyboard.bindings]]
+key = "P"
+mods = "Control|Shift"
+command = { program = "alacritty", args = ["-e", "powershell", "-NoExit", "-Command", "cd ~"] }
+
+[[keyboard.bindings]]
+key = "G"
+mods = "Control|Shift"
+command = { program = "alacritty", args = ["-e", "C:\\Program Files\\Git\\bin\\bash.exe", "--login", "-i"] }
 {{- end }}
 
 # vim:filetype=toml
