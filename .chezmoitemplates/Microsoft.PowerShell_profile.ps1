@@ -31,4 +31,7 @@ function y {
       Set-Location -LiteralPath $cwd
   }
   Remove-Item -Path $tmp
+  # Reset cursor to underline
+  $esc = [char]27
+  Write-Host -NoNewline "$esc[4 q"
 }
