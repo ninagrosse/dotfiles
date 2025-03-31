@@ -19,7 +19,6 @@ capslock.ahk
 {{ end }}
 
 {{ if eq .osid "windows" }}
-.config/alacritty
 .config/atuin
 .config/btop
 .config/httpie

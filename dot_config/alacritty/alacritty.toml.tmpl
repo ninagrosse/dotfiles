@@ -139,4 +139,13 @@ live_config_reload = true
 working_directory = "None"
 import = ["catppuccin-mocha.toml"]
 
+{{- if eq .osid "windows" }}
+# Windows specific settings
+[general]
+working_directory = "~"
+
+[Terminal]
+shell = { program = "wsl", args = ["--cd", "~"] }
+{{- end }}
+
 # vim:filetype=toml
