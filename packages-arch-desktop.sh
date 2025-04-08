@@ -14,7 +14,7 @@ packages=(
 )
 
 for PKG in "${packages[@]}"; do
-  sudo pacman -S "$PKG" --noconfirm --needed
+  sudo pacman -S "$PKG" --needed
 done
 
 paru_pkgs=(
@@ -29,5 +29,5 @@ paru_pkgs=(
 )
 
 for PKG in "${paru_pkgs[@]}"; do
-  paru -S "$PKG" --noconfirm --needed
+  paru -S "$PKG" --needed
 done
