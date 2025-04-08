@@ -6,6 +6,7 @@ packages=(
   btop
   cmatrix
   direnv
+  duf
   dysk
   eza
   fastfetch
