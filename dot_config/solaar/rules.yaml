@@ -24,12 +24,6 @@
   - click
 ...
 ---
-- MouseGesture: Mouse Right
-- KeyPress:
-  - Super_L
-  - click
-...
----
 - MouseGesture: []
 - KeyPress:
   - [Alt_L, Shift_L, a]

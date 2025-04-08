@@ -19,7 +19,8 @@
     divert-crown, divert-gkeys, m-key-leds, mr-key-led, multiplatform, gesture2-gestures, gesture2-divert, gesture2-params, sidetone, equalizer, adc_power_management]
   _battery: 4100
   _modelId: B02540900000
-  _sensitive: {change-host: false, divert-keys: true, hires-scroll-mode: true, hires-smooth-invert: true, hires-smooth-resolution: true, reprogrammable-keys: false}
+  _sensitive: {change-host: false, divert-keys: true, hires-scroll-mode: true, hires-smooth-invert: true, hires-smooth-resolution: true, reprogrammable-keys: false,
+    scroll-ratchet: true, smart-shift: true}
   _serial: E5F26FA2
   _unitId: E5F26FA2
   _wpid: '4090'
