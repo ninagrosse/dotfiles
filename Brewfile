@@ -6,7 +6,7 @@ brew "bat"
 brew "btop"
 brew "cmatrix"
 brew "direnv"
-brew "duf"
+brew "duf" if OS.mac?
 brew "dysk" if OS.linux?
 brew "exiftool"
 brew "eza"
