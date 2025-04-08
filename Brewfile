@@ -4,6 +4,7 @@ tap "jesseduffield/lazygit"
 brew "atuin"
 brew "bat"
 brew "btop"
+brew "cmatrix"
 brew "direnv"
 brew "duf" if OS.mac?
 brew "dysk" if OS.linux?

@@ -4,6 +4,7 @@ packages=(
   atuin
   bat
   btop
+  cmatrix
   direnv
   dysk
   eza
