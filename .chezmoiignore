@@ -4,6 +4,7 @@ LICENSE
 Dockerfile
 Brewfile
 packages-arch.sh
+packages-arch-desktop.sh
 
 {{ if ne .osid "windows" }}
 .config/komorebi

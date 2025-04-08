@@ -25,6 +25,17 @@ bash "$HOME"/.local/share/chezmoi/packages-arch.sh
 
 {{- end }}
 
+{{- if eq .chezmoi.hostname "cachy-mini" "cachy-vm" }}
+# {{ include "packages-arch-desktop.sh" | sha256sum }}
+
+# Install Arch desktop packages from packages-arch-desktop.sh
+if [[ ! $(command -v paru) ]]; then
+  echo "paru is not installed. Please install it first and then run 'chezmoi apply' again."
+  exit 1
+fi
+bash "$HOME"/.local/share/chezmoi/packages-arch-desktop.sh
+{{- end }}
+
 # Build bat cache so it can pick up Catppuccin theme
 bat cache --build
 
