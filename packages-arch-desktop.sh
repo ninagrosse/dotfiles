@@ -4,6 +4,7 @@ packages=(
   alacritty
   brave-bin
   filelight
+  jdk21-openjdk
   ksystemlog
   ttf-jetbrains-mono
   ttf-jetbrains-mono-nerd
