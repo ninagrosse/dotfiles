@@ -1,6 +1,17 @@
 layout {
-  pane split_direction="vertical" {
-    pane split_direction="horizontal" {
+  default_tab_template {
+    pane size=1 borderless=true {
+        plugin location="zellij:tab-bar"
+    }
+    children
+    pane size=1 borderless=true {
+        plugin location="zellij:status-bar"
+    }
+  }
+  tab name="local"
+  tab name="tab1" {
+    pane split_direction="vertical" {
+      pane split_direction="horizontal" {
         pane {
           command "ssh"
           args "server1"
@@ -24,8 +35,34 @@ layout {
           args "server5"
         }
       }
+    }
   }
-  pane size=1 borderless=true {
-    plugin location="zellij:compact-bar"
+  tab name="tab2" {
+    pane split_direction="vertical" {
+      pane split_direction="horizontal" {
+        pane {
+          command "ssh"
+          args "server1"
+        }
+        pane {
+          command "ssh"
+          args "server2"
+        }
+        pane {
+          command "ssh"
+          args "server3"
+        }
+      }
+      pane split_direction="horizontal" {
+        pane {
+          command "ssh"
+          args "server4"
+        }
+        pane {
+          command "ssh"
+          args "server5"
+        }
+      }
+    }
   }
 }
