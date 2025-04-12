@@ -7,6 +7,7 @@ My personal dotfiles, managed with [chezmoi](https://github.com/twpayne/chezmoi)
 ### Requirements
 
 * zsh
+* [age](https://github.com/FiloSottile/age) (for encryption)
 * Package manager
   * Arch: `pacman` and [`paru`](https://github.com/Morganamilo/paru)
   * MacOS and other Linuxes: [Homebrew](https://brew.sh/) [^1]

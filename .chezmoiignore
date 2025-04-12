@@ -5,6 +5,7 @@ Dockerfile
 Brewfile
 packages-arch.sh
 packages-arch-desktop.sh
+key.txt.age
 
 {{ if ne .osid "windows" }}
 .config/komorebi

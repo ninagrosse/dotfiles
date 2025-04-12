@@ -8,6 +8,11 @@
 {{ $gitemail := (printf "%s%s%s" $gitemail_before "@" $gitemail_after) -}}
 {{ $gituser := promptString "git username" -}}
 
+encryption = "age"
+[age]
+    identity = "~/.config/chezmoi/key.txt"
+    recipient = "age1x0arkv8geufsdu83ty275d6yt0fdaak528qp30n6nn4knl00hu0sl5urjm"
+
 [data]
     osid = {{ $osid | quote }}
     gitemail = {{ $gitemail | quote }}
