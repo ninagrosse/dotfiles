@@ -1,6 +1,7 @@
 tap "mike-engel/jwt-cli"
 tap "jesseduffield/lazydocker"
 tap "jesseduffield/lazygit"
+brew "age"
 brew "atuin"
 brew "bat"
 brew "btop"

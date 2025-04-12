@@ -1,6 +1,7 @@
 #!/bin/bash
 
 packages=(
+  age
   atuin
   bat
   btop

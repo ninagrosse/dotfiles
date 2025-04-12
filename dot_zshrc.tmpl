@@ -264,4 +264,9 @@ unset FZF_DEFAULT_OPTS
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 {{- end }}
 
+{{ if eq .osid "linux-ubuntu" "linux-debian" }}
+# age alieas is from ubuntu plugin and aliases to 'sudo apt', but this conflicts with age encryption
+unalias age
+{{- end }}
+
 # vim:filetype=zsh
