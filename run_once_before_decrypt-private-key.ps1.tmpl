@@ -1,0 +1,10 @@
+$configPath = Join-Path $env:USERPROFILE ".config\chezmoi"
+$keyFile = Join-Path $configPath "key.txt"
+$encryptedKeyFile = "{{ .chezmoi.sourceDir }}/key.txt.age"
+
+if (-Not (Test-Path -Path $keyFile)) {
+    New-Item -ItemType Directory -Force -Path $configPath | Out-Null
+    chezmoi age decrypt --output "$keyFile" --passphrase "$encryptedKeyFile"
+}
+
+# vim:filetype=ps1

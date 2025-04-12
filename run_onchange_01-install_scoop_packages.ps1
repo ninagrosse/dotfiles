@@ -5,6 +5,7 @@ $buckets = @(
 )
 
 $packages = @(
+  "age",
   "bat",
   "curl",
   "curlie",
