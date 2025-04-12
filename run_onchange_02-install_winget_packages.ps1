@@ -10,6 +10,8 @@ if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 }
 
 $packages = @(
+  "Alacritty.Alacritty",
+  "Dropbox.Dropbox",
   "7zip.7zip",
   "Piriform.CCleaner",
   "CPUID.CPU-Z",
