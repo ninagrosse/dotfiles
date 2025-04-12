@@ -5,6 +5,7 @@ brew "age"
 brew "atuin"
 brew "bat"
 brew "btop"
+brew "chafa"
 brew "cmatrix"
 brew "direnv"
 brew "duf" if OS.mac?

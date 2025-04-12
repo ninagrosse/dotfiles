@@ -5,6 +5,7 @@ packages=(
   atuin
   bat
   btop
+  chafa
   cmatrix
   direnv
   duf
