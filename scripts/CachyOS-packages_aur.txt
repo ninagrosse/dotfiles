@@ -1,0 +1,12 @@
+cryptomator
+dropbox
+enpass-bin
+input-remapper-git
+insync
+insync-dolphin
+jetbrains-toolbox
+kwin-effect-rounded-corners-git
+kwin-scripts-dynamic-workspaces
+kwin-scripts-krohnkite-git
+rustdesk-bin
+visual-studio-code-bin

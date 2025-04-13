@@ -1,0 +1,6 @@
+cachyos-gaming-meta
+cachyos-gaming-applications
+openrazer-daemon
+sunshine
+moondeckbuddy-appimage
+polychromatic

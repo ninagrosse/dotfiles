@@ -30,7 +30,6 @@ capslock.ahk
 .config/tealdeer
 .config/xxh
 .config/zellij
-scripts/
 .zshrc
 *.sh
 {{ end }}
@@ -38,6 +37,7 @@ scripts/
 {{ if ne .osid "linux-cachyos" }}
 .config/paru
 .config/input-remapper-2
+scripts/
 {{ end }}
 
 {{ if ne .chezmoi.hostname "RTY-6495672069" }}
