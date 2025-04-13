@@ -26,7 +26,6 @@ capslock.ahk
 .config/httpie
 .config/lazydocker
 .config/minimal-nvim
-.config/solaar
 .config/tealdeer
 .config/xxh
 .config/zellij
@@ -35,8 +34,9 @@ capslock.ahk
 {{ end }}
 
 {{ if ne .osid "linux-cachyos" }}
-.config/paru
 .config/input-remapper-2
+.config/paru
+.config/solaar
 scripts-cachy/
 {{ end }}
 
