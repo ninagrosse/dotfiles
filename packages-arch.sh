@@ -1,6 +1,6 @@
 #!/bin/bash
 # This script only install cli-tools. Desktop packages can be installed manually
-# from the files in the scripts folder.
+# from the files in the scripts-cachy folder.
 
 packages=(
   age

@@ -37,7 +37,7 @@ capslock.ahk
 {{ if ne .osid "linux-cachyos" }}
 .config/paru
 .config/input-remapper-2
-scripts/
+scripts-cachy/
 {{ end }}
 
 {{ if ne .chezmoi.hostname "RTY-6495672069" }}

@@ -1,4 +1,4 @@
-# scripts
+# scripts-cachy
 
 ## CachyOS*
 
