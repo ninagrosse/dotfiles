@@ -1,4 +1,6 @@
 #!/bin/bash
+# This script only install cli-tools. Desktop packages can be installed manually
+# from the files in the scripts folder.
 
 packages=(
   age
@@ -17,8 +19,8 @@ packages=(
   git-delta
   httpie
   jq
-  lazygit
   jwt-cli
+  lazygit
   neovim
   perl-image-exiftool
   python
@@ -27,7 +29,6 @@ packages=(
   starship
   tealdeer
   ugrep
-  wget
   yazi
   zellij
   zoxide
