@@ -4,7 +4,6 @@ LICENSE
 Dockerfile
 Brewfile
 packages-arch.sh
-packages-arch-desktop.sh
 key.txt.age
 
 {{ if ne .osid "windows" }}
@@ -42,6 +41,11 @@ scripts-cachy/
 
 {{ if ne .chezmoi.hostname "RTY-6495672069" }}
 OneDrive - Bertelsmann SE & Co. KGaA*
+{{ end }}
+
+{{ if eq .chezmoi.hostname "RTY-6495672069" }}
+.config/zellij/layouts/docker-hosts.kdl
+.config/zellij/layouts/sysadmin.kdl
 {{ end }}
 
 {{ if ne .chezmoi.hostname "nina-desktop" }}
