@@ -11,6 +11,7 @@ jdk21-openjdk
 ksystemlog
 libreoffice-fresh
 obsidian
+partitionmanager
 signal-desktop
 solaar
 thunderbird
