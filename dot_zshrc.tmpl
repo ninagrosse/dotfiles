@@ -273,6 +273,24 @@ unset FZF_DEFAULT_OPTS
 {{- if eq .osid "linux-arch" "linux-cachyos" }}
 # Recent installed packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+# paru aliases
+alias parclean='paru -Sc'
+alias parclr='paru -Scc'
+alias parupg='paru -Syu'
+alias parsu='paru -Syu --noconfirm'
+alias parin='paru -S'
+alias parins='paru -U'
+alias pare='paru -R'
+alias parem='paru -Rns'
+alias parep='paru -Si'
+alias pareps='paru -Ss'
+alias parloc='paru -Qi'
+alias parlocs='paru -Qs'
+alias parlst='paru -Qe'
+alias parorph='paru -Qtd'
+alias parinsd='paru -S --asdeps'
+alias parmir='paru -Syy'
+alias parupd="paru -Sy"
 {{- end }}
 
 {{ if eq .osid "linux-ubuntu" "linux-debian" }}
