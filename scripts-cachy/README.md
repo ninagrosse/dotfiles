@@ -8,7 +8,7 @@ installed are skipped. Requires KDE Plasma.
 
 ```shell
 # install native/pacman packages
-pacman -S --needed - < CachyOS-packages_native.txt
+sudo pacman -S --needed - < CachyOS-packages_native.txt
 ```
 
 ```shell
