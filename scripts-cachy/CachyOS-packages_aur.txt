@@ -1,4 +1,4 @@
-cryptomator
+cryptomator-bin
 dropbox
 enpass-bin
 input-remapper-git

@@ -9,11 +9,14 @@ filelight
 filezilla
 jdk21-openjdk
 ksystemlog
+kimageformats
+libheif
 libayatana-indicator
 libayatana-appindicator
 libreoffice-fresh
 obsidian
 partitionmanager
+python-pillow
 signal-desktop
 solaar
 thunderbird
