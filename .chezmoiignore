@@ -46,6 +46,7 @@ OneDrive - Bertelsmann SE & Co. KGaA*
 {{ if eq .chezmoi.hostname "RTY-6495672069" }}
 .config/zellij/layouts/docker-hosts.kdl
 .config/zellij/layouts/sysadmin.kdl
+.ssh/
 {{ end }}
 
 {{ if ne .chezmoi.hostname "nina-desktop" }}
