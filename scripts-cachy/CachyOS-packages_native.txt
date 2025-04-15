@@ -9,6 +9,8 @@ filelight
 filezilla
 jdk21-openjdk
 ksystemlog
+libayatana-indicator
+libayatana-appindicator
 libreoffice-fresh
 obsidian
 partitionmanager
