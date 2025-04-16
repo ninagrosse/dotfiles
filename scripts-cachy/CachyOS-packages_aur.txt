@@ -10,3 +10,4 @@ kwin-scripts-dynamic-workspaces
 kwin-scripts-krohnkite-git
 rustdesk-bin
 visual-studio-code-bin
+zen-browser-bin
