@@ -9,6 +9,8 @@ alt + shift + o         : komorebic reload-configuration
 # The apps will be focused if open, or launched if not open
 # alt + f                 : if ($wshell.AppActivate('Firefox') -eq $False) { start firefox }
 # alt + b                 : if ($wshell.AppActivate('Chrome') -eq $False) { start chrome }
+alt + t                 : start alacritty
+alt + b                 : if ($wshell.AppActivate('Zen Browser') -eq $False) { start zen }
 
 alt + q                 : komorebic close
 alt + m                 : komorebic minimize
@@ -48,7 +50,7 @@ alt + shift + oem_plus  : komorebic resize-axis vertical increase
 alt + shift + oem_minus : komorebic resize-axis vertical decrease
 
 # Manipulate windows
-alt + t                 : komorebic toggle-float
+alt + f                 : komorebic toggle-float
 alt + shift + f         : komorebic toggle-monocle
 
 # Window manager options
