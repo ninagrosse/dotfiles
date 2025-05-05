@@ -1,0 +1,19 @@
+[Unit]
+Description=Game Streaming Service (Sunshine + MoonDeck Buddy)
+After=network.target network-online.target
+
+[Service]
+Type=exec
+ExecStartPre=/bin/sh -c "systemctl --user start sunshine"
+ExecStart=/usr/bin/MoonDeckBuddy
+ExecStopPost=/bin/sh -c "systemctl --user stop sunshine"
+TimeoutStopSec=30
+Restart=on-failure
+RestartSec=5
+SyslogIdentifier=gamestream
+
+# Import sunshine logs without timestamps
+ExecStartPost=/bin/sh -c "journalctl --user -u sunshine -f --lines=0 -o cat | sed -E 's/\\[[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}\\]: /[sunshine] /' | sed -E 's/^([^\\[])/[sunshine] \\1/' &"
+
+[Install]
+WantedBy=default.target

@@ -36,6 +36,7 @@ capslock.ahk
 .config/input-remapper-2
 .config/paru
 .config/solaar
+.config/systemd
 scripts-cachy/
 {{ end }}
 
