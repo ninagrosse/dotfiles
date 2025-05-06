@@ -254,6 +254,8 @@ export M2_HOME=/home/linuxbrew/.linuxbrew/Cellar/maven/3.9.9
 export M2=$M2_HOME/bin
 export MAVEN_OPTS='-Xms256m -Xmx512m'
 export PATH=$M2:$PATH
+# add /snap/bin to PATH
+export PATH=/snap/bin:$PATH
 {{- end }}
 
 {{- if eq .chezmoi.hostname "soniq-pi4" }}
