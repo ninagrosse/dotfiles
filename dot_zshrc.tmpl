@@ -48,7 +48,7 @@ plugins+=(
 {{- end }}
 
 # Host specific plugins
-{{- if eq .chezmoi.hostname "nina-desktop" "RTY-6495672069" "docker" "MacBook-Air-von-Nina" "cachy-mini" "cachy-desktop" }}
+{{- if eq .chezmoi.hostname "nina-desktop" "RTY-6495672069" "docker" "MacBookAir" "cachy-mini" "cachy-desktop" }}
 plugins+=(
   docker
   docker-compose
@@ -234,7 +234,7 @@ fi
 source $HOME/.cargo/env
 {{- end }}
 
-{{- if eq .chezmoi.hostname "MacBook-Air-von-Nina" }}
+{{- if eq .chezmoi.hostname "MacBookAir" }}
 # iTerm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 # bun
