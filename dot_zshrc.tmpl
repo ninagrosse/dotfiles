@@ -248,7 +248,6 @@ export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
 {{- end }}
 
 {{- if eq .chezmoi.hostname "RTY-6495672069" }}
-alias winhome="cd /mnt/c/Users/GROS145"
 # maven config
 export M2_HOME=/home/linuxbrew/.linuxbrew/Cellar/maven/3.9.9
 export M2=$M2_HOME/bin
@@ -299,5 +298,7 @@ alias parupd="paru -Sy"
 # age alieas is from ubuntu plugin and aliases to 'sudo apt', but this conflicts with age encryption
 unalias age
 {{- end }}
+
+[[ -f $HOME/.local.zsh ]] && source $HOME/.local.zsh
 
 # vim:filetype=zsh
