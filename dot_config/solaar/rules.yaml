@@ -32,6 +32,6 @@
 ---
 - MouseGesture: []
 - KeyPress:
-  - [Alt_L, Shift_L, a]
+  - Super_L
   - click
 ...
