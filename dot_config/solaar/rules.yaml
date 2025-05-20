@@ -1,5 +1,11 @@
 %YAML 1.3
 ---
+- Key: [Smart Shift, pressed]
+- KeyPress:
+  - [Alt_L, Shift_L, a]
+  - click
+...
+---
 - MouseGesture: Mouse Up
 - KeyPress:
   - [Super_L, w]
