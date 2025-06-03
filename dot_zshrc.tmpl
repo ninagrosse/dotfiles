@@ -57,6 +57,12 @@ plugins+=(
 alias lzd='lazydocker'
 {{- end }}
 
+{{- if eq .chezmoi.hostname "RTY-6495672069" }}
+plugins+=(
+  kubectl
+)
+{{- end }}
+
 # General plugins that should be loaded on every host
 plugins+=(
   chezmoi
@@ -255,7 +261,7 @@ export MAVEN_OPTS='-Xms256m -Xmx512m'
 export PATH=$M2:$PATH
 # add /snap/bin to PATH
 export PATH=/snap/bin:$PATH
-source <(kubectl completion zsh)
+# add krew (kubectl plugin manager) to PATH
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 {{- end }}
 
