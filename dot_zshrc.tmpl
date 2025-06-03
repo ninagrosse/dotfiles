@@ -256,6 +256,7 @@ export PATH=$M2:$PATH
 # add /snap/bin to PATH
 export PATH=/snap/bin:$PATH
 source <(kubectl completion zsh)
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 {{- end }}
 
 {{- if eq .chezmoi.hostname "soniq-pi4" }}
