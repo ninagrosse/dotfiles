@@ -17,6 +17,8 @@ packages=(
   fd
   fzf
   git-delta
+  helm
+  helmfile
   httpie
   jq
   jwt-cli
