@@ -87,178 +87,30 @@ plugins+=(
 source $ZSH/oh-my-zsh.sh
 
 ############################################################################
-### Aliases
+### Load aliases from "$HOME/.config/zsh/aliases"
 ############################################################################
-
-# Reload zsh (e.g. after editing .zshrc or editing plugins)
-alias src='exec zsh'
-
-# Edit .zshrc in the chezmoi source directory
-alias zshrc='chezmoi edit ${ZDOTDIR:-$HOME}/.zshrc'
-
-# Replace cat with bat
-alias cat='bat'
-
-# More eza aliases
-alias l='ll'             # make alias l the same as ll (eza -gl)
-alias lt='ls --tree'     # tree alias (ls is already aliased to eza)
-alias lat='ls -a --tree' # tree alias including hidden folder/files
-
-# Pipe output to fzf with 'command F' instead of 'command | fzf'
-alias -g F="| fzf"
-
-# Pipe output to ripgrep with 'command R' instead of 'command | rg'
-alias -g R="| rg"
-
-# Replace grep with ugrep
-alias grep='ug'
-alias egrep='ug -E'
-alias fgrep='ug -F'
-alias xzgrep='ug -z'
-alias xzegrep='ug -zE'
-alias xzfgrep='ug -zF'
-
-# lazigit alias
-alias lg='lazygit'
-
-# Replace cd with z (zoxide)
-alias cd="z"
-
-# Zellij aliases
-alias zls='zellij list-sessions'
-alias zd='zellij delete-session'
-alias zda='zellij delete-all-sessions'
-alias zk='zellij kill-session'
-alias zka='zellij kill-all-sessions'
-alias zj='zellij' # creates a new session regardless of existing ones
-alias zla='zellij --layout'
-
-# Alias to load Neovim with the minimal config included in the dotfiles
-alias mn='NVIM_APPNAME=minimal-nvim nvim'
-
-# Get the error messages from journalctl
-alias jctl="journalctl -p 3 -xb"
-
-# clr+fastfetch
-alias c="clr && fastfetch"
-
-# chezmoi aliases
-alias cad="chezmoi add"
-alias cap="chezmoi apply"
-alias ccd="echo \'chezmoi cd\' starts a sub-shell. Don\'t forget to exit when you are done.; chezmoi cd"
-alias cdi="chezmoi diff"
-alias ced="chezmoi edit"
-alias cls="chezmoi list"
-alias cra="chezmoi re-add"
-alias cst="chezmoi status"
-alias cup="chezmoi update"
+for alias_file in "$HOME/.config/zsh/aliases"/*.zsh; do
+  [[ -r "$alias_file" ]] && source "$alias_file"
+done
 
 ############################################################################
-### Tools initializations & settings
+### Load env vars, tools initializations, etc. from "$HOME/.config/zsh/env"
 ############################################################################
-
-# Set preferred editor
-# Use vscode when inside vscode terminal, otherwise use nvim
-if [[ $TERM_PROGRAM == 'vscode' ]]; then
-  export EDITOR='code --wait'
-else
-  export EDITOR='nvim'
-fi
-
-# Initialize Starship prompt
-eval "$(starship init zsh)"
-
-# Initialize atuin
-eval "$(atuin init zsh)"
-
-# Set fzf colors (Catppuccin Mocha)
-export FZF_DEFAULT_OPTS=" \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
---color=selected-bg:#45475a \
---multi"
-
-# Use bat & eza previews in fzf
-show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
-export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
-export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
-
-# Advanced customization of fzf options via _fzf_comprun function
-# - The first argument to the function is the name of the command.
-# - You should make sure to pass the rest of the arguments to fzf.
-_fzf_comprun() {
-  local command=$1
-  shift
-  case "$command" in
-  cd) fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
-  *) fzf --preview "$show_file_or_dir_preview" "$@" ;;
-  esac
-}
-
-# Function for yazi to start it with just a 'y' and cd into the directory, you're currently in, when exiting yazi
-function y() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-  yazi "$@" --cwd-file="$tmp"
-  if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-    builtin cd -- "$cwd"
-  fi
-  rm -f -- "$tmp"
-  echo -e -n "\x1b[0 q" # reset cursor to terminal emulator default
-}
-
-# Zellij function to either attach/resurrect a session or create a new one, if none exists
-function za() {
-  local session_name="$1"
-  local ZJ_SESSIONS=$(zellij list-sessions -n -s)
-  local NO_SESSIONS=$(echo "${ZJ_SESSIONS}" | wc -w)
-
-  # If a session name is provided, check if it exists
-  if [ -n "$session_name" ]; then
-    if echo "$ZJ_SESSIONS" | grep -q "^$session_name$"; then
-      zellij attach "$session_name"
-      return
-    else
-      # Session doesn't exist, handle based on number of existing sessions
-      if [ "${NO_SESSIONS}" -eq 0 ]; then
-        # 'No active zellij sessions found' message from zellij itself
-        echo -n "Do you want to create a new one with name '$session_name'? (y/N): "
-        read -r response
-        if [[ "$response" =~ ^[Yy]$ ]]; then
-          zellij --session "$session_name"
-        fi
-        return
-      elif [ "${NO_SESSIONS}" -eq 1 ]; then
-        echo -n "Session '$session_name' not found. Do you want to attach to session '$ZJ_SESSIONS'? (y/N): "
-        read -r response
-        if [[ "$response" =~ ^[Yy]$ ]]; then
-          zellij attach "$ZJ_SESSIONS"
-        fi
-        return
-      else
-        # Multiple sessions exist, show fzf selection
-        echo "Session '$session_name' not found. Select from available sessions:"
-        zellij attach "$(echo "${ZJ_SESSIONS}" | fzf --height=20% --reverse)"
-        return
-      fi
-    fi
-  fi
-
-  # When no session name is provided
-  # - No attachable session: create new session
-  # - One session (alive or exited): attach / resurrect session
-  # - Two or more sessions (alive or exited): select session with fzf
-  if [ "${NO_SESSIONS}" -eq 1 ]; then
-    zellij attach "$ZJ_SESSIONS"
-  elif [ "${NO_SESSIONS}" -ge 2 ]; then
-    zellij attach "$(echo "${ZJ_SESSIONS}" | fzf --height=20% --reverse)"
-  else
-    zellij
-  fi
-}
+for env_file in "$HOME/.config/zsh/env"/*.zsh; do
+  [[ -r "$env_file" ]] && source "$env_file"
+done
 
 ############################################################################
-### Host specific settings, variables, aliases, ...
+### Load functions from "$HOME/.config/zsh/functions"
+############################################################################
+for func_file in "$HOME/.config/zsh/functions"/*.zsh; do
+  [[ -r "$func_file" ]] && source "$func_file"
+done
+
+############################################################################
+### Host specific settings, variables, aliases, etc.
+### Stuff that shouldn't be committed to chezmoi can also be placed in the
+### direcotories for aliases, env or functions and just not be added.
 ############################################################################
 {{- if eq .chezmoi.hostname "nina-desktop" }}
 # Init ssh-agent so vscode can forward the keys to a dev container
@@ -344,7 +196,5 @@ alias parupd="paru -Sy"
 # age alieas is from ubuntu plugin and aliases to 'sudo apt', but this conflicts with age encryption
 unalias age
 {{- end }}
-
-[[ -f $HOME/.local.zsh ]] && source $HOME/.local.zsh
 
 # vim:filetype=zsh
