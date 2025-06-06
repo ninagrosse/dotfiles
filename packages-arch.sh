@@ -20,6 +20,9 @@ packages=(
   httpie
   jq
   jwt-cli
+  kubectl
+  krew
+  k9s
   lazygit
   neovim
   perl-image-exiftool
