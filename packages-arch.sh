@@ -31,6 +31,7 @@ packages=(
   python
   python-pipx
   ripgrep
+  sops
   starship
   tealdeer
   ugrep
