@@ -65,6 +65,12 @@ plugins+=(
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 {{- end }}
 
+{{- if eq .chezmoi.hostname "cachy-desktop" }}
+plugins+=(
+  podman
+)
+{{- end }}
+
 # General plugins that should be loaded on every host
 plugins+=(
   chezmoi
