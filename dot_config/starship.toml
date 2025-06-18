@@ -1,10 +1,18 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# To show k8s context only in certain directories, place an .envrc in the directory with content 'export k8s=true'.
+# .envrc also applies to subdirectories. Requires 'direnv'.
+[kubernetes]
+disabled = false
+detect_env_vars = ['k8s']
+format = '[$symbol $context( \($namespace\))]($style) in '
+style = "blue bold"
+
 # [username]
 # show_always = true
 #
 # [hostname]
 # ssh_only = false
-
+#
 # [os]
 # disabled = false
