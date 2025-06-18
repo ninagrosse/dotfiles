@@ -5,7 +5,7 @@
 [kubernetes]
 disabled = false
 detect_env_vars = ['k8s']
-format = '[$symbol $context( \($namespace\))]($style) in '
+format = '[$symbol$context( \($namespace\))]($style) in '
 style = "blue bold"
 
 # [username]
