@@ -20,7 +20,7 @@ brew "httpie"
 brew "helm"
 brew "helmfile"
 brew "jq"
-brew "jesseduffield/lazydocker/lazydocker"
+brew "jesseduffield/lazydocker/lazydocker" if OS.linux?
 brew "jesseduffield/lazygit/lazygit"
 brew "kubectl"
 brew "krew"
