@@ -36,3 +36,6 @@ _fzf_comprun() {
   *) fzf --preview "$show_file_or_dir_preview" "$@" ;;
   esac
 }
+
+# reset cursor to steady underline
+echo -e -n "\x1b[4 q"
