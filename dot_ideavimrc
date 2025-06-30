@@ -414,3 +414,24 @@ let g:WhichKeyDesc_git_prev_hunk = "<leader>g[ Previous Hunk"
 let g:WhichKeyDesc_git_rollback_changed_lines = "<leader>gr Rollback Hunk"
 let g:WhichKeyDesc_git_rollback_file = "<leader>gR Rollback File"
 let g:WhichKeyDesc_git_diff_file = "<leader>gd Diff File"
+
+" String manipulation
+nmap <leader>mp <Action>(osmedile.intellij.stringmanip.PopupChoiceAction)
+nmap <leader>ma <Action>(StringManipulation.AlignToColumns)
+nmap <leader>mi <Action>(osmedile.intellij.stringmanip.IncrementAction)
+nmap <leader>mI <Action>(osmedile.intellij.stringmanip.DuplicateAndIncrementAction)
+nmap <leader>md <Action>(osmedile.intellij.stringmanip.DecrementAction)
+nmap <leader>mD <Action>(osmedile.intellij.stringmanip.DuplicateAndDecrementAction)
+
+vmap <leader>mp <Action>(osmedile.intellij.stringmanip.PopupChoiceAction)
+vmap <leader>ma <Action>(StringManipulation.AlignToColumns)
+vmap <leader>mi <Action>(osmedile.intellij.stringmanip.IncrementAction)
+vmap <leader>md <Action>(osmedile.intellij.stringmanip.DecrementAction)
+
+let g:WhichKeyDesc_stringmanip = "<leader>m String manipulation"
+let g:WhichKeyDesc_stringmanip_popup = "<leader>mp Popup"
+let g:WhichKeyDesc_stringmanip_align = "<leader>ma AlignToColumns"
+let g:WhichKeyDesc_stringmanip_inc = "<leader>mi Increment"
+let g:WhichKeyDesc_stringmanip_dupinc = "<leader>mI DuplicateAndIncrement"
+let g:WhichKeyDesc_stringmanip_dec = "<leader>md Decrement"
+let g:WhichKeyDesc_stringmanip_dupdec = "<leader>mD DuplicateAndDecrement"
