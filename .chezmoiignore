@@ -22,6 +22,7 @@ capslock.ahk
 {{ if eq .osid "windows" }}
 .config/atuin
 .config/btop
+.config/ghostty
 .config/httpie
 .config/lazydocker
 .config/minimal-nvim
