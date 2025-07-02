@@ -134,6 +134,8 @@ fi
 source $HOME/.cargo/env
 # COLORTERM isn't set on WSL and without it terminal apps like k9s look weird
 export COLORTERM=truecolor
+# set cursor to steady underline
+echo -e -n "\x1b[4 q"
 {{- end }}
 
 {{- if eq .chezmoi.hostname "MacBookAir" }}
@@ -159,6 +161,8 @@ export PATH=$M2:$PATH
 export PATH=/snap/bin:$PATH
 # COLORTERM isn't set on WSL and without it terminal apps like k9s look weird
 export COLORTERM=truecolor
+# set cursor to steady underline
+echo -e -n "\x1b[4 q"
 {{- end }}
 
 {{- if eq .chezmoi.hostname "soniq-pi4" }}
