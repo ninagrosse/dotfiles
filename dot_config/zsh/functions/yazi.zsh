@@ -6,5 +6,5 @@ function y() {
     builtin cd -- "$cwd"
   fi
   rm -f -- "$tmp"
-  echo -e -n "\x1b[4 q" # reset cursor to steady underline
+  echo -e -n "\x1b[0 q" # reset cursor to terminal emulator default
 }
