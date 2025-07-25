@@ -41,7 +41,7 @@ capslock.ahk
 scripts-cachy/
 {{ end }}
 
-{{ if ne .chezmoi.hostname "RTY-6495672069" "RTY-4110655125" }}
+{{ if ne .chezmoi.hostname "RTY-4110655125" }}
 OneDrive - Bertelsmann SE & Co. KGaA*
 {{ end }}
 
