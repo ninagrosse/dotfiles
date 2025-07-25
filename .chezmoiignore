@@ -41,11 +41,11 @@ capslock.ahk
 scripts-cachy/
 {{ end }}
 
-{{ if ne .chezmoi.hostname "RTY-6495672069" }}
+{{ if ne .chezmoi.hostname "RTY-6495672069" "RTY-4110655125" }}
 OneDrive - Bertelsmann SE & Co. KGaA*
 {{ end }}
 
-{{ if eq .chezmoi.hostname "RTY-6495672069" }}
+{{ if eq .chezmoi.hostname "RTY-6495672069" "RTY-4110655125" }}
 .config/zellij/layouts/docker-hosts.kdl
 .config/zellij/layouts/sysadmin.kdl
 .ssh/
