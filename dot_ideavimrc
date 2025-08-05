@@ -15,7 +15,7 @@ set visualbell
 nmap <Esc> :nohlsearch<CR>
 
 " Clipboard Integration
-set clipboard+=unnamed
+set clipboard+=unnamedplus
 
 " Leader Key
 let mapleader="\<space>"
