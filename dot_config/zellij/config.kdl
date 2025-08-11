@@ -119,7 +119,7 @@ keybinds clear-defaults=true {
         bind "Ctrl -" { Resize "Decrease"; }
         bind "Ctrl =" { Resize "Increase"; }
         bind "Ctrl h" {
-            MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.2.1/vim-zellij-navigator.wasm" {
+            MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.3.0/vim-zellij-navigator.wasm" {
                 name "move_focus_or_tab"
                 payload "left"
                 floating false
@@ -127,7 +127,7 @@ keybinds clear-defaults=true {
             }
         }
         bind "Ctrl j" {
-            MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.2.1/vim-zellij-navigator.wasm" {
+            MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.3.0/vim-zellij-navigator.wasm" {
                 name "move_focus"
                 payload "down"
                 floating false
@@ -135,7 +135,7 @@ keybinds clear-defaults=true {
             }
         }
         bind "Ctrl k" {
-            MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.2.1/vim-zellij-navigator.wasm" {
+            MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.3.0/vim-zellij-navigator.wasm" {
                 name "move_focus"
                 payload "up"
                 floating false
@@ -143,7 +143,7 @@ keybinds clear-defaults=true {
             }
         }
         bind "Ctrl l" {
-            MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.2.1/vim-zellij-navigator.wasm" {
+            MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.3.0/vim-zellij-navigator.wasm" {
                 name "move_focus_or_tab"
                 payload "right"
                 floating false
