@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -e
+set -u
+
+# Datum auf Deutsch
+LC_TIME=de_DE.UTF-8 date "+%H:%M Uhr am %A, %d. %B %Y"
+echo
+
+# Aktuellen Tag holen
+TAG=$(date '+%-d')
+
+# Kalender mit Montag als Wochenstart
+# Aktuellen Tag rot markieren
+cal --monday | sed -E "s/\b($TAG)\b/\x1b[31m\1\x1b[0m/"

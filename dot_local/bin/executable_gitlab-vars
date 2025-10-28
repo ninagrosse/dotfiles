@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# Script to get all CI/CD variable keys stored in GitLab.
+# Only lists groups and projects with sufficient access.
+# Requires glab and jq.
+
+echo "🔍 Fetching all accessible groups..."
+groups=$(glab api groups --paginate | jq -r '.[].full_path')
+
+echo "🔍 Fetching all accessible projects..."
+projects=$(glab repo list --output json | jq -r '.[].path_with_namespace')
+
+echo
+echo "🔑 Group-level CI/CD variable keys:"
+for group in $groups; do
+  echo "Group: $group"
+  vars=$(glab variable list --output json -g "$group" 2>/dev/null || echo "[]")
+  if [[ "$vars" == "[]" ]]; then
+    echo "  (no variables or access denied)"
+    echo
+  else
+    echo "$vars" | jq -r '.[].key' | sed 's/^/  /'
+    echo
+  fi
+done
+
+echo "🔑 Project-level CI/CD variable keys:"
+for project in $projects; do
+  echo "Project: $project"
+  vars=$(glab variable list --output json -R "$project" 2>/dev/null || echo "[]")
+  if [[ "$vars" == "[]" ]]; then
+    echo "  (no variables or access denied)"
+    echo
+  else
+    echo "$vars" | jq -r '.[].key' | sed 's/^/  /'
+    echo
+  fi
+done

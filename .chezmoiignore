@@ -29,6 +29,7 @@ capslock.ahk
 .config/tealdeer
 .config/xxh
 .config/zellij
+.local/bin
 .zshrc
 *.sh
 {{ end }}
