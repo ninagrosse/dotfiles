@@ -33,6 +33,7 @@ $packages = @(
   "ugrep",
   "win32yank",
   "yazi",
+  "yq",
   "zoxide"
 )
 

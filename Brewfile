@@ -35,6 +35,7 @@ brew "ugrep"
 brew "wget"
 brew "xxh"
 brew "yazi"
+brew "yq"
 brew "zellij"
 brew "zoxide"
 

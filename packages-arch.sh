@@ -36,6 +36,7 @@ packages=(
   tealdeer
   ugrep
   yazi
+  yq
   zellij
   zoxide
 )
