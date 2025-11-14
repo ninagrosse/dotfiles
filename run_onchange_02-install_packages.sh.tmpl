@@ -33,7 +33,7 @@ bat cache --build
 # {{ include "dot_config/yazi/package.toml" | sha256sum }}
 rm -rf "$HOME"/.config/yazi/flavors
 rm -rf "$HOME"/.config/yazi/plugins
-ya pack -i
+ya pkg install
 
 # Install/update nvm
 PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash'
