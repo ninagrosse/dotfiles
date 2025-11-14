@@ -48,7 +48,9 @@ foreach ($package in $packages) {
 bat cache --build
 
 # Run 'ya pack' to install yazi plugins and themes
-ya pack -i
+Remove-Item -Path "$env:APPDATA\yazi\config\flavors" -Recurse -Force
+Remove-Item -Path "$env:APPDATA\yazi\config\plugins" -Recurse -Force
+ya pkg install
 
 # Set YAZI_FILE_ONE system env, so yazi file previews work
 [System.Environment]::SetEnvironmentVariable('YAZI_FILE_ONE','C:\Program Files\Git\usr\bin\file.exe', 'User')
