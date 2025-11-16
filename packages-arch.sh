@@ -33,6 +33,7 @@ packages=(
   ripgrep
   sops
   starship
+  ttf-jetbrains-mono-nerd
   tealdeer
   ugrep
   yazi
