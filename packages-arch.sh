@@ -36,6 +36,8 @@ packages=(
   ttf-jetbrains-mono-nerd
   tealdeer
   ugrep
+  wl-clipboard
+  xclip
   yazi
   yq
   zellij
