@@ -86,7 +86,6 @@ Installs various desktop applications with winget.
 ## ⚙️ Other configs
 
 * [Neovim config](https://github.com/ninagrosse/lazyvim-config)
-* [Wezterm config](https://github.com/ninagrosse/wezterm-config)
 * [CLI tools plugin for xxh](https://github.com/ninagrosse/xxh-plugin-prerun-cli-tools)
 
 [^1]: Other Linuxes have their own tools for package management, but for the distros I use besides Arch (Debian, Ubuntu, Fedora), a lot of the packages aren't available in their repositories. Using Homebrew on non-Arch systems is just more hassle-free.
