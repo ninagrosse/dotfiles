@@ -37,9 +37,11 @@ capslock.ahk
 {{ if ne .osid "linux-cachyos" }}
 .config/DankMaterialShell
 .config/input-remapper-2
+.config/MangoHud
 .config/niri
 .config/paru
 .config/solaar
+.config/sunshine
 .config/systemd
 scripts-cachy/
 {{ end }}
