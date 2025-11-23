@@ -3,7 +3,6 @@
 # from the files in the scripts-cachy folder.
 
 packages=(
-  age
   atuin
   bat
   btop
@@ -17,6 +16,7 @@ packages=(
   fd
   fzf
   git-delta
+  glab
   helm
   helmfile
   httpie
@@ -24,8 +24,10 @@ packages=(
   jwt-cli
   kubectl
   krew
+  kustomize
   k9s
   lazygit
+  lazydocker
   neovim
   perl-image-exiftool
   python
@@ -33,6 +35,7 @@ packages=(
   ripgrep
   sops
   starship
+  ttf-jetbrains-mono
   ttf-jetbrains-mono-nerd
   tealdeer
   ugrep
@@ -48,13 +51,12 @@ for PKG in "${packages[@]}"; do
   sudo pacman -S "$PKG" --noconfirm --needed
 done
 
-paru_pkgs=(
-  lazydocker
-)
-
-for PKG in "${paru_pkgs[@]}"; do
-  paru -S "$PKG" --noconfirm --needed
-done
+# paru_pkgs=(
+# )
+#
+# for PKG in "${paru_pkgs[@]}"; do
+#   paru -S "$PKG" --noconfirm --needed
+# done
 
 # install xxh via pipx
 pipx ensurepath

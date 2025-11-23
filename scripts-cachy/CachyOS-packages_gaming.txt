@@ -1,6 +1,8 @@
 cachyos-gaming-meta
 cachyos-gaming-applications
 openrazer-daemon
+proton-ge-custom-bin
+protonhax
 sunshine
 moondeckbuddy-appimage
 polychromatic
