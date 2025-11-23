@@ -4,19 +4,18 @@ ansible
 baobab
 brave-bin
 cachyos-snapper-support
+dconf-editor
 docker
 docker-buildx
 docker-compose
-dolphin-plugins
+extension-manager
 ffmpegthumbnailer
-filelight
 filezilla
+firefoxpwa
 fuse3
 ghostty
 jdk21-openjdk
 keepassxc
-ksystemlog
-kimageformats
 libheif
 libappindicator
 libayatana-appindicator
@@ -25,7 +24,6 @@ libreoffice-fresh
 maven
 obsidian
 papirus-icon-theme
-partitionmanager
 podman
 podman-desktop
 postgresql-libs
@@ -33,6 +31,7 @@ python-pillow
 qt5-wayland
 refind
 refind-btrfs
+seahorse
 signal-desktop
 solaar
 thunderbird
@@ -44,4 +43,6 @@ vesktop
 vlc
 vorta
 wev
+xdg-terminal-exec
+xarchiver
 zen-browser-bin
