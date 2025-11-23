@@ -212,6 +212,10 @@ window-rule {
     default-column-width { proportion 0.8; }
 }
 window-rule {
+    match app-id="Alacritty"
+    default-column-width { proportion 0.66667; }
+}
+window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     match app-id=r#"zen$"# title="^Picture-in-Picture$"
     match app-id="zoom"
