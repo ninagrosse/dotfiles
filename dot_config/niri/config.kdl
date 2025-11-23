@@ -213,6 +213,7 @@ window-rule {
 }
 window-rule {
     match app-id="Alacritty"
+    match title=r#"Discord$"#
     default-column-width { proportion 0.66667; }
 }
 window-rule {
