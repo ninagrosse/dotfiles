@@ -208,12 +208,12 @@ window-rule {
 window-rule {
     match app-id="zen"
     match app-id="obsidian"
-    match title=r#"Apple Music$"#
     default-column-width { proportion 0.8; }
 }
 window-rule {
     match app-id="Alacritty"
     match title=r#"Discord$"#
+    match title=r#"Apple Music$"#
     default-column-width { proportion 0.66667; }
 }
 window-rule {
