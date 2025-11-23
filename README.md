@@ -1,12 +1,13 @@
 # 🏠 dotfiles
 
-My personal dotfiles, managed with [chezmoi](https://github.com/twpayne/chezmoi). Compatible with Linux, MacOS and Windows 11.
+My personal dotfiles, managed with chezmoi. Compatible with Linux, MacOS and Windows 11.
 
 ## 📖 Linux & MacOS instructions
 
 ### Requirements
 
 * zsh
+* [chezmoi](https://github.com/twpayne/chezmoi)
 * [age](https://github.com/FiloSottile/age) (for encryption)
 * Package manager
   * Arch: `pacman` and [`paru`](https://github.com/Morganamilo/paru)
@@ -15,10 +16,8 @@ My personal dotfiles, managed with [chezmoi](https://github.com/twpayne/chezmoi)
 
 ### Installation
 
-One-line Installation
-
 ```shell
-sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply ninagrosse --ssh
+chezmoi init --apply ninagrosse --ssh
 ```
 
 This installs `chezmoi`, clones the repo and applies everything. Follow the on-screen prompts to setup git email and username. For cloning with https instead, omit `--ssh`.
