@@ -126,6 +126,7 @@ environment {
   QT_QPA_PLATFORMTHEME "gtk3"
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
   TERMINAL "alacritty"
+  GTK_IM_MODULE "simple"
 }
 hotkey-overlay {
     skip-at-startup
