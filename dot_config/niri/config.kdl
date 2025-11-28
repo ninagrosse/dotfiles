@@ -125,7 +125,7 @@ environment {
   ELECTRON_OZONE_PLATFORM_HINT "auto"
   QT_QPA_PLATFORMTHEME "gtk3"
   QT_QPA_PLATFORMTHEME_QT6 "gtk3"
-  TERMINAL "alacritty"
+  TERMINAL "ghostty"
   GTK_IM_MODULE "simple"
 }
 hotkey-overlay {
@@ -213,6 +213,7 @@ window-rule {
 }
 window-rule {
     match app-id="Alacritty"
+    match app-id="ghostty"
     match title=r#"Discord$"#
     match title=r#"Apple Music$"#
     default-column-width { proportion 0.66667; }
@@ -264,7 +265,7 @@ binds {
 
     // === Application Launchers ===
     Mod+T hotkey-overlay-title="Open Terminal" { 
-      spawn "alacritty";
+      spawn "ghostty";
     }
     Mod+B hotkey-overlay-title="Open Browser" { 
       spawn "zen-browser";
