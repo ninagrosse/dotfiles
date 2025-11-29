@@ -27,7 +27,7 @@ input {
     }
     trackpoint {
     }
-    warp-mouse-to-focus
+    // warp-mouse-to-focus
 }
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
@@ -243,6 +243,15 @@ window-rule {
     clip-to-geometry true
     draw-border-with-background false
 }
+window-rule {
+  match app-id="Mouseless"
+  open-floating true
+  open-fullscreen false
+  opacity 0.2
+  // open-maximized-to-edges true // v25.11
+  default-window-height { proportion 1.0; }
+  default-column-width { proportion 1.0; }
+}
 // "next release"
 // recent-windows {
 //   binds {
@@ -352,6 +361,7 @@ binds {
     Mod+Shift+T { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
     Mod+W { toggle-column-tabbed-display; }
+    Mod+Ctrl+Shift+F { toggle-windowed-fullscreen; }
 
     // === Focus Navigation ===
     Mod+H     { focus-column-left; }
