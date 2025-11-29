@@ -1,0 +1,60 @@
+[general]
+live_config_reload = true
+import = [
+  # If dank-theme isn't present, fall back to catppuccin-mocha
+  "~/.config/alacritty/catppuccin-mocha.toml",
+  "~/.config/alacritty/dank-theme.toml",
+]
+
+[window]
+# decorations = "None" # Unnecessary with niri's 'prefer-no-csd'
+padding = { x = 12, y = 12 }
+opacity = 0.97
+
+[font]
+size = 12
+
+[font.normal]
+family = "JetbrainsMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "JetbrainsMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "JetbrainsMono Nerd Font"
+style = "Italic"
+
+[font.bold_italic]
+family = "JetbrainsMono Nerd Font"
+style = "Bold Italic"
+
+[scrolling]
+history = 3023
+
+[cursor]
+style = "Underline"
+vi_mode_style = "None"
+unfocused_hollow = true
+thickness = 0.15
+
+[mouse]
+hide_when_typing = true
+
+[selection]
+save_to_clipboard = true
+
+[bell]
+duration = 0
+
+[keyboard]
+bindings = [
+  { key = "C",       mods = "Control|Shift", action = "Copy"  },
+  { key = "V",       mods = "Control|Shift", action = "Paste" },
+  { key = "N",       mods = "Control|Shift", action = "SpawnNewInstance" },
+  { key = "Equals",  mods = "Control|Shift", action = "IncreaseFontSize" },
+  { key = "Minus",   mods = "Control",       action = "DecreaseFontSize" },
+  { key = "Key0",    mods = "Control",       action = "ResetFontSize"    },
+  { key = "Enter",   mods = "Shift",         chars = "\n" },
+]
