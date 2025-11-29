@@ -4,7 +4,6 @@ app-notifications = no-clipboard-copy,no-config-reload
 copy-on-select = true
 scrollback-limit = 30000
 confirm-close-surface = false
-gtk-titlebar = false
 gtk-single-instance = true
 
 # Font
