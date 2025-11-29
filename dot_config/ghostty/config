@@ -1,19 +1,33 @@
-# This is the configuration file for Ghostty.
-#
-# Run `ghostty +show-config --default --docs` to view a list of
-# all available config options and their default values.
-#
-# Additionally, each config option is also explained in detail
-# on Ghostty's website, at https://ghostty.org/docs/config.
-
+# General
 term = xterm-256color
-font-family = "JetbrainsMono Nerd Font"
-theme = catppuccin-mocha.conf
-bold-is-bright = true
-background-opacity = 0.95
-shell-integration-features = no-cursor
-cursor-style = underline
-cursor-style-blink = false
+app-notifications = no-clipboard-copy,no-config-reload
 copy-on-select = true
 scrollback-limit = 30000
+confirm-close-surface = false
+gtk-titlebar = false
+gtk-single-instance = true
+
+# Font
+font-family = "JetbrainsMono Nerd Font"
+bold-is-bright = true
+
+# Look & Feel
+# window-decoration = false # Unnecessary with niri's 'prefer-no-csd'
+window-padding-x = 12
+window-padding-y = 12
+background-blur-radius = 32
+background-opacity = 0.97
+unfocused-split-opacity = 0.7
+unfocused-split-fill = #44464f
+
+# If Matugen colors aren't present, load Catppuccin
+theme = catppuccin-mocha.conf
+
+# Cursor / Mouse
+shell-integration-features = no-cursor
 mouse-hide-while-typing = true
+cursor-style = underline
+cursor-style-blink = false
+
+# Matugen Colors (overrides Catppuccin)
+config-file = ?config-dankcolors
