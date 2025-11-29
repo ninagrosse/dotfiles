@@ -5,8 +5,7 @@ Wants=graphical-session.target
 
 [Service]
 Type=simple
-Environment=XDG_DATA_DIRS=/usr/share/:/usr/local/share/:%h/.local/share
-ExecStart=%h/.local/bin/Mouseless_v0.5.0-preview.2_arch-20251019.0.436919_x86_64.AppImage --no-compositing --debug
+ExecStart=/bin/sh -c 'export XDG_DATA_DIRS=${XDG_DATA_DIRS:-/usr/share/:/usr/local/share/:$HOME/.local/share} && exec %h/.local/bin/Mouseless_v0.5.0-preview.2_arch-20251019.0.436919_x86_64.AppImage --no-compositing --debug'
 TimeoutStopSec=30
 # Restart=on-failure
 # RestartSec=5
