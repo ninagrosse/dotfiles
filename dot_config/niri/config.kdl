@@ -175,15 +175,6 @@ animations {
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
-window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
 window-rule {
     match app-id=r#"^org\.gnome\."#
     geometry-corner-radius 12
@@ -205,14 +196,6 @@ window-rule {
     match app-id=r#"^xdg-desktop-portal$"#
     open-floating true
 }
-// window-rule {
-//     match app-id=r#"^org\.wezfurlong\.wezterm$"#
-//     match app-id="Alacritty"
-//     match app-id="zen"
-//     match app-id="com.mitchellh.ghostty"
-//     match app-id="kitty"
-//     draw-border-with-background false
-// }
 window-rule {
     match app-id="zen"
     match app-id="obsidian"
@@ -248,21 +231,32 @@ window-rule {
   open-floating true
   open-fullscreen false
   opacity 0.2
-  // open-maximized-to-edges true // v25.11
+  open-maximized-to-edges true
   default-window-height { proportion 1.0; }
   default-column-width { proportion 1.0; }
 }
-// "next release"
-// recent-windows {
-//   binds {
-//     Alt+Tab {
-//       next-window;
-//     }
-//     Alt+Shift+Tab {
-//       previous-window;
-//     }
-//   }
-// }
+
+recent-windows {
+  binds {
+    Alt+Tab {
+      next-window;
+    }
+    Alt+Shift+Tab {
+      previous-window;
+    }
+    Alt+Ctrl+Tab {
+      next-window filter="app-id";
+    }
+    Alt+Ctrl+Shift+Tab {
+      previous-window filter="app-id";
+    }
+  }
+}
+
+// Matugen-Templates at /usr/share/quickshell/dms
+include "dms/alttab.kdl"
+include "dms/colors.kdl"
+include "dms/wpblur.kdl"
 
 binds {
     // === System & Overview ===
@@ -358,10 +352,11 @@ binds {
     Mod+Q repeat=false { close-window; }
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
+    Mod+Alt+F { maximize-window-to-edges; }
+    Mod+Ctrl+Shift+F { toggle-windowed-fullscreen; }
     Mod+Shift+T { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
     Mod+W { toggle-column-tabbed-display; }
-    Mod+Ctrl+Shift+F { toggle-windowed-fullscreen; }
 
     // === Focus Navigation ===
     Mod+H     { focus-column-left; }
