@@ -313,6 +313,9 @@ binds {
     Ctrl+Shift+Space {
       spawn "1password" "--quick-access"
     }
+    Mod+G {
+      spawn "wl-kbptr"
+    }
 
     // === Security ===
     Mod+Alt+L hotkey-overlay-title="Lock Screen" {
