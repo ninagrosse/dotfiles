@@ -13,7 +13,7 @@ echo
 echo "🔑 Group-level CI/CD variable keys:"
 for group in $groups; do
   echo "Group: $group"
-  vars=$(glab variable list --output json -g "$group" 2>/dev/null || echo "[]")
+  vars=$(glab variable list --output json -g "$group" | tail -1 2>/dev/null || echo "[]")
   if [[ "$vars" == "[]" ]]; then
     echo "  (no variables or access denied)"
     echo
@@ -26,7 +26,7 @@ done
 echo "🔑 Project-level CI/CD variable keys:"
 for project in $projects; do
   echo "Project: $project"
-  vars=$(glab variable list --output json -R "$project" 2>/dev/null || echo "[]")
+  vars=$(glab variable list --output json -R "$project" | tail -1 2>/dev/null || echo "[]")
   if [[ "$vars" == "[]" ]]; then
     echo "  (no variables or access denied)"
     echo
