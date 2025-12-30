@@ -51,12 +51,13 @@ for PKG in "${packages[@]}"; do
   sudo pacman -S "$PKG" --noconfirm --needed
 done
 
-# paru_pkgs=(
-# )
-#
-# for PKG in "${paru_pkgs[@]}"; do
-#   paru -S "$PKG" --noconfirm --needed
-# done
+paru_pkgs=(
+  witr-bin
+)
+
+for PKG in "${paru_pkgs[@]}"; do
+  paru -S "$PKG" --noconfirm --needed
+done
 
 # install xxh via pipx
 pipx ensurepath
