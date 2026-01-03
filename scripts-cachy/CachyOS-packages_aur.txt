@@ -1,7 +1,9 @@
 1password
 1password-cli
 bazecor
+breezex-cursor-theme
 cryptomator
+dms-shell-bin
 dropbox
 enpass-bin
 input-remapper-git
@@ -13,9 +15,14 @@ kwin-scripts-dynamic-workspaces
 kwin-scripts-krohnkite-git
 ledger-live-bin
 libappindicator-gtk2
+nautilus-dropbox
 openwebstart-bin
 rustdesk-bin
 synology-hyper-backup-explorer
+thunar-dropbox
 visual-studio-code-bin
 witr-bin
+wl-kbptr
+wlrctl
+xdg-terminal-exec
 yubico-authenticator-bin

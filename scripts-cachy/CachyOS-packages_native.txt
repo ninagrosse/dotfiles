@@ -1,4 +1,5 @@
 adw-gtk-theme
+adwaita-icon-theme
 alacritty
 ansible
 baobab
@@ -43,6 +44,7 @@ thunar-dropbox
 ueberzugpp
 vesktop
 vlc
+vlc-plugins-all
 vorta
 wev
 xdg-terminal-exec
