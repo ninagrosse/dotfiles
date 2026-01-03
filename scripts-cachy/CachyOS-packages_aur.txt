@@ -17,4 +17,5 @@ openwebstart-bin
 rustdesk-bin
 synology-hyper-backup-explorer
 visual-studio-code-bin
+witr-bin
 yubico-authenticator-bin

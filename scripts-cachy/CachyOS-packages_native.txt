@@ -29,8 +29,10 @@ podman-desktop
 postgresql-libs
 python-pillow
 qt5-wayland
+qt6-wayland
 refind
 refind-btrfs
+rpi-imager
 seahorse
 signal-desktop
 solaar
