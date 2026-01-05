@@ -8,30 +8,30 @@
 ---
 - MouseGesture: Mouse Up
 - KeyPress:
-  - [Super_L, w]
+  - [Super_L, i]
   - click
 ...
 ---
 - MouseGesture: Mouse Down
 - KeyPress:
-  - [Control_L, F7]
+  - [Super_L, u]
   - click
 ...
 ---
 - MouseGesture: Mouse Left
 - KeyPress:
-  - [Super_L, Control_L, Left]
+  - [Super_L, h]
   - click
 ...
 ---
 - MouseGesture: Mouse Right
 - KeyPress:
-  - [Super_L, Control_L, Right]
+  - [Super_L, l]
   - click
 ...
 ---
 - MouseGesture: []
 - KeyPress:
-  - Super_L
+  - [Super_L, Tab]
   - click
 ...
