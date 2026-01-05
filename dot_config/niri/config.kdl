@@ -6,12 +6,6 @@
 //     disable-failed
 // }
 
-// gestures {
-//     hot-corners {
-//         off
-//     }
-// }
-
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
@@ -29,21 +23,13 @@ input {
     }
     // warp-mouse-to-focus
 }
-// You can configure outputs by their name, which you can find
-// by running `niri msg outputs` while inside a niri instance.
-// The built-in laptop monitor is usually called "eDP-1".
-// Find more information on the wiki:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
-// Remember to uncomment the node by removing "/-"!
-/-output "eDP-2" {
-    mode "2560x1600@239.998993"
-    position x=2560 y=0
-    variable-refresh-rate
-}
-/-output "HDMI-A-1" {
-  mode "1920x1080@60.000"
-  variable-refresh-rate on-demand=true
-}
+
+// output.kdl is just a symlink which needs to point to the config of the actual device!
+// Create with e.g. `ln -s output_cachy-desktop.kdl output.kdl`
+// "Since next release" an include can be optional
+// include optional=true "output.kdl"
+include "output.kdl"
+
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout

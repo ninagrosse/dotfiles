@@ -1,0 +1,18 @@
+// You can configure outputs by their name, which you can find
+// by running `niri msg outputs` while inside a niri instance.
+// The built-in laptop monitor is usually called "eDP-1".
+// Find more information on the wiki:
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
+
+// iiyama 1440p
+output "DP-1" {
+  mode "2560x1440@74.924"
+}
+// AOC 1080p
+output "DP-2" {
+  mode "1920x1080@60.000"
+  variable-refresh-rate on-demand=true
+  hot-corners {
+    off
+  }
+}
