@@ -182,14 +182,14 @@ window-rule {
 }
 window-rule {
     match app-id="zen"
-    match app-id="obsidian"
+    match title=r#"Discord$"#
     default-column-width { proportion 0.8; }
 }
 window-rule {
     match app-id="Alacritty"
     match app-id="ghostty"
-    match title=r#"Discord$"#
     match title=r#"Apple Music$"#
+    match app-id="obsidian"
     default-column-width { proportion 0.66667; }
 }
 window-rule {
@@ -199,6 +199,16 @@ window-rule {
     match title="1Password"
     default-column-width { proportion 0.6667; }
     default-window-height { proportion 0.8; }
+    open-floating true
+}
+window-rule {
+    match app-id="org.mozilla.Thunderbird"
+    default-column-width { proportion 0.9; }
+}
+window-rule {
+    match title="File Operation Progress" // thunar
+    default-column-width { proportion 0.25; }
+    default-window-height { proportion 0.25; }
     open-floating true
 }
 window-rule {
