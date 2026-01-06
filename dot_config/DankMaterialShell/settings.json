@@ -165,7 +165,9 @@
   "wifiNetworkPins": {},
   "bluetoothDevicePins": {},
   "audioInputDevicePins": {},
-  "audioOutputDevicePins": {},
+  "audioOutputDevicePins": {
+    "preferredOutput": "alsa_output.usb-Creative_Technology_Ltd_Creative_Pebble_Pro_MF1710-01.iec958-stereo"
+  },
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
