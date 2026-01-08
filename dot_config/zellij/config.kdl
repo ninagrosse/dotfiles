@@ -43,6 +43,8 @@ keybinds clear-defaults=true {
         bind "s" { ToggleActiveSyncTab; SwitchToMode "locked"; }
         bind "t" { SwitchToMode "normal"; }
         bind "x" { CloseTab; SwitchToMode "locked"; }
+        bind "H" { MoveTab "Left"; }
+        bind "L" { MoveTab "Right"; }
         bind "tab" { ToggleTab; }
     }
     resize {
