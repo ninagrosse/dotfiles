@@ -182,6 +182,7 @@ window-rule {
 }
 window-rule {
     match app-id="zen"
+    match app-id="Bazecor"
     match title=r#"Discord$"#
     default-column-width { proportion 0.8; }
 }
