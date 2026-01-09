@@ -206,6 +206,10 @@ window-rule {
     default-column-width { proportion 0.9; }
 }
 window-rule {
+    match app-id="jetbrains-idea"
+    open-maximized true
+}
+window-rule {
     match title="File Operation Progress" // thunar
     default-column-width { proportion 0.25; }
     default-window-height { proportion 0.25; }
