@@ -16,3 +16,8 @@ output "DP-2" {
     off
   }
 }
+// TV
+output "HDMI-A-1" {
+  off
+}
+
