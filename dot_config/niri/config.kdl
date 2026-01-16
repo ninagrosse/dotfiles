@@ -105,7 +105,6 @@ overview {
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
-spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 environment {
   XDG_CURRENT_DESKTOP "niri"
   QT_QPA_PLATFORM "wayland"
@@ -118,6 +117,7 @@ environment {
 cursor {
     xcursor-theme "BreezeX-Black"
     xcursor-size 32
+    hide-when-typing
 }
 hotkey-overlay {
     skip-at-startup
@@ -195,7 +195,9 @@ window-rule {
 }
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"firefox$"# title="^Bild-im-Bild$"
     match app-id=r#"zen$"# title="^Picture-in-Picture$"
+    match app-id=r#"zen$"# title="^Bild-im-Bild$"
     match app-id="zoom"
     match title="1Password"
     default-column-width { proportion 0.6667; }
@@ -211,7 +213,9 @@ window-rule {
     open-maximized true
 }
 window-rule {
-    match title="File Operation Progress" // thunar
+    // thunar modals
+    match title="File Operation Progress"
+    match title="Rename"
     default-column-width { proportion 0.25; }
     default-window-height { proportion 0.25; }
     open-floating true
