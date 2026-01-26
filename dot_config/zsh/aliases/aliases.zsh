@@ -48,6 +48,7 @@ alias mn='NVIM_APPNAME=minimal-nvim nvim'
 alias jctl="journalctl -p 3 -xb"
 
 # clr+fastfetch
+alias clr="clear"
 alias c="clr && fastfetch"
 
 # chezmoi aliases
