@@ -28,6 +28,7 @@ packages=(
   k9s
   lazygit
   lazydocker
+  mise
   neovim
   perl-image-exiftool
   python
