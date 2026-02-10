@@ -35,3 +35,9 @@ function y {
   $esc = [char]27
   Write-Host -NoNewline "$esc[4 q"
 }
+
+# mise activate
+$shimPath = "$env:USERPROFILE\AppData\Local\mise\shims"
+$currentPath = [Environment]::GetEnvironmentVariable('Path', 'User')
+$newPath = $currentPath + ";" + $shimPath
+[Environment]::SetEnvironmentVariable('Path', $newPath, 'User')
