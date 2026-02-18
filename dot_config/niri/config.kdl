@@ -185,13 +185,13 @@ window-rule {
     match app-id="Bazecor"
     match title=r#"Discord$"#
     match app-id="org.mozilla.Thunderbird"
+    match app-id="obsidian"
     default-column-width { proportion 0.8; }
 }
 window-rule {
     match app-id="Alacritty"
     match app-id="ghostty"
     match title=r#"Apple Music$"#
-    match app-id="obsidian"
     default-column-width { proportion 0.66667; }
 }
 window-rule {
