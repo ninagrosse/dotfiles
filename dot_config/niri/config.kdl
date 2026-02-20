@@ -186,6 +186,7 @@ window-rule {
     match title=r#"Discord$"#
     match app-id="org.mozilla.Thunderbird"
     match app-id="obsidian"
+    match title="calibre"
     default-column-width { proportion 0.8; }
 }
 window-rule {
