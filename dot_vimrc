@@ -33,7 +33,7 @@ set rulerformat=%=%h%m%r%w\ %(%c%V%),%l/%L\ %P
 set undolevels=1000
 set backspace=indent,eol,start
 
-set cursorline
+" set cursorline
 set whichwrap=b,s,<,>,[,]
 
 set noswapfile
@@ -49,7 +49,7 @@ set showcmd
 nmap <Esc> :nohlsearch<CR>
 
 " Clipboard Integration
-set clipboard+=unnamed
+set clipboard+=unnamedplus
 
 " Leader Key
 let mapleader=" "
