@@ -13,8 +13,11 @@ if [[ -d $context_dir ]]; then
 fi
 
 # Export KUBECONFIG as colon-separated list
-if (( ${#context_configs[@]} )); then
+if ((${#context_configs[@]})); then
   export KUBECONFIG="${(j.:.)context_configs}"
 else
   unset KUBECONFIG
 fi
+
+# Add krew to PATH
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

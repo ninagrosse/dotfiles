@@ -48,7 +48,7 @@ plugins+=(
 {{- end }}
 
 # Host specific plugins
-{{- if eq .chezmoi.hostname "RTY-6495672069" "RTY-4110655125" "docker" "cachy-mini" "cachy-desktop" }}
+{{- if eq .chezmoi.hostname "RTY-6495672069" "RTY-4110655125" "docker" "cachy-mini" "cachy-desktop" "cachy-tuxedo" }}
 plugins+=(
   docker
   docker-compose
@@ -57,15 +57,7 @@ plugins+=(
 alias lzd='lazydocker'
 {{- end }}
 
-{{- if eq .chezmoi.hostname "MacBookAir" "RTY-6495672069" "RTY-4110655125" "cachy-desktop" }}
-plugins+=(
-  kubectl
-)
-# add krew (kubectl plugin manager) to PATH
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-{{- end }}
-
-{{- if eq .chezmoi.hostname "cachy-desktop" }}
+{{- if eq .chezmoi.hostname "cachy-desktop" "cachy-tuxedo" }}
 plugins+=(
   podman
 )
@@ -83,6 +75,7 @@ plugins+=(
   fzf
   git
   history
+  kubectl
   mise
   rsync
   ssh
