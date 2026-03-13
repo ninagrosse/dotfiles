@@ -13,6 +13,7 @@ docker-buildx
 docker-compose
 extension-manager
 fcitx5
+fcitx5-configtool
 ffmpegthumbnailer
 filezilla
 firefoxpwa
