@@ -1,5 +1,6 @@
 cachyos-gaming-meta
 cachyos-gaming-applications
+faugus-launcher
 openrazer-daemon
 proton-ge-custom-bin
 protonhax

@@ -17,6 +17,7 @@ packages=(
   fzf
   git-delta
   glab
+  glow
   helm
   helmfile
   httpie
