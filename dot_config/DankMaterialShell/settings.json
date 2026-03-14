@@ -489,11 +489,22 @@
         ],
         "createdAt": 1773525163896,
         "updatedAt": 1773525163896
+      },
+      "profile_1773525458553_xqyz9s": {
+        "id": "profile_1773525458553_xqyz9s",
+        "name": "Desktop default",
+        "outputSet": [
+          "DP-1",
+          "DP-2",
+          "HDMI-A-1"
+        ],
+        "createdAt": 1773525458553,
+        "updatedAt": 1773525458553
       }
     }
   },
   "activeDisplayProfile": {
-    "niri": "profile_1773525163896_4eou3r"
+    "niri": "profile_1773525458553_xqyz9s"
   },
   "displayProfileAutoSelect": false,
   "displayShowDisconnected": false,
