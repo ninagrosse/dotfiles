@@ -15,7 +15,7 @@
   "cornerRadius": 12,
   "niriLayoutGapsOverride": -1,
   "niriLayoutRadiusOverride": -1,
-  "niriLayoutBorderSize": -1,
+  "niriLayoutBorderSize": 2,
   "hyprlandLayoutGapsOverride": -1,
   "hyprlandLayoutRadiusOverride": -1,
   "hyprlandLayoutBorderSize": -1,
@@ -29,7 +29,7 @@
   "windSpeedUnit": "kmh",
   "nightModeEnabled": false,
   "animationSpeed": 1,
-  "customAnimationDuration": 200,
+  "customAnimationDuration": 241,
   "syncComponentAnimationSpeeds": true,
   "popoutAnimationSpeed": 1,
   "popoutCustomAnimationDuration": 150,
@@ -80,14 +80,11 @@
       "width": 100
     },
     {
-      "id": "audioOutput",
+      "id": "brightnessSlider",
       "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "audioInput",
-      "enabled": true,
-      "width": 50
+      "width": 100,
+      "instanceId": "mmqhzkp2wdbclpvcuzqimxng6erbp",
+      "deviceName": ""
     },
     {
       "id": "wifi",
@@ -100,7 +97,22 @@
       "width": 50
     },
     {
+      "id": "audioOutput",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "audioInput",
+      "enabled": true,
+      "width": 50
+    },
+    {
       "id": "colorPicker",
+      "enabled": true,
+      "width": 25
+    },
+    {
+      "id": "nightMode",
       "enabled": true,
       "width": 25
     },
@@ -110,9 +122,9 @@
       "width": 25
     },
     {
-      "id": "battery",
+      "id": "idleInhibitor",
       "enabled": true,
-      "width": 50
+      "width": 25
     }
   ],
   "showWorkspaceIndex": false,
@@ -255,9 +267,9 @@
   "acSuspendTimeout": 3600,
   "acSuspendBehavior": 0,
   "acProfileName": "",
-  "batteryMonitorTimeout": 0,
-  "batteryLockTimeout": 0,
-  "batterySuspendTimeout": 0,
+  "batteryMonitorTimeout": 300,
+  "batteryLockTimeout": 300,
+  "batterySuspendTimeout": 900,
   "batterySuspendBehavior": 0,
   "batteryProfileName": "",
   "batteryChargeLimit": 100,
@@ -399,24 +411,40 @@
       {
         "name": "DP-1",
         "model": "PL2730Q"
+      },
+      {
+        "name": "eDP-1",
+        "model": "MNE007ZA3-2"
       }
     ],
     "toast": [
       {
         "name": "DP-1",
         "model": "PL2730Q"
+      },
+      {
+        "name": "eDP-1",
+        "model": "MNE007ZA3-2"
       }
     ],
     "osd": [
       {
         "name": "DP-1",
         "model": "PL2730Q"
+      },
+      {
+        "name": "eDP-1",
+        "model": "MNE007ZA3-2"
       }
     ],
     "notepad": [
       {
         "name": "DP-1",
         "model": "PL2730Q"
+      },
+      {
+        "name": "eDP-1",
+        "model": "MNE007ZA3-2"
       }
     ]
   },
@@ -426,10 +454,33 @@
     "osd": true,
     "notepad": true
   },
-  "niriOutputSettings": {},
+  "niriOutputSettings": {
+    "eDP-1": {
+      "hotCorners": {
+        "corners": [
+          "top-left"
+        ]
+      },
+      "focusAtStartup": true
+    }
+  },
   "hyprlandOutputSettings": {},
-  "displayProfiles": {},
-  "activeDisplayProfile": {},
+  "displayProfiles": {
+    "niri": {
+      "profile_1773502803764_aw0ltm": {
+        "id": "profile_1773502803764_aw0ltm",
+        "name": "Laptop only",
+        "outputSet": [
+          "eDP-1"
+        ],
+        "createdAt": 1773502803764,
+        "updatedAt": 1773502803764
+      }
+    }
+  },
+  "activeDisplayProfile": {
+    "niri": "profile_1773502803764_aw0ltm"
+  },
   "displayProfileAutoSelect": false,
   "displayShowDisconnected": false,
   "displaySnapToEdge": true,
@@ -440,10 +491,7 @@
       "enabled": true,
       "position": 0,
       "screenPreferences": [
-        {
-          "name": "DP-1",
-          "model": "PL2730Q"
-        }
+        "all"
       ],
       "showOnLastDisplay": true,
       "leftWidgets": [
@@ -492,18 +540,8 @@
           "enabled": true
         },
         {
-          "id": "cpuTemp",
-          "enabled": true
-        },
-        {
           "id": "memUsage",
           "enabled": true
-        },
-        {
-          "id": "gpuTemp",
-          "enabled": true,
-          "selectedGpuIndex": 0,
-          "pciId": "1002:744c"
         },
         {
           "id": "notificationButton",
@@ -519,6 +557,10 @@
         },
         {
           "id": "controlCenterButton",
+          "enabled": true
+        },
+        {
+          "id": "battery",
           "enabled": true
         }
       ],
@@ -548,7 +590,7 @@
     {
       "id": "bar1767630451646",
       "name": "Bar 2",
-      "enabled": true,
+      "enabled": false,
       "position": 0,
       "screenPreferences": [
         {
