@@ -481,21 +481,19 @@
   "hyprlandOutputSettings": {},
   "displayProfiles": {
     "niri": {
-      "profile_1773523332791_pivxwk": {
-        "id": "profile_1773523332791_pivxwk",
-        "name": "Desktop default",
+      "profile_1773525163896_4eou3r": {
+        "id": "profile_1773525163896_4eou3r",
+        "name": "Laptop only",
         "outputSet": [
-          "DP-1",
-          "DP-2",
-          "HDMI-A-1"
+          "eDP-1"
         ],
-        "createdAt": 1773523332791,
-        "updatedAt": 1773523332791
+        "createdAt": 1773525163896,
+        "updatedAt": 1773525163896
       }
     }
   },
   "activeDisplayProfile": {
-    "niri": "profile_1773523332791_pivxwk"
+    "niri": "profile_1773525163896_4eou3r"
   },
   "displayProfileAutoSelect": false,
   "displayShowDisconnected": false,
