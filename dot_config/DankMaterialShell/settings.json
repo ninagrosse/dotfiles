@@ -284,9 +284,7 @@
   "wifiNetworkPins": {},
   "bluetoothDevicePins": {},
   "audioInputDevicePins": {},
-  "audioOutputDevicePins": {
-    "preferredOutput": "alsa_output.usb-Creative_Technology_Ltd_Creative_Pebble_Pro_MF1710-01.iec958-stereo"
-  },
+  "audioOutputDevicePins": {},
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
@@ -462,24 +460,42 @@
         ]
       },
       "focusAtStartup": true
+    },
+    "HDMI-A-1": {
+      "disabled": true
+    },
+    "DP-2": {
+      "vrrOnDemand": true,
+      "hotCorners": {
+        "off": true
+      }
+    },
+    "DP-1": {
+      "hotCorners": {
+        "corners": [
+          "top-left"
+        ]
+      }
     }
   },
   "hyprlandOutputSettings": {},
   "displayProfiles": {
     "niri": {
-      "profile_1773502803764_aw0ltm": {
-        "id": "profile_1773502803764_aw0ltm",
-        "name": "Laptop only",
+      "profile_1773523332791_pivxwk": {
+        "id": "profile_1773523332791_pivxwk",
+        "name": "Desktop default",
         "outputSet": [
-          "eDP-1"
+          "DP-1",
+          "DP-2",
+          "HDMI-A-1"
         ],
-        "createdAt": 1773502803764,
-        "updatedAt": 1773502803764
+        "createdAt": 1773523332791,
+        "updatedAt": 1773523332791
       }
     }
   },
   "activeDisplayProfile": {
-    "niri": "profile_1773502803764_aw0ltm"
+    "niri": "profile_1773523332791_pivxwk"
   },
   "displayProfileAutoSelect": false,
   "displayShowDisconnected": false,
@@ -491,7 +507,14 @@
       "enabled": true,
       "position": 0,
       "screenPreferences": [
-        "all"
+        {
+          "name": "DP-1",
+          "model": "PL2730Q"
+        },
+        {
+          "name": "eDP-1",
+          "model": "MNE007ZA3-2"
+        }
       ],
       "showOnLastDisplay": true,
       "leftWidgets": [
