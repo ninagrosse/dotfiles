@@ -453,6 +453,10 @@
       {
         "name": "eDP-1",
         "model": "MNE007ZA3-2"
+      },
+      {
+        "name": "DP-9",
+        "model": "PL2730Q"
       }
     ],
     "toast": [
@@ -463,6 +467,10 @@
       {
         "name": "eDP-1",
         "model": "MNE007ZA3-2"
+      },
+      {
+        "name": "DP-9",
+        "model": "PL2730Q"
       }
     ],
     "osd": [
@@ -473,6 +481,10 @@
       {
         "name": "eDP-1",
         "model": "MNE007ZA3-2"
+      },
+      {
+        "name": "DP-9",
+        "model": "PL2730Q"
       }
     ],
     "notepad": [
@@ -516,6 +528,16 @@
           "top-left"
         ]
       }
+    },
+    "DP-11": {
+      "vrrOnDemand": true
+    },
+    "DP-9": {
+      "hotCorners": {
+        "corners": [
+          "top-left"
+        ]
+      }
     }
   },
   "hyprlandOutputSettings": {},
@@ -540,6 +562,17 @@
         ],
         "createdAt": 1773525458553,
         "updatedAt": 1773525458553
+      },
+      "profile_1773587326967_sxgowm": {
+        "id": "profile_1773587326967_sxgowm",
+        "name": "Laptop docked",
+        "outputSet": [
+          "DP-11",
+          "DP-9",
+          "eDP-1"
+        ],
+        "createdAt": 1773587326967,
+        "updatedAt": 1773587326967
       }
     }
   },
@@ -563,6 +596,10 @@
         {
           "name": "eDP-1",
           "model": "MNE007ZA3-2"
+        },
+        {
+          "name": "DP-9",
+          "model": "PL2730Q"
         }
       ],
       "showOnLastDisplay": true,
