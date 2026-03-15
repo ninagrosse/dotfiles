@@ -337,11 +337,11 @@
   "matugenTemplateNeovimSettings": {
     "dark": {
       "baseTheme": "catppuccin",
-      "harmony": 0.5
+      "harmony": 0.3
     },
     "light": {
       "baseTheme": "catppuccin-latte",
-      "harmony": 0.5
+      "harmony": 0.3
     }
   },
   "showDock": true,
