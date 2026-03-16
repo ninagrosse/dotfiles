@@ -87,27 +87,22 @@
     {
       "id": "volumeSlider",
       "enabled": true,
-      "width": 100
+      "width": 50
     },
     {
       "id": "brightnessSlider",
       "enabled": true,
-      "width": 100,
+      "width": 50,
       "instanceId": "mmqhzkp2wdbclpvcuzqimxng6erbp",
       "deviceName": ""
     },
     {
-      "id": "wifi",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "bluetooth",
-      "enabled": true,
-      "width": 50
-    },
-    {
       "id": "audioOutput",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "wifi",
       "enabled": true,
       "width": 50
     },
@@ -117,9 +112,9 @@
       "width": 50
     },
     {
-      "id": "colorPicker",
+      "id": "bluetooth",
       "enabled": true,
-      "width": 25
+      "width": 50
     },
     {
       "id": "nightMode",
@@ -127,14 +122,14 @@
       "width": 25
     },
     {
-      "id": "doNotDisturb",
+      "id": "idleInhibitor",
       "enabled": true,
       "width": 25
     },
     {
-      "id": "idleInhibitor",
+      "id": "builtin_vpn",
       "enabled": true,
-      "width": 25
+      "width": 50
     }
   ],
   "showWorkspaceIndex": false,
@@ -666,7 +661,12 @@
         },
         {
           "id": "controlCenterButton",
-          "enabled": true
+          "enabled": true,
+          "showAudioPercent": false,
+          "showBrightnessIcon": false,
+          "showBrightnessPercent": false,
+          "showMicIcon": false,
+          "showBatteryIcon": false
         },
         {
           "id": "battery",
