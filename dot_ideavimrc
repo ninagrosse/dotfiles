@@ -3,7 +3,7 @@
 "" ========================================================
 set scrolloff=10
 set history=1000
-set number relativenumber
+" set number relativenumber
 set showmode
 set showcmd
 set ignorecase
@@ -113,16 +113,16 @@ nmap <leader>iU <action>(ShowUmlDiagram)
 nmap <leader>ih <action>(CallHierarchy)
 nmap <leader>iu <action>(ShowUsages)
 nmap <leader>im <action>(MethodHierarchy)
-let g:WhichKeyDesc_info = "<leader>i Information"
-let g:WhichKeyDesc_info_error = "<leader>ie Error Description"
-let g:WhichKeyDesc_info_type = "<leader>it Expression Type"
-let g:WhichKeyDesc_info_parameter = "<leader>ip Parameter Info"
-let g:WhichKeyDesc_info_javadoc = "<leader>ij Java Doc"
-let g:WhichKeyDesc_info_file_structure = "<leader>if File Structure"
-let g:WhichKeyDesc_info_uml_diagram = "<leader>iU UML Diagram"
-let g:WhichKeyDesc_info_call_hierarchy = "<leader>ih Call Hierarchy"
-let g:WhichKeyDesc_info_show_usages = "<leader>iu Usages"
-let g:WhichKeyDesc_info_method_hierarchy = "<leader>im Method Hierarchy"
+"let g:WhichKeyDesc_info = "<leader>i Information"
+"let g:WhichKeyDesc_info_error = "<leader>ie Error Description"
+"let g:WhichKeyDesc_info_type = "<leader>it Expression Type"
+"let g:WhichKeyDesc_info_parameter = "<leader>ip Parameter Info"
+"let g:WhichKeyDesc_info_javadoc = "<leader>ij Java Doc"
+"let g:WhichKeyDesc_info_file_structure = "<leader>if File Structure"
+"let g:WhichKeyDesc_info_uml_diagram = "<leader>iU UML Diagram"
+"let g:WhichKeyDesc_info_call_hierarchy = "<leader>ih Call Hierarchy"
+"let g:WhichKeyDesc_info_show_usages = "<leader>iu Usages"
+"let g:WhichKeyDesc_info_method_hierarchy = "<leader>im Method Hierarchy"
 
 
 " Window splits
@@ -132,13 +132,13 @@ nmap <leader>wu <action>(Unsplit)
 nmap <leader>wm <action>(MoveEditorToOppositeTabGroup)
 nmap <leader>wb <action>(Back)
 nmap <leader>wf <action>(Forward)
-let g:WhichKeyDesc_window = "<leader>w Window splits"
-let g:WhichKeyDesc_window_split_vertically = "<leader>wv Split vertically"
-let g:WhichKeyDesc_window_split_horizontally = "<leader>ws Split horizontally"
-let g:WhichKeyDesc_window_split_unsplit = "<leader>wu Unsplit"
-let g:WhichKeyDesc_window_split_move_editor = "<leader>wm Move editor to opposite tab group"
-let g:WhichKeyDesc_window_split_back = "<leader>wb Back split"
-let g:WhichKeyDesc_window_split_forward = "<leader>wf Forward split"
+"let g:WhichKeyDesc_window = "<leader>w Window splits"
+"let g:WhichKeyDesc_window_split_vertically = "<leader>wv Split vertically"
+"let g:WhichKeyDesc_window_split_horizontally = "<leader>ws Split horizontally"
+"let g:WhichKeyDesc_window_split_unsplit = "<leader>wu Unsplit"
+"let g:WhichKeyDesc_window_split_move_editor = "<leader>wm Move editor to opposite tab group"
+"let g:WhichKeyDesc_window_split_back = "<leader>wb Back split"
+"let g:WhichKeyDesc_window_split_forward = "<leader>wf Forward split"
 
 
 " Tab Navigation and Management
@@ -156,32 +156,32 @@ nmap <leader>tx <Action>(CloseContent)
 nmap <leader>tX <Action>(CloseAllEditors)
 nmap <leader>to <Action>(CloseAllEditorsButActive)
 nmap <leader>ta <Action>(CloseAllUnpinnedEditors)
-let g:WhichKeyDesc_tabs = "<leader>t Tabs"
-let g:WhichKeyDesc_tabs_pin = "<leader>tP Pin Active Tab"
-let g:WhichKeyDesc_tabs_go_to = "<leader>tg Go to Tab"
-let g:WhichKeyDesc_tabs_go_to_1 = "<leader>tg1 Go to Tab 1"
-let g:WhichKeyDesc_tabs_go_to_2 = "<leader>tg2 Go to Tab 2"
-let g:WhichKeyDesc_tabs_go_to_3 = "<leader>tg3 Go to Tab 3"
-let g:WhichKeyDesc_tabs_go_to_4 = "<leader>tg4 Go to Tab 4"
-let g:WhichKeyDesc_tabs_go_to_5 = "<leader>tg5 Go to Tab 5"
-let g:WhichKeyDesc_tabs_go_to_6 = "<leader>tg6 Go to Tab 6"
-let g:WhichKeyDesc_tabs_go_to_7 = "<leader>tg7 Go to Tab 7"
-let g:WhichKeyDesc_tabs_go_to_8 = "<leader>tg8 Go to Tab 8"
-let g:WhichKeyDesc_tabs_go_to_9 = "<leader>tg9 Go to Tab 9"
-let g:WhichKeyDesc_tabs_close = "<leader>tx Close Current Tab"
-let g:WhichKeyDesc_tabs_close_all = "<leader>tX Close All Tabs"
-let g:WhichKeyDesc_tabs_close_all_but_active = "<leader>to Close All Tabs But Active"
-let g:WhichKeyDesc_tabs_close_all_unpinned = "<leader>ta Close All Unpinned Tabs"
+"let g:WhichKeyDesc_tabs = "<leader>t Tabs"
+"let g:WhichKeyDesc_tabs_pin = "<leader>tP Pin Active Tab"
+"let g:WhichKeyDesc_tabs_go_to = "<leader>tg Go to Tab"
+"let g:WhichKeyDesc_tabs_go_to_1 = "<leader>tg1 Go to Tab 1"
+"let g:WhichKeyDesc_tabs_go_to_2 = "<leader>tg2 Go to Tab 2"
+"let g:WhichKeyDesc_tabs_go_to_3 = "<leader>tg3 Go to Tab 3"
+"let g:WhichKeyDesc_tabs_go_to_4 = "<leader>tg4 Go to Tab 4"
+"let g:WhichKeyDesc_tabs_go_to_5 = "<leader>tg5 Go to Tab 5"
+"let g:WhichKeyDesc_tabs_go_to_6 = "<leader>tg6 Go to Tab 6"
+"let g:WhichKeyDesc_tabs_go_to_7 = "<leader>tg7 Go to Tab 7"
+"let g:WhichKeyDesc_tabs_go_to_8 = "<leader>tg8 Go to Tab 8"
+"let g:WhichKeyDesc_tabs_go_to_9 = "<leader>tg9 Go to Tab 9"
+"let g:WhichKeyDesc_tabs_close = "<leader>tx Close Current Tab"
+"let g:WhichKeyDesc_tabs_close_all = "<leader>tX Close All Tabs"
+"let g:WhichKeyDesc_tabs_close_all_but_active = "<leader>to Close All Tabs But Active"
+"let g:WhichKeyDesc_tabs_close_all_unpinned = "<leader>ta Close All Unpinned Tabs"
 
 
 " Display options
 map <leader>Dd <action>(ToggleDistractionFreeMode)
 map <leader>Dz <action>(ToggleZenMode)
 map <leader>Df <action>(ToggleFullScreen)
-let g:WhichKeyDesc_display = "<leader>D Display options"
-let g:WhichKeyDesc_zen_mode = "<leader>Dz Toggle Zen mode"
-let g:WhichKeyDesc_df_mode = "<leader>Dd Toggle Distraction-Free mode"
-let g:WhichKeyDesc_fullscreen = "<leader>Df Toggle full screen"
+"let g:WhichKeyDesc_display = "<leader>D Display options"
+"let g:WhichKeyDesc_zen_mode = "<leader>Dz Toggle Zen mode"
+"let g:WhichKeyDesc_df_mode = "<leader>Dd Toggle Distraction-Free mode"
+"let g:WhichKeyDesc_fullscreen = "<leader>Df Toggle full screen"
 
 
 " File navigation
@@ -198,20 +198,20 @@ nmap <leader>fh <Action>(LocalHistory.ShowHistory)
 nmap <leader>fx <Action>(ShowFilePath)
 nmap <leader>fi <Action>(SelectIn)
 nmap <leader>ft <Action>(ActivateTerminalToolWindow)
-let g:WhichKeyDesc_file_opt = "<leader>f File navigation"
-let g:WhichKeyDesc_file_opt_goto_file = "<leader>ff Go To File"
-let g:WhichKeyDesc_file_opt_show_recent_files = "<leader>fr Recent Files"
-let g:WhichKeyDesc_file_opt_goto_content = "<leader>/ Find/Grep In Files"
-let g:WhichKeyDesc_file_opt_show_recent_locations = "<leader>fl Recent Locations"
-let g:WhichKeyDesc_file_opt_new_scratch_file = "<leader>fs New Scratch File"
-let g:WhichKeyDesc_file_opt_toggle_nerdtree = "<leader>fe Toggle NERDTree"
-let g:WhichKeyDesc_file_opt_open_file = "<leader>fo Open File"
-let g:WhichKeyDesc_file_opt_copy_path = "<leader>fy Copy Absolute Path"
-let g:WhichKeyDesc_file_opt_recent_projects = "<leader>fp Manage Recent Projects"
-let g:WhichKeyDesc_file_opt_history = "<leader>fh Show Local History"
-let g:WhichKeyDesc_file_opt_show_path = "<leader>fx Show File Path"
-let g:WhichKeyDesc_file_opt_select_in = "<leader>fi Select In"
-let g:WhichKeyDesc_file_terminal = "<leader>ft Open Terminal"
+"let g:WhichKeyDesc_file_opt = "<leader>f File navigation"
+"let g:WhichKeyDesc_file_opt_goto_file = "<leader>ff Go To File"
+"let g:WhichKeyDesc_file_opt_show_recent_files = "<leader>fr Recent Files"
+"let g:WhichKeyDesc_file_opt_goto_content = "<leader>/ Find/Grep In Files"
+"let g:WhichKeyDesc_file_opt_show_recent_locations = "<leader>fl Recent Locations"
+"let g:WhichKeyDesc_file_opt_new_scratch_file = "<leader>fs New Scratch File"
+"let g:WhichKeyDesc_file_opt_toggle_nerdtree = "<leader>fe Toggle NERDTree"
+"let g:WhichKeyDesc_file_opt_open_file = "<leader>fo Open File"
+"let g:WhichKeyDesc_file_opt_copy_path = "<leader>fy Copy Absolute Path"
+"let g:WhichKeyDesc_file_opt_recent_projects = "<leader>fp Manage Recent Projects"
+"let g:WhichKeyDesc_file_opt_history = "<leader>fh Show Local History"
+"let g:WhichKeyDesc_file_opt_show_path = "<leader>fx Show File Path"
+"let g:WhichKeyDesc_file_opt_select_in = "<leader>fi Select In"
+"let g:WhichKeyDesc_file_terminal = "<leader>ft Open Terminal"
 
 
 " Run Actions
@@ -223,15 +223,15 @@ nmap <leader>rt <Action>(RunTests)
 nmap <leader>rf <action>(RerunFailedTests)
 nmap <leader>rs <Action>(Stop)
 nmap <leader>rc <action>(ChooseRunConfiguration)
-let g:WhichKeyDesc_run = "<leader>r Run"
-let g:WhichKeyDesc_run_menu = "<leader>rm Run Menu"
-let g:WhichKeyDesc_run_class = "<leader>rn Run Class"
-let g:WhichKeyDesc_run_context = "<leader>rC Context Run"
-let g:WhichKeyDesc_run_rerun = "<leader>rr Rerun"
-let g:WhichKeyDesc_run_tests = "<leader>rt Run Tests"
-let g:WhichKeyDesc_run_failed = "<leader>rf Rerun Failed Tests"
-let g:WhichKeyDesc_run_stop = "<leader>rs Stop"
-let g:WhichKeyDesc_run_choose_configuration = "<leader>rc Choose Run Configuration"
+"let g:WhichKeyDesc_run = "<leader>r Run"
+"let g:WhichKeyDesc_run_menu = "<leader>rm Run Menu"
+"let g:WhichKeyDesc_run_class = "<leader>rn Run Class"
+"let g:WhichKeyDesc_run_context = "<leader>rC Context Run"
+"let g:WhichKeyDesc_run_rerun = "<leader>rr Rerun"
+"let g:WhichKeyDesc_run_tests = "<leader>rt Run Tests"
+"let g:WhichKeyDesc_run_failed = "<leader>rf Rerun Failed Tests"
+"let g:WhichKeyDesc_run_stop = "<leader>rs Stop"
+"let g:WhichKeyDesc_run_choose_configuration = "<leader>rc Choose Run Configuration"
 
 
 " Debugging commands
@@ -250,21 +250,21 @@ nmap <leader>ds <Action>(Stop)
 nmap <leader>dR <Action>(EvaluateExpression)
 nmap <leader>dw <Action>(ActivateDebugToolWindow)
 nmap <leader>dh <Action>(XDebugger.Hotswap.Modified.Files)
-let g:WhichKeyDesc_debugging = "<leader>d Debugging"
-let g:WhichKeyDesc_debug_execute = "<leader>dx Execute Debug"
-let g:WhichKeyDesc_debug_context = "<leader>dc Context Debug"
-let g:WhichKeyDesc_debug_view_breakpoints = "<leader>dv View Breakpoints"
-let g:WhichKeyDesc_debug_edit_breakpoints = "<leader>de Edit Breakpoints"
-let g:WhichKeyDesc_debug_mute_breakpoints = "<leader>dm Mute Breakpoints"
-let g:WhichKeyDesc_debug_toggle_line_breakpoint = "<leader>dt Toggle Line Breakpoint"
-let g:WhichKeyDesc_debug_run_to_cursor = "<leader>dC Run to Cursor"
-let g:WhichKeyDesc_debug_step_into = "<leader>di Step Into"
-let g:WhichKeyDesc_debug_step_over = "<leader>do Step Over"
-let g:WhichKeyDesc_debug_resume = "<leader>dr Resume Debugging"
-let g:WhichKeyDesc_debug_stop = "<leader>ds Stop Debugging"
-let g:WhichKeyDesc_debug_evaluate_expression = "<leader>dR Evaluate Expression"
-let g:WhichKeyDesc_debug_activate_tool_window = "<leader>dw Activate Debug Tool Window"
-let g:WhichKeyDesc_debug_hotswap_files = "<leader>dh Hotswap modified files"
+"let g:WhichKeyDesc_debugging = "<leader>d Debugging"
+"let g:WhichKeyDesc_debug_execute = "<leader>dx Execute Debug"
+"let g:WhichKeyDesc_debug_context = "<leader>dc Context Debug"
+"let g:WhichKeyDesc_debug_view_breakpoints = "<leader>dv View Breakpoints"
+"let g:WhichKeyDesc_debug_edit_breakpoints = "<leader>de Edit Breakpoints"
+"let g:WhichKeyDesc_debug_mute_breakpoints = "<leader>dm Mute Breakpoints"
+"let g:WhichKeyDesc_debug_toggle_line_breakpoint = "<leader>dt Toggle Line Breakpoint"
+"let g:WhichKeyDesc_debug_run_to_cursor = "<leader>dC Run to Cursor"
+"let g:WhichKeyDesc_debug_step_into = "<leader>di Step Into"
+"let g:WhichKeyDesc_debug_step_over = "<leader>do Step Over"
+"let g:WhichKeyDesc_debug_resume = "<leader>dr Resume Debugging"
+"let g:WhichKeyDesc_debug_stop = "<leader>ds Stop Debugging"
+"let g:WhichKeyDesc_debug_evaluate_expression = "<leader>dR Evaluate Expression"
+"let g:WhichKeyDesc_debug_activate_tool_window = "<leader>dw Activate Debug Tool Window"
+"let g:WhichKeyDesc_debug_hotswap_files = "<leader>dh Hotswap modified files"
 
 
 " Code Actions
@@ -283,21 +283,21 @@ nmap <leader>ca <Action>(ShowIntentionActions)
 nmap <leader>cR <Action>(ReformatCode)
 nmap <leader>cI <Action>(InspectCode)
 nmap <leader>cg <Action>(Generate)
-let g:WhichKeyDesc_language = "<leader>c Code Actions"
-let g:WhichKeyDesc_language_menu = "<leader>cl Quick List"
-let g:WhichKeyDesc_language_rename = "<leader>cr Rename"
-let g:WhichKeyDesc_language_change_signature = "<leader>cs Change Signature"
-let g:WhichKeyDesc_language_inline_variable = "<leader>ci Inline"
-let g:WhichKeyDesc_language_introduce_field = "<leader>cf Introduce Field"
-let g:WhichKeyDesc_language_extract_method = "<leader>cm Extract Method"
-let g:WhichKeyDesc_language_introduce_constant = "<leader>cc Introduce Constant"
-let g:WhichKeyDesc_language_introduce_parameter = "<leader>cp Introduce Parameter"
-let g:WhichKeyDesc_language_introduce_param_object = "<leader>co Introduce Parameter Object"
-let g:WhichKeyDesc_language_encapsulate = "<leader>ce Encapsulate Fields"
-let g:WhichKeyDesc_language_show_intention_actions = "<leader>ca Show Intention Actions"
-let g:WhichKeyDesc_language_reformat_code = "<leader>cR Reformat Code"
-let g:WhichKeyDesc_language_inspect_code = "<leader>cI Inspect Code"
-let g:WhichKeyDesc_language_generate = "<leader>cg Generate"
+"let g:WhichKeyDesc_language = "<leader>c Code Actions"
+"let g:WhichKeyDesc_language_menu = "<leader>cl Quick List"
+"let g:WhichKeyDesc_language_rename = "<leader>cr Rename"
+"let g:WhichKeyDesc_language_change_signature = "<leader>cs Change Signature"
+"let g:WhichKeyDesc_language_inline_variable = "<leader>ci Inline"
+"let g:WhichKeyDesc_language_introduce_field = "<leader>cf Introduce Field"
+"let g:WhichKeyDesc_language_extract_method = "<leader>cm Extract Method"
+"let g:WhichKeyDesc_language_introduce_constant = "<leader>cc Introduce Constant"
+"let g:WhichKeyDesc_language_introduce_parameter = "<leader>cp Introduce Parameter"
+"let g:WhichKeyDesc_language_introduce_param_object = "<leader>co Introduce Parameter Object"
+"let g:WhichKeyDesc_language_encapsulate = "<leader>ce Encapsulate Fields"
+"let g:WhichKeyDesc_language_show_intention_actions = "<leader>ca Show Intention Actions"
+"let g:WhichKeyDesc_language_reformat_code = "<leader>cR Reformat Code"
+"let g:WhichKeyDesc_language_inspect_code = "<leader>cI Inspect Code"
+"let g:WhichKeyDesc_language_generate = "<leader>cg Generate"
 
 
 """ Bookmarks
@@ -308,14 +308,14 @@ nmap <leader>bb <Action>(ToggleBookmark)
 nmap <leader>be <Action>(EditBookmark)
 nmap <leader>bp <Action>(GotoPreviousBookmark)
 nmap <leader>bn <Action>(GotoNextBookmark)
-let g:WhichKeyDesc_bookmarks = "<leader>b Bookmarks"
-let g:WhichKeyDesc_bookmarks_menu = "<leader>bm Bookmark Menu"
-let g:WhichKeyDesc_bookmarks_show = "<leader>bs Show Bookmarks"
-let g:WhichKeyDesc_bookmarks_tool = "<leader>bt Bookmark Tool"
-let g:WhichKeyDesc_bookmarks_toggle_bookmark = "<leader>bb Toggle Bookmark"
-let g:WhichKeyDesc_bookmarks_edit = "<leader>be Edit Bookmark"
-let g:WhichKeyDesc_bookmarks_prev = "<leader>bp Previous Bookmark"
-let g:WhichKeyDesc_bookmarks_next = "<leader>bn Next Bookmark"
+"let g:WhichKeyDesc_bookmarks = "<leader>b Bookmarks"
+"let g:WhichKeyDesc_bookmarks_menu = "<leader>bm Bookmark Menu"
+"let g:WhichKeyDesc_bookmarks_show = "<leader>bs Show Bookmarks"
+"let g:WhichKeyDesc_bookmarks_tool = "<leader>bt Bookmark Tool"
+"let g:WhichKeyDesc_bookmarks_toggle_bookmark = "<leader>bb Toggle Bookmark"
+"let g:WhichKeyDesc_bookmarks_edit = "<leader>be Edit Bookmark"
+"let g:WhichKeyDesc_bookmarks_prev = "<leader>bp Previous Bookmark"
+"let g:WhichKeyDesc_bookmarks_next = "<leader>bn Next Bookmark"
 
 
 " Go To
@@ -324,12 +324,12 @@ nmap go <Action>(GotoSuperMethod)
 nmap gD <Action>(GotoTypeDeclaration)
 nmap gi <Action>(GotoImplementation)
 nmap gT <Action>(GotoTest)
-let g:WhichKeyDesc_goto = "g Go To"
-let g:WhichKeyDesc_goto_declaration = "gd Go To Declaration"
-let g:WhichKeyDesc_goto_super_method = "go Go To Super Method"
-let g:WhichKeyDesc_goto_type_declaration = "gD Go To Type Declaration"
-let g:WhichKeyDesc_goto_implementation = "gi Go To Implementation"
-let g:WhichKeyDesc_goto_test = "gT Go To Test"
+"let g:WhichKeyDesc_goto = "g Go To"
+"let g:WhichKeyDesc_goto_declaration = "gd Go To Declaration"
+"let g:WhichKeyDesc_goto_super_method = "go Go To Super Method"
+"let g:WhichKeyDesc_goto_type_declaration = "gD Go To Type Declaration"
+"let g:WhichKeyDesc_goto_implementation = "gi Go To Implementation"
+"let g:WhichKeyDesc_goto_test = "gT Go To Test"
 
 
 " Search
@@ -342,16 +342,16 @@ nmap <leader>sf <Action>(GotoFile)
 nmap <leader>ss <Action>(GotoSymbol)
 nmap <leader>st <Action>(TextSearchAction)
 nmap <leader>sg <Action>(FindInPath)
-let g:WhichKeyDesc_search = "<leader>s Search"
-let g:WhichKeyDesc_search_everywhere = "<leader>sS Search Everywhere"
-let g:WhichKeyDesc_search_usages = "<leader>su Find Usages"
-let g:WhichKeyDesc_search_nav_bar = "<leader>sn Show Nav Bar"
-let g:WhichKeyDesc_search_action = "<leader>sa Search Action"
-let g:WhichKeyDesc_search_class = "<leader>sc Search Class"
-let g:WhichKeyDesc_search_file = "<leader>sf Search File"
-let g:WhichKeyDesc_search_symbol = "<leader>ss Search Symbol"
-let g:WhichKeyDesc_search_text = "<leader>st Search Text"
-let g:WhichKeyDesc_search_in_files = "<leader>sg Search/Grep In Files"
+"let g:WhichKeyDesc_search = "<leader>s Search"
+"let g:WhichKeyDesc_search_everywhere = "<leader>sS Search Everywhere"
+"let g:WhichKeyDesc_search_usages = "<leader>su Find Usages"
+"let g:WhichKeyDesc_search_nav_bar = "<leader>sn Show Nav Bar"
+"let g:WhichKeyDesc_search_action = "<leader>sa Search Action"
+"let g:WhichKeyDesc_search_class = "<leader>sc Search Class"
+"let g:WhichKeyDesc_search_file = "<leader>sf Search File"
+"let g:WhichKeyDesc_search_symbol = "<leader>ss Search Symbol"
+"let g:WhichKeyDesc_search_text = "<leader>st Search Text"
+"let g:WhichKeyDesc_search_in_files = "<leader>sg Search/Grep In Files"
 
 
 " Case Conversion
@@ -368,18 +368,18 @@ vmap <leader>Ct <Action>(me.laria.code.idea_caseconv.TitleCaseAction)
 vmap <leader>C- <Action>(me.laria.code.idea_caseconv.DashCaseAction)
 vmap <leader>Cd <Action>(me.laria.code.idea_caseconv.SentenceCaseAction)
 let g:WhichKeyDesc_case_conversion = "<leader>C Case Conversion"
-let g:WhichKeyDesc_change_case_menu = "<leader>Cm Case Menu"
-let g:WhichKeyDesc_case_conversion_camel = "<leader>Cc camelCase"
-let g:WhichKeyDesc_case_conversion_pascal = "<leader>Cp PascalCase"
-let g:WhichKeyDesc_case_conversion_snake = "<leader>Cs snake_case"
-let g:WhichKeyDesc_case_conversion_screaming_snake = "<leader>CS SCREAMING_SNAKE_CASE"
-let g:WhichKeyDesc_case_conversion_lower = "<leader>Cl lowercase"
-let g:WhichKeyDesc_case_conversion_upper = "<leader>Cu UPPERCASE"
-let g:WhichKeyDesc_case_conversion_dot = "<leader>C. dot.case"
-let g:WhichKeyDesc_case_conversion_words = "<leader>Cw Separate Words"
-let g:WhichKeyDesc_case_conversion_title = "<leader>Ct Title Case"
-let g:WhichKeyDesc_case_conversion_dash = "<leader>C- dash-case"
-let g:WhichKeyDesc_case_conversion_sentence = "<leader>Cd Sentence case"
+"let g:WhichKeyDesc_change_case_menu = "<leader>Cm Case Menu"
+"let g:WhichKeyDesc_case_conversion_camel = "<leader>Cc camelCase"
+"let g:WhichKeyDesc_case_conversion_pascal = "<leader>Cp PascalCase"
+"let g:WhichKeyDesc_case_conversion_snake = "<leader>Cs snake_case"
+"let g:WhichKeyDesc_case_conversion_screaming_snake = "<leader>CS SCREAMING_SNAKE_CASE"
+"let g:WhichKeyDesc_case_conversion_lower = "<leader>Cl lowercase"
+"let g:WhichKeyDesc_case_conversion_upper = "<leader>Cu UPPERCASE"
+"let g:WhichKeyDesc_case_conversion_dot = "<leader>C. dot.case"
+"let g:WhichKeyDesc_case_conversion_words = "<leader>Cw Separate Words"
+"let g:WhichKeyDesc_case_conversion_title = "<leader>Ct Title Case"
+"let g:WhichKeyDesc_case_conversion_dash = "<leader>C- dash-case"
+"let g:WhichKeyDesc_case_conversion_sentence = "<leader>Cd Sentence case"
 
 
 " Git
@@ -398,22 +398,22 @@ nmap <leader>g[ <Action>(VcsShowPrevChangeMarker)
 nmap <leader>gr <Action>(Vcs.RollbackChangedLines)
 nmap <leader>gR <Action>(ChangesView.Revert)
 nmap <leader>gd <Action>(Compare.SameVersion)
-let g:WhichKeyDesc_git = "<leader>g Git"
-let g:WhichKeyDesc_git_update_project = "<leader>gu Update Project"
-let g:WhichKeyDesc_git_local_changes = "<leader>gl Show Local Changes"
-let g:WhichKeyDesc_git_branches = "<leader>gb Branches"
-let g:WhichKeyDesc_git_commit = "<leader>gc Prepare Commit"
-let g:WhichKeyDesc_git_push = "<leader>gp Push"
-let g:WhichKeyDesc_git_commit_and_push = "<leader>gP Commit & Push"
-let g:WhichKeyDesc_git_operations = "<leader>go Git Operations"
-let g:WhichKeyDesc_git_menu = "<leader>gm Git Menu"
-let g:WhichKeyDesc_git_window = "<leader>gw Git Window"
-let g:WhichKeyDesc_git_annotate = "<leader>ga Annotate File"
-let g:WhichKeyDesc_git_next_hunk = "<leader>g] Next Hunk"
-let g:WhichKeyDesc_git_prev_hunk = "<leader>g[ Previous Hunk"
-let g:WhichKeyDesc_git_rollback_changed_lines = "<leader>gr Rollback Hunk"
-let g:WhichKeyDesc_git_rollback_file = "<leader>gR Rollback File"
-let g:WhichKeyDesc_git_diff_file = "<leader>gd Diff File"
+"let g:WhichKeyDesc_git = "<leader>g Git"
+"let g:WhichKeyDesc_git_update_project = "<leader>gu Update Project"
+"let g:WhichKeyDesc_git_local_changes = "<leader>gl Show Local Changes"
+"let g:WhichKeyDesc_git_branches = "<leader>gb Branches"
+"let g:WhichKeyDesc_git_commit = "<leader>gc Prepare Commit"
+"let g:WhichKeyDesc_git_push = "<leader>gp Push"
+"let g:WhichKeyDesc_git_commit_and_push = "<leader>gP Commit & Push"
+"let g:WhichKeyDesc_git_operations = "<leader>go Git Operations"
+"let g:WhichKeyDesc_git_menu = "<leader>gm Git Menu"
+"let g:WhichKeyDesc_git_window = "<leader>gw Git Window"
+"let g:WhichKeyDesc_git_annotate = "<leader>ga Annotate File"
+"let g:WhichKeyDesc_git_next_hunk = "<leader>g] Next Hunk"
+"let g:WhichKeyDesc_git_prev_hunk = "<leader>g[ Previous Hunk"
+"let g:WhichKeyDesc_git_rollback_changed_lines = "<leader>gr Rollback Hunk"
+"let g:WhichKeyDesc_git_rollback_file = "<leader>gR Rollback File"
+"let g:WhichKeyDesc_git_diff_file = "<leader>gd Diff File"
 
 " String manipulation
 nmap <leader>mp <Action>(osmedile.intellij.stringmanip.PopupChoiceAction)
@@ -429,9 +429,9 @@ vmap <leader>mi <Action>(osmedile.intellij.stringmanip.IncrementAction)
 vmap <leader>md <Action>(osmedile.intellij.stringmanip.DecrementAction)
 
 let g:WhichKeyDesc_stringmanip = "<leader>m String manipulation"
-let g:WhichKeyDesc_stringmanip_popup = "<leader>mp Popup"
-let g:WhichKeyDesc_stringmanip_align = "<leader>ma AlignToColumns"
-let g:WhichKeyDesc_stringmanip_inc = "<leader>mi Increment"
-let g:WhichKeyDesc_stringmanip_dupinc = "<leader>mI DuplicateAndIncrement"
-let g:WhichKeyDesc_stringmanip_dec = "<leader>md Decrement"
-let g:WhichKeyDesc_stringmanip_dupdec = "<leader>mD DuplicateAndDecrement"
+"let g:WhichKeyDesc_stringmanip_popup = "<leader>mp Popup"
+"let g:WhichKeyDesc_stringmanip_align = "<leader>ma AlignToColumns"
+"let g:WhichKeyDesc_stringmanip_inc = "<leader>mi Increment"
+"let g:WhichKeyDesc_stringmanip_dupinc = "<leader>mI DuplicateAndIncrement"
+"let g:WhichKeyDesc_stringmanip_dec = "<leader>md Decrement"
+"let g:WhichKeyDesc_stringmanip_dupdec = "<leader>mD DuplicateAndDecrement"
