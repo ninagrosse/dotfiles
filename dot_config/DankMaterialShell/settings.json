@@ -730,7 +730,11 @@
     }
   },
   "clipboardEnterToPaste": false,
-  "launcherPluginVisibility": {},
+  "launcherPluginVisibility": {
+    "dms_settings_search": {
+      "allowWithoutTrigger": false
+    }
+  },
   "launcherPluginOrder": [],
   "configVersion": 5
 }
