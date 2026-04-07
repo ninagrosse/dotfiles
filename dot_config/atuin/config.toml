@@ -51,6 +51,9 @@ ctrl_n_shortcuts = true
 history_filter = [
   # "^secret-cmd",
   # "^innocuous-cmd .*--secret=.+",
+  "^y$",
+  "^z$",
+  "^c$",
   "^clr",
   "^clear",
   "^exit",

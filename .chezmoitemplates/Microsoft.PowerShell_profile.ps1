@@ -19,6 +19,9 @@ Set-Alias -Name cat -Value bat -Option AllScope
 # Replace grep with ugrep
 Set-Alias -Name grep -Value ug
 
+# Clear alias
+Set-Alias -Name clr -Value clear
+
 # Fake function to fix a Junie bug
 # Junie sometimes calls 'true' which isn't a valid PowerShell command.
 # This leads to Junie killing its own session with error code 127.
@@ -27,6 +30,9 @@ Function true { echo "" }
 
 # Init zoxide
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
+
+# Init atuin
+(&atuin init powershell) | Out-String | Invoke-Expression
 
 # Yazi function
 function y {
