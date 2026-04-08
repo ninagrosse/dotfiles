@@ -506,6 +506,21 @@
           "top-left"
         ]
       }
+    },
+    "DP-10": {
+      "vrrOnDemand": true,
+      "disabled": false,
+      "hotCorners": {
+        "off": true
+      }
+    },
+    "DP-8": {
+      "disabled": false,
+      "hotCorners": {
+        "corners": [
+          "top-left"
+        ]
+      }
     }
   },
   "hyprlandOutputSettings": {},
@@ -531,16 +546,16 @@
         "createdAt": 1773525458553,
         "updatedAt": 1773525458553
       },
-      "profile_1773587326967_sxgowm": {
-        "id": "profile_1773587326967_sxgowm",
-        "name": "Laptop docked",
+      "profile_1775663464614_7pnz6h": {
+        "id": "profile_1775663464614_7pnz6h",
+        "name": "Laptop Docked",
         "outputSet": [
-          "DP-11",
-          "DP-9",
+          "DP-10",
+          "DP-8",
           "eDP-1"
         ],
-        "createdAt": 1773587326967,
-        "updatedAt": 1773587326967
+        "createdAt": 1775663464614,
+        "updatedAt": 1775663464614
       }
     }
   },
