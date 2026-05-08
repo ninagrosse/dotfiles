@@ -39,6 +39,8 @@
   "modalAnimationSpeed": 1,
   "modalCustomAnimationDuration": 150,
   "enableRippleEffects": true,
+  "animationVariant": 0,
+  "motionEffect": 0,
   "m3ElevationEnabled": true,
   "m3ElevationIntensity": 12,
   "m3ElevationOpacity": 30,
@@ -368,6 +370,7 @@
   "showDock": true,
   "dockAutoHide": false,
   "dockSmartAutoHide": true,
+  "dockHideOnFullscreen": true,
   "dockGroupByApp": true,
   "dockRestoreSpecialWorkspaceOnClick": false,
   "dockOpenOnOverview": true,
@@ -527,10 +530,11 @@
       }
     },
     "DP-10": {
-      "vrrOnDemand": true,
       "disabled": false,
       "hotCorners": {
-        "off": true
+        "corners": [
+          "top-left"
+        ]
       }
     },
     "DP-8": {
@@ -543,47 +547,15 @@
     }
   },
   "hyprlandOutputSettings": {},
-  "displayProfiles": {
-    "niri": {
-      "profile_1773525163896_4eou3r": {
-        "id": "profile_1773525163896_4eou3r",
-        "name": "Laptop only",
-        "outputSet": [
-          "eDP-1"
-        ],
-        "createdAt": 1773525163896,
-        "updatedAt": 1773525163896
-      },
-      "profile_1773525458553_xqyz9s": {
-        "id": "profile_1773525458553_xqyz9s",
-        "name": "Desktop default",
-        "outputSet": [
-          "DP-1",
-          "DP-2",
-          "HDMI-A-1"
-        ],
-        "createdAt": 1773525458553,
-        "updatedAt": 1773525458553
-      },
-      "profile_1775663464614_7pnz6h": {
-        "id": "profile_1775663464614_7pnz6h",
-        "name": "Laptop Docked",
-        "outputSet": [
-          "DP-10",
-          "DP-8",
-          "eDP-1"
-        ],
-        "createdAt": 1775663464614,
-        "updatedAt": 1775663464614
-      }
-    }
-  },
+  "displayProfiles": {},
   "activeDisplayProfile": {
-    "niri": "profile_1773525163896_4eou3r"
+    "niri": ""
   },
-  "displayProfileAutoSelect": false,
+  "displayProfileAutoSelect": true,
   "displayShowDisconnected": false,
   "displaySnapToEdge": true,
+  "connectedFrameBarStyleBackups": {},
+  "connectedFrameModalDarkenBackup": null,
   "barConfigs": [
     {
       "id": "default",
@@ -776,5 +748,20 @@
     }
   },
   "launcherPluginOrder": [],
-  "configVersion": 5
+  "frameEnabled": false,
+  "frameThickness": 16,
+  "frameRounding": 23,
+  "frameColor": "",
+  "frameOpacity": 1,
+  "frameScreenPreferences": [
+    "all"
+  ],
+  "frameBarSize": 40,
+  "frameShowOnOverview": false,
+  "frameBlurEnabled": true,
+  "frameCloseGaps": true,
+  "frameLauncherEmergeSide": "bottom",
+  "frameLauncherArcExtender": false,
+  "frameMode": "separate",
+  "configVersion": 11
 }
