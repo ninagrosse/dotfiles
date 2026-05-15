@@ -11,8 +11,8 @@ output "eDP-1" {
     }
 }
 
-output "DP-10" {
-    mode "2560x1440@59.951"
+output "DP-8" {
+    mode "2560x1440@69.928"
     scale 1
     position x=1646 y=0
     hot-corners {
@@ -20,10 +20,13 @@ output "DP-10" {
     }
 }
 
-output "DP-11" {
+output "DP-9" {
     mode "1920x1080@60.000"
     scale 1
     position x=4206 y=0
     variable-refresh-rate on-demand=true
+    hot-corners {
+        off
+    }
 }
 

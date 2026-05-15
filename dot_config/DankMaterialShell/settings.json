@@ -287,6 +287,8 @@
   "monoFontFamily": "Fira Code",
   "fontWeight": 400,
   "fontScale": 1.1,
+  "textRenderType": 1,
+  "textRenderQuality": 0,
   "notepadUseMonospace": true,
   "notepadFontFamily": "",
   "notepadFontSize": 14,
@@ -467,6 +469,7 @@
   "customPowerActionReboot": "",
   "customPowerActionPowerOff": "",
   "updaterHideWidget": false,
+  "updaterCheckOnStart": false,
   "updaterUseCustomCommand": false,
   "updaterCustomCommand": "",
   "updaterTerminalAdditionalParams": "",
@@ -524,10 +527,9 @@
     },
     "DP-9": {
       "hotCorners": {
-        "corners": [
-          "top-left"
-        ]
-      }
+        "off": true
+      },
+      "vrrOnDemand": true
     },
     "DP-10": {
       "disabled": false,
@@ -549,13 +551,12 @@
   "hyprlandOutputSettings": {},
   "displayProfiles": {},
   "activeDisplayProfile": {
-    "niri": ""
+    "niri": "auto_a3b227d6"
   },
   "displayProfileAutoSelect": true,
   "displayShowDisconnected": false,
   "displaySnapToEdge": true,
   "connectedFrameBarStyleBackups": {},
-  "connectedFrameModalDarkenBackup": null,
   "barConfigs": [
     {
       "id": "default",
