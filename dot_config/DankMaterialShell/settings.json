@@ -20,9 +20,11 @@
   "hyprlandLayoutGapsOverride": -1,
   "hyprlandLayoutRadiusOverride": -1,
   "hyprlandLayoutBorderSize": -1,
+  "hyprlandResizeOnBorder": false,
   "mangoLayoutGapsOverride": -1,
   "mangoLayoutRadiusOverride": -1,
   "mangoLayoutBorderSize": -1,
+  "mangoTrackpadNaturalScrolling": true,
   "firstDayOfWeek": -1,
   "showWeekNumber": false,
   "use24HourClock": true,
@@ -92,6 +94,8 @@
   "controlCenterShowBatteryIcon": false,
   "controlCenterShowPrinterIcon": false,
   "controlCenterShowScreenSharingIcon": true,
+  "controlCenterShowIdleInhibitorIcon": false,
+  "controlCenterShowDoNotDisturbIcon": false,
   "showPrivacyButton": true,
   "privacyShowMicIcon": false,
   "privacyShowCameraIcon": false,
@@ -154,6 +158,7 @@
   "maxWorkspaceIcons": 3,
   "workspaceAppIconSizeOffset": 0,
   "groupWorkspaceApps": true,
+  "groupActiveWorkspaceApps": false,
   "workspaceFollowFocus": false,
   "showOccupiedWorkspacesOnly": false,
   "reverseScrolling": false,
@@ -175,6 +180,7 @@
   "audioWheelScrollAmount": 5,
   "clockCompactMode": false,
   "focusedWindowCompactMode": true,
+  "focusedWindowSize": 1,
   "runningAppsCompactMode": true,
   "barMaxVisibleApps": 0,
   "barMaxVisibleRunningApps": 0,
@@ -186,6 +192,7 @@
   "appsDockEnlargePercentage": 125,
   "appsDockIconSizePercentage": 100,
   "keyboardLayoutNameCompactMode": false,
+  "keyboardLayoutNameShowIcon": false,
   "runningAppsCurrentWorkspace": false,
   "runningAppsGroupByApp": true,
   "runningAppsCurrentMonitor": false,
@@ -221,6 +228,7 @@
   "lockDateFormat": "",
   "greeterRememberLastSession": true,
   "greeterRememberLastUser": true,
+  "greeterAutoLogin": false,
   "greeterEnableFprint": false,
   "greeterEnableU2f": false,
   "greeterWallpaperPath": "",
@@ -241,6 +249,7 @@
   "appLauncherGridColumns": 4,
   "spotlightCloseNiriOverview": true,
   "rememberLastQuery": false,
+  "rememberLastMode": true,
   "spotlightSectionViewModes": {
     "apps": "list"
   },
@@ -256,7 +265,10 @@
   "dankLauncherV2UnloadOnClose": false,
   "dankLauncherV2IncludeFilesInAll": false,
   "dankLauncherV2IncludeFoldersInAll": false,
-  "useAutoLocation": true,
+  "launcherUseOverlayLayer": false,
+  "launcherStyle": "full",
+  "spotlightBarShowModeChips": false,
+  "useAutoLocation": false,
   "weatherEnabled": true,
   "networkPreference": "ethernet",
   "iconTheme": "Papirus",
@@ -372,7 +384,7 @@
   "showDock": true,
   "dockAutoHide": false,
   "dockSmartAutoHide": true,
-  "dockHideOnFullscreen": true,
+  "dockUseOverlayLayer": false,
   "dockGroupByApp": true,
   "dockRestoreSpecialWorkspaceOnClick": false,
   "dockOpenOnOverview": true,
@@ -411,7 +423,7 @@
   "lockScreenShowProfileImage": true,
   "lockScreenShowPasswordField": true,
   "lockScreenShowMediaPlayer": true,
-  "lockScreenPowerOffMonitorsOnLock": false,
+  "lockScreenPowerOffMonitorsOnLock": true,
   "lockAtStartup": false,
   "enableFprint": false,
   "maxFprintTries": 3,
@@ -428,6 +440,7 @@
   "notificationTimeoutNormal": 5000,
   "notificationTimeoutCritical": 0,
   "notificationCompactMode": false,
+  "notificationDedupeEnabled": true,
   "notificationPopupPosition": 0,
   "notificationAnimationSpeed": 1,
   "notificationCustomAnimationDuration": 400,
@@ -523,7 +536,11 @@
       }
     },
     "DP-11": {
-      "vrrOnDemand": true
+      "vrrOnDemand": true,
+      "focusAtStartup": false,
+      "hotCorners": {
+        "off": true
+      }
     },
     "DP-9": {
       "hotCorners": {
@@ -551,9 +568,9 @@
   "hyprlandOutputSettings": {},
   "displayProfiles": {},
   "activeDisplayProfile": {
-    "niri": "auto_a3b227d6"
+    "niri": "profile_1775663464614_7pnz6h"
   },
-  "displayProfileAutoSelect": true,
+  "displayProfileAutoSelect": false,
   "displayShowDisconnected": false,
   "displaySnapToEdge": true,
   "connectedFrameBarStyleBackups": {},
