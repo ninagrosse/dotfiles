@@ -9,6 +9,11 @@
   "matugenTargetMonitor": "",
   "popupTransparency": 1,
   "dockTransparency": 1,
+  "floatingWindowSyncGlobal": true,
+  "floatingWindowTransparency": 1,
+  "floatingWindowForegroundLayers": true,
+  "floatingWindowForegroundTransparency": 1,
+  "dmsWindowsFloating": true,
   "widgetBackgroundColor": "sch",
   "widgetBackgroundCustomColor": "#6750A4",
   "widgetBackgroundCustomStrength": 0.5,
@@ -29,10 +34,37 @@
   "mangoLayoutRadiusOverride": -1,
   "mangoLayoutBorderSize": -1,
   "mangoTrackpadNaturalScrolling": true,
+  "mouseAccelProfile": "default",
+  "mouseAccelSpeed": 0,
+  "mouseLeftHanded": false,
+  "mouseMiddleEmulation": false,
+  "mouseNaturalScroll": false,
+  "mouseScrollFactor": 1,
+  "mouseScrollMethod": "default",
+  "touchpadAccelProfile": "default",
+  "touchpadAccelSpeed": 0,
+  "touchpadDisableOnExternalMouse": false,
+  "touchpadDisableWhileTyping": true,
+  "touchpadDragLock": false,
+  "touchpadMiddleEmulation": false,
+  "touchpadNaturalScroll": true,
+  "touchpadScrollFactor": 1,
+  "touchpadScrollMethod": "default",
+  "touchpadTapAndDrag": true,
+  "touchpadTapToClick": true,
+  "keyboardLayouts": "",
+  "keyboardVariants": "",
+  "keyboardModel": "",
+  "keyboardOptions": "",
+  "keyboardKeymapFile": "",
+  "keyboardTrackLayout": "",
+  "keyboardRepeatDelay": 0,
+  "keyboardRepeatRate": 0,
+  "keyboardNumlock": false,
   "firstDayOfWeek": -1,
   "showWeekNumber": false,
   "calendarBackend": "auto",
-  "use24HourClock": true,
+  "clockFormat": "24h",
   "showSeconds": false,
   "padHours12Hour": false,
   "useFahrenheit": false,
@@ -59,7 +91,9 @@
   "barElevationEnabled": false,
   "blurEnabled": false,
   "blurForegroundLayers": true,
+  "foregroundLayerTransparency": 1,
   "blurLayerOutlineOpacity": 0.12,
+  "blurBorderEnabled": true,
   "blurBorderColor": "outline",
   "blurBorderCustomColor": "#ffffff",
   "blurBorderOpacity": 1,
@@ -207,6 +241,8 @@
   "scrollTitleEnabled": true,
   "mediaAdaptiveWidthEnabled": true,
   "audioVisualizerEnabled": true,
+  "mediaUseAlbumArtAccent": false,
+  "appleMusicAnimatedArtEnabled": false,
   "audioScrollMode": "volume",
   "audioWheelScrollAmount": 5,
   "audioDeviceScrollVolumeEnabled": false,
@@ -269,12 +305,10 @@
   "greeterEnableFprint": false,
   "greeterEnableU2f": false,
   "greeterWallpaperPath": "",
-  "greeterUse24HourClock": true,
-  "greeterShowSeconds": false,
-  "greeterPadHours12Hour": false,
   "greeterLockDateFormat": "",
   "greeterFontFamily": "",
   "greeterWallpaperFillMode": "",
+  "greeterPamExternallyManaged": false,
   "greeterSyncPending": false,
   "greeterSyncBaseline": {},
   "mediaSize": 1,
@@ -296,6 +330,7 @@
     "apps": "list"
   },
   "niriOverviewOverlayEnabled": true,
+  "niriOverviewLauncherStyle": "full",
   "dankLauncherV2Size": "compact",
   "dankLauncherV2ShowSourceBadges": true,
   "dankLauncherV2BorderEnabled": false,
@@ -409,6 +444,7 @@
   "batteryLowNotificationType": 0,
   "batteryCriticalNotificationType": 0,
   "batteryAutoPowerSaver": false,
+  "lowerDisplayRefreshRateOnBattery": false,
   "lockBeforeSuspend": true,
   "loginctlLockIntegration": true,
   "fadeToLockEnabled": true,
@@ -416,13 +452,6 @@
   "fadeToDpmsEnabled": true,
   "fadeToDpmsGracePeriod": 5,
   "launchPrefix": "",
-  "brightnessDevicePins": {},
-  "wifiNetworkPins": {},
-  "bluetoothDevicePins": {},
-  "audioInputDevicePins": {},
-  "audioOutputDevicePins": {},
-  "gtkThemingEnabled": false,
-  "qtThemingEnabled": false,
   "syncModeWithPortal": true,
   "terminalsAlwaysDark": true,
   "muxType": "",
@@ -498,6 +527,7 @@
   "notificationOverlayEnabled": false,
   "notificationPopupShadowEnabled": true,
   "notificationPopupPrivacyMode": false,
+  "notificationForegroundLayers": true,
   "modalDarkenBackground": true,
   "lockScreenShowPowerActions": true,
   "lockScreenShowSystemIcons": true,
@@ -512,6 +542,13 @@
   "maxFprintTries": 3,
   "enableU2f": true,
   "u2fMode": "or",
+  "lockPamPath": "",
+  "lockScreenSecurityKeyShortcut": "Ctrl+Q",
+  "lockScreenSecurityKeyShortcutEnabled": false,
+  "lockPamInlineFprint": false,
+  "lockPamInlineU2f": false,
+  "lockPamExternallyManaged": false,
+  "lockU2fPamPath": "",
   "lockScreenInactiveColor": "#000000",
   "lockScreenNotificationMode": 0,
   "lockScreenVideoEnabled": false,
@@ -524,6 +561,7 @@
   "notificationTimeoutLow": 5000,
   "notificationTimeoutNormal": 5000,
   "notificationTimeoutCritical": 0,
+  "notificationIgnoreAppTimeout": false,
   "notificationCompactMode": false,
   "notificationShowTimeoutBar": false,
   "notificationDedupeEnabled": true,
@@ -542,7 +580,15 @@
       "field": "desktopEntry",
       "pattern": "dev.deedles.Trayscale",
       "matchType": "exact",
-      "action": "mute",
+      "action": "ignore",
+      "urgency": "default"
+    },
+    {
+      "enabled": true,
+      "field": "appName",
+      "pattern": "IDEA",
+      "matchType": "exact",
+      "action": "popup_only",
       "urgency": "default"
     }
   ],
@@ -576,6 +622,7 @@
   "customPowerActionHibernate": "",
   "customPowerActionReboot": "",
   "customPowerActionPowerOff": "",
+  "customPowerButtons": [],
   "updaterHideWidget": false,
   "updaterCheckOnStart": false,
   "updaterUseCustomCommand": false,
@@ -584,6 +631,7 @@
   "updaterIntervalSeconds": 1800,
   "updaterIncludeFlatpak": true,
   "updaterAllowAUR": true,
+  "updaterIgnoredPackages": [],
   "displayNameMode": "system",
   "screenPreferences": {
     "notifications": [
@@ -665,6 +713,20 @@
   "activeDisplayProfile": {
     "niri": "profile_1775663464614_7pnz6h"
   },
+  "activeDisplayProfileModes": {
+    "niri": {
+      "eDP-1": {
+        "mode": "2880x1800@120.000"
+      },
+      "DP-10": {
+        "mode": "2560x1440@69.928"
+      },
+      "DP-11": {
+        "mode": "1920x1080@60.000"
+      }
+    }
+  },
+  "displayPreviousRefreshModes": {},
   "displayProfileAutoSelect": false,
   "displayShowDisconnected": false,
   "displaySnapToEdge": true,
@@ -852,6 +914,12 @@
   "builtInPluginSettings": {
     "dms_settings_search": {
       "trigger": "?"
+    },
+    "dms_clipboard_search": {
+      "trigger": "cb"
+    },
+    "dms_qr_generator": {
+      "trigger": "qrg"
     }
   },
   "clipboardClickToPaste": false,
@@ -888,5 +956,5 @@
   "barInsetPaddingShared": -1,
   "barInsetPaddingSyncAll": false,
   "frameBarInsetPadding": -1,
-  "configVersion": 12
+  "configVersion": 13
 }
