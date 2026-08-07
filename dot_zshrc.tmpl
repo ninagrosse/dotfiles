@@ -57,15 +57,6 @@ plugins+=(
 alias lzd='lazydocker'
 {{- end }}
 
-{{- if eq .chezmoi.hostname "cachy-desktop" "cachy-tuxedo" }}
-plugins+=(
-  podman
-)
-# Podman somehow conflicts with wl-clipboard (or maybe how it's integrated in niri/DMS)
-# and won't show stdout when the clipboard is empty. Simply copying nothing fixes this.
-echo | wl-copy
-{{- end }}
-
 # General plugins that should be loaded on every host
 plugins+=(
   chezmoi
