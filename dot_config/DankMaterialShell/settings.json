@@ -205,7 +205,9 @@
         {
           "id": "focusedWindow",
           "enabled": true,
-          "focusedWindowCompactMode": true
+          "focusedWindowCompactMode": true,
+          "focusedWindowSize": 1,
+          "focusedWindowShowIcon": true
         }
       ],
       "centerWidgets": [
@@ -284,7 +286,9 @@
       "visible": true,
       "popupGapsAuto": true,
       "popupGapsManual": 0,
-      "widgetOutlineEnabled": false
+      "widgetOutlineEnabled": false,
+      "barInsetPadding": 4,
+      "widgetPadding": 8
     }
   ],
   "desktopClockCustomColor": {
@@ -330,5 +334,5 @@
     }
   },
   "frameMode": "separate",
-  "configVersion": 15
+  "configVersion": 16
 }
