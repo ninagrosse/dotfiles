@@ -1,0 +1,42 @@
+onboarding = false
+
+[ui]
+show_agent_labels_on_pane_borders = true
+host_cursor = "native"
+agent_panel_sort = "spaces"
+
+[ui.toast]
+delivery = "herdr"
+
+[ui.sound]
+enabled = false
+
+[theme]
+name = "terminal"
+auto_switch = false
+
+[keys]
+prefix = "ctrl+f"
+
+navigate_workspace_up = "k"
+navigate_workspace_down = "j"
+
+new_tab = "prefix+t"
+previous_tab = "prefix+h"
+next_tab = "prefix+l"
+move_tab_previous = "prefix+shift+h"
+move_tab_next = "prefix+shift+l"
+
+copy_mode = "prefix+c"
+
+focus_pane_left = "ctrl+h"
+focus_pane_down = "ctrl+j"
+focus_pane_up = "ctrl+k"
+focus_pane_right = "ctrl+l"
+swap_pane_left = "prefix+ctrl+h"
+swap_pane_down = "prefix+ctrl+j"
+swap_pane_up = "prefix+ctrl+k"
+swap_pane_right = "prefix+ctrl+l"
+
+split_vertical = "prefix+p"
+split_horizontal = "prefix+d"
