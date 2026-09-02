@@ -48,16 +48,40 @@ save_to_clipboard = true
 [bell]
 duration = 0
 
-[keyboard]
-bindings = [
-  { key = "C",       mods = "Control|Shift", action = "Copy"  },
-  { key = "V",       mods = "Control|Shift", action = "Paste" },
-  { key = "N",       mods = "Control|Shift", action = "SpawnNewInstance" },
-  { key = "Equals",  mods = "Control|Shift", action = "IncreaseFontSize" },
-  { key = "Minus",   mods = "Control",       action = "DecreaseFontSize" },
-  { key = "Key0",    mods = "Control",       action = "ResetFontSize"    },
-  { key = "Enter",   mods = "Shift",         chars = "\n" },
-]
+[[keyboard.bindings]]
+key = "C"
+mods = "Control|Shift"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "V"
+mods = "Control|Shift"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "N"
+mods = "Control|Shift"
+action = "SpawnNewInstance"
+
+[[keyboard.bindings]]
+key = "Equals"
+mods = "Control"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Minus"
+mods = "Control"
+action = "DecreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Key0"
+mods = "Control"
+action = "ResetFontSize"
+
+[[keyboard.bindings]]
+key = "Enter"
+mods = "Shift"
+chars = "\n"
 
 {{ if eq .osid "windows" }}
 # Windows specific settings
