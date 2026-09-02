@@ -28,5 +28,8 @@ mouse-hide-while-typing = true
 cursor-style = underline
 cursor-style-blink = false
 
+# disable ctrl+shift+j so it can be used in Herdr
+keybind = ctrl+shift+j=unbind
+
 # Matugen Colors (overrides Catppuccin)
 config-file = ?config-dankcolors

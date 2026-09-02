@@ -20,8 +20,8 @@ prefix = "ctrl+f"
 
 navigate_workspace_up = "k"
 navigate_workspace_down = "j"
-next_workspace = "prefix+j"
-previous_workspace = "prefix+k"
+next_workspace = ["ctrl+shift+j", "prefix+j"]
+previous_workspace = ["ctrl+shift+k", "prefix+k"]
 switch_workspace = "prefix+shift+1..9"
 
 new_tab = "prefix+t"
