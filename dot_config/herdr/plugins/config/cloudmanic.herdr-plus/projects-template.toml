@@ -1,0 +1,39 @@
+name = "Name"
+description = "description"
+working_dir = "~"
+
+[[tabs]]
+name = "Tab 1"
+
+[[tabs.panes]]
+command = ""
+
+[[tabs.panes]]
+command = "xxh ..."
+split = "right"
+
+
+[[tabs]]
+name = "Tab 2"
+
+[[tabs.panes]]
+command = "xxh ..."
+
+[[tabs.panes]]
+command = "xxh ..."
+split = "right"
+
+[[tabs.panes]]
+command = "xxh ..."
+split = "down"
+
+
+[[tabs]]
+name = "Tab 3"
+
+[[tabs.panes]]
+command = "xxh ..."
+
+[[tabs.panes]]
+command = "xxh ..."
+split = "right"
