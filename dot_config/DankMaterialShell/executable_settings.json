@@ -84,6 +84,9 @@
   "currentThemeCategory": "dynamic",
   "matugenScheme": "scheme-vibrant",
   "runUserMatugenTemplates": false,
+  "dmsWindowsFloatingSeeded": [
+    "niri"
+  ],
   "niriLayoutBorderSize": 2,
   "barElevationEnabled": false,
   "blurWallpaperOnOverview": true,
@@ -91,49 +94,58 @@
     {
       "id": "volumeSlider",
       "enabled": true,
-      "width": 50
+      "w": 4,
+      "h": 1
     },
     {
       "id": "brightnessSlider",
       "enabled": true,
-      "width": 50,
       "instanceId": "mmqhzkp2wdbclpvcuzqimxng6erbp",
-      "deviceName": ""
+      "deviceName": "",
+      "w": 4,
+      "h": 1
     },
     {
       "id": "audioOutput",
       "enabled": true,
-      "width": 50
+      "w": 4,
+      "h": 1
     },
     {
       "id": "wifi",
       "enabled": true,
-      "width": 50
+      "w": 4,
+      "h": 1
     },
     {
       "id": "audioInput",
       "enabled": true,
-      "width": 50
+      "w": 4,
+      "h": 1
     },
     {
       "id": "bluetooth",
       "enabled": true,
-      "width": 50
+      "w": 4,
+      "h": 1
     },
     {
       "id": "nightMode",
       "enabled": true,
-      "width": 25
+      "w": 2,
+      "h": 1
     },
     {
       "id": "idleInhibitor",
       "enabled": true,
-      "width": 25
+      "w": 2,
+      "h": 1
     },
     {
       "id": "builtin_vpn",
       "enabled": true,
-      "width": 50
+      "w": 4,
+      "h": 1
     }
   ],
   "spotlightSectionViewModes": {
@@ -164,7 +176,6 @@
       "cursorHideTimeout": 0
     }
   },
-  "launcherLogoColorOverride": "primary",
   "acMonitorTimeout": 600,
   "acLockTimeout": 900,
   "acSuspendTimeout": 3600,
@@ -254,7 +265,8 @@
       "leftWidgets": [
         {
           "id": "launcherButton",
-          "enabled": true
+          "enabled": true,
+          "launcherLogoColorOverride": "primary"
         },
         {
           "id": "workspaceSwitcher",
@@ -354,7 +366,8 @@
       "widgetOutlineEnabled": false,
       "barInsetPadding": 4,
       "widgetPadding": 8,
-      "followInterfaceStyle": false
+      "followInterfaceStyle": false,
+      "widgetFollowInterfaceStyle": false
     }
   ],
   "builtInPluginSettings": {
@@ -377,5 +390,5 @@
     }
   },
   "frameMode": "separate",
-  "configVersion": 26
+  "configVersion": 31
 }
