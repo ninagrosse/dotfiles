@@ -27,7 +27,7 @@ zstyle ':omz:plugins:eza' 'dirs-first' yes
 zstyle ':omz:plugins:eza' 'icons' yes
 
 # OS specific plugins
-{{- if eq .osid "darwin" "linux-ubuntu" "linux-debian" }}
+{{- if eq .osid "darwin" "linux-ubuntu" "linux-debian" "linux-bazzite" }}
 # Ensure brew is loaded first on Mac, Ubuntu, Debian and Fedora (Universal Blue distros).
 # Otherwise the brew-installed packages aren't available on the PATH.
 plugins+=(
