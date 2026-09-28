@@ -33,3 +33,6 @@ keybind = ctrl+shift+j=unbind
 
 # Matugen Colors (overrides Catppuccin)
 config-file = ?config-dankcolors
+
+# Local overrides
+config-file = ?config-local
