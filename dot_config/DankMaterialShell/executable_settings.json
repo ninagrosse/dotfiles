@@ -61,6 +61,10 @@
       "showTrash": true,
       "trashFileManager": "thunar",
       "trashCustomCommand": "",
+      "magnification": false,
+      "magnificationScale": 130,
+      "magnificationProfile": "parabolic",
+      "magnificationExpand": false,
       "order": [],
       "widgets": [
         {
@@ -91,6 +95,33 @@
   "barElevationEnabled": false,
   "blurWallpaperOnOverview": true,
   "controlCenterWidgets": [
+    {
+      "id": "user",
+      "enabled": true,
+      "w": 5,
+      "h": 1
+    },
+    {
+      "id": "settings",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "small": true
+    },
+    {
+      "id": "lock",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "small": true
+    },
+    {
+      "id": "power",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "small": true
+    },
     {
       "id": "volumeSlider",
       "enabled": true,
@@ -146,6 +177,15 @@
       "enabled": true,
       "w": 4,
       "h": 1
+    },
+    {
+      "id": "edit",
+      "enabled": true,
+      "w": 1,
+      "h": 1,
+      "small": true,
+      "footer": true,
+      "footerEnd": true
     }
   ],
   "spotlightSectionViewModes": {
@@ -390,5 +430,5 @@
     }
   },
   "frameMode": "separate",
-  "configVersion": 31
+  "configVersion": 39
 }
